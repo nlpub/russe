@@ -1,6 +1,7 @@
 .content {
   margin: 0 auto;
   max-width: 960px;
+  line-height: 1.2;
 }
 
 li {
