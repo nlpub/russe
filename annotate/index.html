@@ -90,7 +90,9 @@ tbody tr:nth-child(odd) {
 
 <p>Вы можете ознакомиться с <a href="https://github.com/alexanderpanchenko/sim-eval/blob/master/datasets/mc.csv">примером выполнения</a> подобного теста на английском языке.</p>
 
-<form id="form" method="POST" action="/annotate/submit/">
+<p>Начните работу с нажатия кнопки: <button id="ready">Поехали!</button></p>
+
+<form id="form" method="POST" action="/annotate/submit/" hidden>
   <table class="pure-table pure-table-bordered">
     <thead>
       <tr>
@@ -178,6 +180,11 @@ tbody tr:nth-child(odd) {
       }).fail(function() {
         alert('Произошла ошибка при обработке данных. Похоже, что-то сломалось.')
       });
+    })
+
+    $("#ready").click(function(e) {
+      $("#form").removeAttr('hidden');
+      $(this).parent().hide();
     })
   })
 </script>
