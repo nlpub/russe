@@ -1,0 +1,3 @@
+<FilesMatch "Makefile|russe.ini">
+Deny from all
+</FilesMatch>

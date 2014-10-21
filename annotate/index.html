@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The First International Workshop on Russian Semantic Similarity Evaluation." />
+<meta name="keywords" content="computational linguistics, natural language processing, lexical semantics, semantic similarity measures, semantic relations, semantic relation extraction, synonyms, hypernyms, co-hyponyms" />
+<title>The First International Workshop on Russian Semantic Similarity Evaluation (RUSSE)</title>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
+<link rel="stylesheet" href="../sidebar.css">
+<link rel="stylesheet" href="../style.css">
+<link rel="canonical" href="http://russe.nlpub.ru/annotate">
+<style>
+
+input[type=range] {
+  width: 100%;
+}
+
+.russe-score-label {
+  display: block;
+  margin-top: -.35em;
+  font-size: 85%;
+}
+
+table { width: 100%; }
+
+thead .numero {
+  width: 5%;
+  text-align: center;
+}
+
+thead .word {
+  width: 30%;
+}
+
+thead .similarity {
+  width: 35%;
+}
+
+tr .russe-id {
+  text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #F8F8F8;
+}
+
+</style>
+</head>
+<body>
+
+<div id="layout">
+
+<a href="#menu" id="menuLink" class="menu-link">
+  <span></span>
+</a>
+
+<div id="menu">
+  <div class="pure-menu pure-menu-open">
+    <a class="pure-menu-heading" href="#">RUSSE</a>
+
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li class="pure-menu-selected">
+        <a href="/annotate">Annotate</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="content">
+
+<h1>Оценка семантической близости между словами</h1>
+
+<div id="assignment">
+
+<p>Цель задания заключается в оценке семантического подобия слов на русском языке. Мы хотим повторить подобные англоязычные эксперименты для русского языка (см. <a href="http://www.cs.ucf.edu/~seansz/publications/acl2013-szumlanski.pdf">Szumlanski et al.</a>, <a href="http://dx.doi.org/10.1080/01690969108406936">Miller &amp; Charles</a> и <a href="http://dl.acm.org/citation.cfm?id=365657">Rubenstein &amp; Goodenough</a>).</p>
+
+<p>Пожалуйста, оцените связность каждой пары слов следующим образом:</p>
+
+<ul>
+<li>если <strong>слова являются синонимами</strong>, например, &laquo;гиппопотам&raquo; и &laquo;бегемот&raquo;, то укажите <em>сильно&nbsp;связаны</em>;</li>
+<li>если <strong>слова семантически связаны</strong> — имеют подобный смысл, например, обозначают подобные понятия, такие как &laquo;яблоко&raquo; и &laquo;груша&raquo;, то укажите <em>связаны</em>;</li>
+<li>если <strong>пара слов имеет отдаленную связность</strong>, например тематическую, как у слов &laquo;колесо&raquo; и &laquo;тормоз&raquo;, то укажите <em>слабо&nbsp;связаны</em>;</li>
+<li>если на ваш взгляд <strong>слова никак не связаны</strong> или связаны очень отдаленно, например &laquo;машина&raquo; и &laquo;спорт&raquo;, то укажите <em>не&nbsp;связаны</em>.</li>
+</ul>
+
+<p>Описание исходного эксперимента Миллера и Чарльза в 1991&nbsp;г. для английского языка доступно здесь: <a href="http://dx.doi.org/10.1080/01690969108406936">doi:10.1080/01690969108406936</a>.</p>
+
+<p>Вы можете ознакомиться с <a href="https://github.com/alexanderpanchenko/sim-eval/blob/master/datasets/mc.csv">примером выполнения</a> подобного теста на английском языке.</p>
+
+<form id="form" method="POST" action="/annotate/submit/">
+  <table class="pure-table pure-table-bordered">
+    <thead>
+      <tr>
+        <td class='numero'>№</td>
+        <td class='word'>Первое слово</td>
+        <td class='word'>Второе слово</td>
+        <td class='similarity'>Насколько <em>связаны</em> эти слова?</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr hidden>
+        <td class="russe-id">1</td>
+        <td class="russe-word1">2</td>
+        <td class="russe-word2">3</td>
+        <td>
+          <div class="pure-g">
+            <div class="pure-u-24-24 align-center">
+              <input type="hidden" class="russe-word1-input">
+              <input type="hidden" class="russe-word2-input">
+              <input type="range" class="russe-score-input" min="0" max="3" value="0">
+              <span class="russe-score-label">4</span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="pure-g">
+    <div class="pure-u-3-4">
+      <p>Пожалуйста, не отключайте JavaScript при работе на сайте.</p>
+    </div>
+    <div class="pure-u-1-4 align-right">
+      <p><input type="submit" value="Отправить"></p>
+    </div>
+  </div>
+</form>
+
+</div>
+
+<p>Благодарим за участие!</p>
+
+</div>
+
+</div>
+
+<script type="text/javascript" src="//yandex.st/jquery/2.1.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var template = $("tbody tr:first").clone();
+    template.removeAttr('hidden');
+
+    $.getJSON("/annotate/pairs/", function(data) {
+      for (var i = 1, len = data.length; i <= len; i++) {
+        e = data[i - 1];
+        var id = e.id, word1 = e.word1, word2 = e.word2;
+        template.find('.russe-id').text(i);
+        template.find('.russe-word1').text(word1);
+        template.find('.russe-word2').text(word2);
+        template.find('.russe-score-input').attr('name', 'pair[' + id + '][score]');
+        template.find('.russe-score-input').change(function(e) {
+          switch (parseInt(e.target.value, 10)) {
+            case 0: $(e.target).parent().find('.russe-score-label').text('не связаны'); break;
+            case 1: $(e.target).parent().find('.russe-score-label').text('слабо связаны'); break;
+            case 2: $(e.target).parent().find('.russe-score-label').text('связаны'); break;
+            case 3: $(e.target).parent().find('.russe-score-label').text('сильно связаны'); break;
+            default: alert('Произошла ошибка. Попробуйте перезагрузить страницу.'); break;
+          }
+        })
+        template.find('.russe-score-input').change()
+        template.appendTo("tbody");
+        template = template.clone();
+      }
+    })
+
+    $("#form").submit(function(e) {
+      e.preventDefault();
+      var form = $(this);
+      $.ajax({
+        type: form.attr("method"),
+        url: form.attr("action"),
+        data: form.serialize()
+      }).done(function() {
+        $('#assignment').hide();
+      }).fail(function() {
+        alert('Произошла ошибка при обработке данных. Похоже, что-то сломалось.')
+      });
+    })
+  })
+</script>
+
+<a href="https://github.com/nlpub/russe"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+<script src="../ui.js"></script>
+
+</body>
+</html>
