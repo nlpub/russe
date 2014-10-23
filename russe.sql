@@ -63,7 +63,8 @@ CREATE TABLE responses (
     pair_id integer NOT NULL,
     score smallint NOT NULL,
     remote_addr inet,
-    user_agent text
+    user_agent text,
+    "timestamp" time without time zone
 );
 
 
