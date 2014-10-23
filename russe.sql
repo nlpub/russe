@@ -73,7 +73,7 @@ CREATE TABLE responses (
 --
 
 CREATE VIEW pair_scores AS
-    SELECT pairs.id AS pair_id, (1 / (count(responses.pair_id) + 1)) AS score FROM (pairs LEFT JOIN responses ON ((responses.pair_id = pairs.id))) GROUP BY pairs.id, responses.pair_id ORDER BY (1 / (count(responses.pair_id) + 1)) DESC, random();
+    SELECT pairs.id AS pair_id, count(responses.pair_id) AS count, avg(responses.score) AS mean, stddev_samp(responses.score) AS stddev FROM (pairs LEFT JOIN responses ON ((responses.pair_id = pairs.id))) GROUP BY pairs.id ORDER BY count(responses.pair_id), stddev_samp(responses.score) DESC, random();
 
 
 --
@@ -165,3 +165,4 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 --
 -- PostgreSQL database dump complete
 --
+
