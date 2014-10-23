@@ -95,6 +95,13 @@ tbody tr:nth-child(odd) {
 
 <p>Начните работу с нажатия кнопки: <button id="ready">Поехали!</button></p>
 
+<datalist id="marks">
+  <option>0</option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+</datalist>
+
 <form id="form" method="POST" action="/annotate/submit/" hidden>
   <table class="pure-table pure-table-bordered">
     <thead>
@@ -115,7 +122,7 @@ tbody tr:nth-child(odd) {
             <div class="pure-u-24-24 align-center">
               <input type="hidden" class="russe-word1-input">
               <input type="hidden" class="russe-word2-input">
-              <input type="range" class="russe-score-input" min="0" max="3" value="0">
+              <input type="range" class="russe-score-input" min="0" max="3" list="marks" value="0">
               <span class="russe-score-label">4</span>
             </div>
           </div>
