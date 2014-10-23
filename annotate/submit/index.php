@@ -72,7 +72,7 @@ UPDATE responses SET id = DEFAULT;
 try {
   $pdo->beginTransaction();
 
-  $stmt = $pdo->prepare("INSERT INTO responses (uniqid, pair_id, score, remote_addr, user_agent) VALUES (?, ?, ?, ?, ?)");
+  $stmt = $pdo->prepare("INSERT INTO responses (uniqid, pair_id, score, remote_addr, user_agent, timestamp) VALUES (?, ?, ?, ?, ?, localtimestamp)");
 
   $stmt->bindParam(1, $uniqid);
   $stmt->bindParam(4, $remote_addr);

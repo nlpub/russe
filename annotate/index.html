@@ -177,8 +177,8 @@ tbody tr:nth-child(odd) {
         data: form.serialize()
       }).done(function() {
         $('#assignment').hide();
-      }).fail(function() {
-        alert('Произошла ошибка при обработке данных. Похоже, что-то сломалось.')
+      }).fail(function(text) {
+        alert('Произошла ошибка при обработке данных. Похоже, что-то сломалось.\n' + text)
       });
     })
 
