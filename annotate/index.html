@@ -136,7 +136,14 @@ tbody tr:nth-child(odd) {
 
 </div>
 
-<p>Благодарим за участие!</p>
+<div id="thanks" hidden>
+  <form method="GET" action="/annotate/">
+    <p>
+      Благодарим за участие! Хочется разметить ещё?
+      <input type="submit" value="Конечно!">
+    </p>
+  </form>
+</div>
 
 </div>
 
@@ -180,7 +187,8 @@ tbody tr:nth-child(odd) {
         url: form.attr("action"),
         data: form.serialize()
       }).done(function() {
-        $('#assignment').hide();
+        $('#assignment').attr('hidden', '');
+        $('#thanks').removeAttr('hidden');
       }).fail(function(text) {
         alert('Произошла ошибка при обработке данных. Похоже, что-то сломалось.\n' + text)
       });
@@ -188,7 +196,7 @@ tbody tr:nth-child(odd) {
 
     $("#ready").click(function(e) {
       $("#form").removeAttr('hidden');
-      $(this).parent().hide();
+      $(this).parent().attr('hidden', '');
     })
   })
 </script>
