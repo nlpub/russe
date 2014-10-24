@@ -73,7 +73,7 @@ CREATE TABLE responses (
 --
 
 CREATE VIEW pair_scores AS
-    SELECT pairs.id AS pair_id, count(responses.pair_id) AS count, avg(responses.score) AS mean, stddev_samp(responses.score) AS stddev FROM (pairs LEFT JOIN responses ON ((responses.pair_id = pairs.id))) GROUP BY pairs.id ORDER BY count(responses.pair_id), stddev_samp(responses.score) DESC, random();
+    SELECT pairs.id AS pair_id, count(responses.pair_id) AS count, avg(responses.score) AS mean, stddev_samp(responses.score) AS stddev FROM (pairs LEFT JOIN responses ON ((responses.pair_id = pairs.id))) GROUP BY pairs.id ORDER BY stddev_samp(responses.score) DESC, count(responses.pair_id), random();
 
 
 --
