@@ -64,7 +64,7 @@ CREATE TABLE responses (
     score smallint NOT NULL,
     remote_addr inet,
     user_agent text,
-    "timestamp" time without time zone
+    "timestamp" timestamp without time zone
 );
 
 
