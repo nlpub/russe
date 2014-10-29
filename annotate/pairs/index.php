@@ -42,4 +42,5 @@ foreach ($pdo->query($sql) as $row) {
 }
 
 header('Content-Type: application/json', true);
+shuffle($data);
 die(json_encode($data));
