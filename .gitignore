@@ -1,4 +1,4 @@
 /Makefile
+/*.csv
 *.ini
-*.csv
 *.rb
