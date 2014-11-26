@@ -19,3 +19,7 @@ li {
 .align-right {
   text-align: right;
 }
+
+.strike {
+  text-decoration: line-through;
+}

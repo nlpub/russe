@@ -4,9 +4,17 @@
 <meta charset="utf-8" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The First International Workshop on Russian Semantic Similarity Evaluation." />
-<meta name="keywords" content="computational linguistics, natural language processing, lexical semantics, semantic similarity measures, semantic relations, semantic relation extraction, synonyms, hypernyms, co-hyponyms" />
-<title>The First International Workshop on Russian Semantic Similarity Evaluation (RUSSE)</title>
+<meta name="description" content="There are two fairly similar tasks: the relatedness task and the association task." />
+<meta name="keywords" content="semantic similarity, relatedness, association, task description, RUSSE" />
+<meta property="og:title" content="RUSSE — Task Description" />
+<meta property="og:description" content="There are two fairly similar tasks: the relatedness task and the association task." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="http://russe.nlpub.ru/task/" />
+<meta property="og:image" content="http://russe.nlpub.ru/nlpub.png" />
+<meta property="og:image:width" content="135" />
+<meta property="og:image:height" content="135" />
+<title>RUSSE — Task Description</title>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
 <link rel="stylesheet" href="../sidebar.css">
 <link rel="stylesheet" href="../style.css">
@@ -28,7 +36,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="/call/">Call for Participation</a></li>
       <li class="pure-menu-selected">
-        <a href="/task/">Task Description</a></li>
+        <a href="/task/">Task Description</a>
       </li>
     </ul>
   </div>
@@ -38,7 +46,220 @@
 
 <h1>Task Description</h1>
 
-Detailed description of the relatedness and the association tasks will appear here soon. Short descriptions can be found at <a href="../call/">call for papers</a> page. 
+<p>There are two fairly similar tasks: the relatedness task and the association task. Each shared task is described below. Each task has two independent evaluation datasets. </p>
+
+<h2>1. The Relatedness Task</h2>
+
+<p>The goal of this task is to find semantically related words. Words are considered to be related if they are synonyms, hypernyms or hyponyms. For instance:</p>
+
+<ul>
+<li>авиация, авиа, syn</li>
+<li>абориген, индеец, hypo</li>
+<li>бизнесмен, владелец, hyper</li>
+</ul>
+
+<p>You can find definitions of these semantic relation types here: <a href="http://en.wiktionary.org/wiki/Wiktionary:Semantic_relations">http://en.wiktionary.org/wiki/Wiktionary:Semantic_relations</a>.</p>
+
+<p>Quality of a semantic similarity measure in this task will be assessed based on two criteria. The first benchmark is based on human judgments about semantic similarity (a translated version of the widely used MC, RG, and WordSim353 datasets). The second benchmark follows the structure of the <a href="https://github.com/alexanderpanchenko/sim-eval/blob/master/datasets/bless.csv">BLESS dataset</a> (see also <a href="http://www.aclweb.org/anthology/W11-2501">Baroni and Lenchi (2011)</a>). This benchmark is derived from the <a href="http://www.labinform.ru/pub/ruthes/index.htm">RuThes Lite</a> thesaurus. More details about each benchmark are provided below. </p>
+
+<h3>1.1 Evaluation based on Correlation with Human Judgments</h3>
+
+<p>This benchmark quantifies how well a system predicts a similarity score of a word pair. This is the most common way to assess a semantic similarity measure and is  used by many researchers. </p>
+
+<p><strong>Input (what we provide you)</strong>: a list of word pairs in an UTF-8 encoded CSV file in the following format:</p>
+
+<pre><code>word1,word2\n
+</code></pre>
+
+<p><strong>Output (what you provide us)</strong>: similarity score between each pair in the range [0;1] in an UTF-8 encoded CSV file in the following format:</p>
+
+<pre><code>word1,word2,sim\n
+</code></pre>
+
+<p><strong>Evaluation metric</strong>: <a href="http://en.wikipedia.org/wiki/Spearman&#x27;s_rank_correlation_coefficient">Spearman’s rank correlation</a> coefficient (rho) between a vector of human judgments &quot;Human Score&quot; and your similarity scores &quot;sim&quot; (denoted as &quot;Score&quot; on the figure below). The following figure shows  you an example of such an evaluation dataset. This is the <a href="http://www.cs.cmu.edu/%7Emfaruqui/suite.html">Miller-Charles dataset</a>. </p>
+
+<p><img src="rg.png" alt="alt"></p>
+
+<p>Figure below presents a visualization of Spearman&#39;s rank correlation of human judgements and similarity scores. In this case, Spearman&#39;s rank correlation of a similarity measure on this benchmark is 0.843 (p&lt;0.001), whereas correlation of a random measure is 0.173 (p=0.360).</p>
+
+<p><img src="mc-correlations-2.png" alt="alt"></p>
+
+<p>You can download a <a href="hj-sample.csv">sample from the testing dataset</a> composed of 66 pairs (see also the table below). Please keep in mind that this is not a training dataset. The goal is just to show  you the format of the test data. </p>
+
+<pre><code>word1        word2          sim
+петух        петушок        0.952381
+побережье    берег          0.904762
+тип          вид            0.851852
+миля         километр       0.791667
+чашка        посуда         0.761905
+птица        петух          0.714286
+война        войска         0.666667
+улица        квартал        0.666667
+. . .
+доброволец   девиз          0.090909
+аккорд       улыбка         0.087719
+энергия      кризис         0.083333
+бедствие     площадь        0.047619
+производство экипаж         0.047619
+мальчик      мудрец         0.041667
+прибыль      предупреждение 0.041667
+напиток      машина         0
+сахар        подход         0
+лес          погост         0
+практика     учреждение     0</code></pre>
+
+<h3>1.2 Evaluation based on Semantic Relation Classification</h3>
+
+<p>This benchmark quantifies how well a system can distinguish related word pairs from unrelated ones. </p>
+
+<p><strong>Input (what we provide you)</strong>: a list of word pairs in an UTF-8 encoded CSV file in the following format:</p>
+
+<pre><code>word1,word2\n
+</code></pre>
+
+<p><strong>Output (what you provide us)</strong>: similarity score between each pair in the range [0;1] in an UTF-8 encoded CSV file in the following format:</p>
+
+<pre><code>word1,word2,sim\n
+</code></pre>
+
+<p><strong>Evaluation metric:</strong>  <a href="http://en.wikipedia.org/wiki/Accuracy_and_precision">accuracy</a> of the classification and AUC (area under <a href="http://en.wikipedia.org/wiki/Receiver_operating_characteristic">ROC curve</a>).</p>
+
+<p>In this benchmark, similarity scores are used to distinguish semantically related pairs of words from semantically unrelated pairs. Each word in the test collection has 50% of related and 50% of unrelated terms. For instance:</p>
+
+<p><img src="one.png" alt="alt"></p>
+
+<p>As each word has precisely half related and half unrelated words, one can classify pairs given the scores as following:</p>
+
+<ol>
+<li>Sort the table by “word1” and “sim”. </li>
+<li>Set to 1 the “related” label of the first 50% relations of “word1”.</li>
+<li>Set to 0 the “related” label of the last 50% relations of “word1”.</li>
+</ol>
+
+<p>For instance:</p>
+
+<p><img src="two.png" alt="alt"></p>
+
+<p>One the &quot;related&quot; column is calculated, it is straighforward to calculate Accuracy and AUC of a similarity measure. </p>
+
+<h3>1.3 Training Data</h3>
+
+
+<p><strong>Sample of human judgements about semantic similarity</strong>: <a href="hj-sample.csv">hj-sample.csv</a>. </p>
+
+<p>The judgemens were obtained via  a crowdsourcing procedure. The judgemens are provided in an UTF-8 encoded CSV file in the following format:</p>
+
+<pre><code>word1,word2,sim\n
+</code></pre>
+
+<p>Here <em>sim</em> is semantic similarity of words. This is the mean score on the scale {0,1,2,3} over all human judgements. Annotation instruction can be found here: <a href="annotate.txt">annotate.txt</a>. </p>
+
+<p><strong>Semantic relations between words</strong>: <a href="rt-train.csv">rt-train.csv</a>.</p>
+
+
+<p>These relations were sampled from the <a href="http://www.labinform.ru/pub/ruthes/index.htm">RuThes Lite thesaurus</a>. Therefore, you cannot use this thesaurus in this track. The relations are provided in an UTF-8 encoded CSV file in the following format:</p>
+
+<pre><code>word1,word2,sim\n
+</code></pre>
+
+<p>Here <em>sim</em> is the type of a relation. It can be one of the following:</p>
+
+<ul>
+<li>syn &mdash; synonyms</li>
+<li>hyper &mdash; hyperonyms</li>
+<li>hypo &mdash; hyponyms</li>
+</ul>
+
+<h2>2. The Association Task</h2>
+
+<p>In this task, two words are considered similar if the second is an association of the first one. Association here is understood as the &quot;mental association&quot; of a person given  on an input word, &quot;stimulus&quot;. We use results of two large-scale Russian associative experiments in order to build training and test collections: <a href="http://it-claim.ru/Projects/ASIS/">Russian Associative Thesaurus</a> (an offline experiment) and <a href="http://sociation.org/">Sociation.org</a> (an online experiment).</p>
+
+<p>The goal of this task is to find cognitive associations of an input word. In an associative experiment respondents are asked to provide an association to an input word. This is normally the first thing that comes to mind of a person, e.g.:</p>
+
+<ul>
+<li>время, деньги, 14</li>
+<li>россия, страна, 23</li>
+<li>рыба, жареная, 35</li>
+<li>женщина, мужчина, 71</li>
+<li>песня, веселая, 33</li>
+</ul>
+
+<p>The association task is based on the Russian associative experiment data. Therefore, type of a semantic relation here is not constrained. A relation can be of any type: synonyms, hyponyms, homonyms, etc. </p>
+
+<p>Quality of a similarity measure in this task will be assessed in the same way as in the relatedness task (see the Section 1.2). </p>
+
+<h3>2.2 Training Data</h3>
+
+<p><strong>Associations between words</strong>: <a href="ae-train.csv">ae-train.csv</a></p>
+
+These relations were sampled from the  <a href="http://it-claim.ru/Projects/ASIS/">Russian Associative Thesaurus</a> . Therefore, you cannot use this thesaurus in this track. The relations are provided in an UTF-8 encoded CSV file in the following format:</p>
+
+<pre><code>word1,word2,sim\n
+</code></pre>
+
+<p>Here <em>sim</em> is the number of responses. For instance, the line &quot;время,деньги,14&quot; means that 14 people provided the reaction &quot;деньги&quot; on the stimulus &quot;время&quot;. </p>
+
+<p><strong>Associations between words</strong>: <a href="ae2-train.csv">ae2-train.csv</a></p>
+
+These relations were sampled from the <a href="http://sociation.org/">Sociation.org</a> database. Therefore, you cannot use this resource in this track. The relations are provided in an UTF-8 encoded CSV file in the following format:</p>
+
+<pre><code>word1,word2,sim,dir,rev\n
+</code></pre>
+
+<p>Here <em>dir</em> and <em>rev</em> is the number of direct (<em>word1 -> word2</em>) and reverse (<em>word2 -> word1</em>) responses. The <em>sim</em> column contains similarity of words calculated as following: <em>sim = (dir + rev)/2 * (min(dir+2, rev+2)/max(dir+2, rev+2)) </em>. </p>
+
+<b>Please, note that there will be two separate evaluations in the associatin task: one for the Russian Associative Thesaurus and another for the Sociation.org data. </b>
+
+<h2>3. Submission Format</h2>
+
+<p>You will be provided with a list of word pairs in the format</p>
+
+<pre><code>word1,word2\n
+</code></pre>
+
+<p>We are going to provide about 15,000 word pairs for testing. You should quickly (during several days) calculate semantic similarity scores between them. Each score should be in the range [0;1]. You should send the results to us in the format </p>
+
+<pre><code>word1,word2,sim
+</code></pre>
+
+<p>All aforementioned performance metrics for both relatedness and association tasks (spearman correlation, accuracy, auc) are calculated based on this input. You are allowed to submit up to three different results per task. </p>
+
+<p>You are allowed to use any tool and resource in order to build a semantic similarity measure except for the RuThes Lite thesaurus and the Russian Associative Thesaurus. Some data you can start from are listed below. </p>
+
+<h2>5. Additional Resources</h2>
+
+<p>We collected here pointers to some additional resources that you may find useful for building your semantic similarity measure. </p>
+
+<ul>
+<li><p><strong>Russian Wikipedia</strong>. This corpus is a common choice for training semantic similarity systems. </p>
+
+<ul>
+<li><a href="https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/wiki-ru-noxml.txt.bz2">Text version</a> of the Wikipedia cleaned from Wiki markup (UTF-8).</li>
+<li><a href="https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/wiki-ru-pos.csv.bz2">POS tagged version</a> of the Wikipedia (UTF-8) in the following format: &quot;surface lemma part-of-speech&quot;</li>
+</ul></li>
+<li><p><strong><a href="https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/wiki-cooccur-ge2.csv.bz2">Wikipedia co-occurrence scores</a>.</strong> The file is in the format “word1,word2,num”. Here “num” is the number of times “word1” and “word2” co-occurred within Wikipedia articles.</p></li>
+<li><p><strong><a href="http://smlc09.leeds.ac.uk/serge/mocky/parse/ruwac-filtered.out.lzma">RuWaC</a></strong>. A web-based corpus. An advantage of this corpus is that it is already syntactically parsed with MaltParser.</p></li>
+</ul>
+
+<ul>
+<li><p><strong>Baseline systems</strong>:</p>
+
+<ul>
+<li>Word2Vec: <a href="https://code.google.com/p/word2vec/">https://code.google.com/p/word2vec/</a></li>
+<li>SemanticVectors: <a href="https://code.google.com/p/semanticvectors/">https://code.google.com/p/semanticvectors/</a></li>
+<li>AirHead Reseach: <a href="https://code.google.com/p/airhead-research/">https://code.google.com/p/airhead-research/</a></li>
+<li>GenSim: <a href="http://radimrehurek.com/gensim/index.html">http://radimrehurek.com/gensim/index.html</a></li>
+<li>Serelex (see the “API” section): <a href="http://serelex.cental.be/page/about">http://serelex.cental.be/page/about</a></li>
+<li>DISSECT: <a href="http://clic.cimec.unitn.it/composes/toolkit/">http://clic.cimec.unitn.it/composes/toolkit/</a></li>
+</ul></li>
+<li><p><strong>Some other userful NLP tools</strong>:</p>
+
+<ul>
+<li><a href="https://pypi.python.org/pypi/pymystem3/0.1.1">PyMystem3</a> — a Python wrapper around Yandex Mystem. </li>
+<li><a href="http://nlpub.ru/TreeTagger">TreeTagger</a> and <a href="http://nlpub.ru/MaltParser">MaltParser</a> for Russian.<br></li>
+<li><a href="http://lucene.apache.org/">Lucene</a> text search library.</li>
+</ul></li>
+</ul>
 
 </div>
 
