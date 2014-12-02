@@ -28,4 +28,5 @@ li {
   border: none;
   overflow: hidden;
   background-color: transparent;
+  padding-bottom: 32px;
 }
