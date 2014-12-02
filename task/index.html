@@ -156,7 +156,6 @@
 
 <p><strong>Semantic relations between words</strong>: <a href="rt-train.csv">rt-train.csv</a>.</p>
 
-
 <p>These relations were sampled from the <a href="http://www.labinform.ru/pub/ruthes/index.htm">RuThes Lite thesaurus</a>. Therefore, you cannot use this thesaurus in this track. The relations are provided in an UTF-8 encoded CSV file in the following format:</p>
 
 <pre><code>word1,word2,sim\n
@@ -170,9 +169,12 @@
 <li>hypo &mdash; hyponyms</li>
 </ul>
 
+<p><strong>Negative training samples</strong>:
+Please note that these training data contain no negative training samples.  In order to obtain negative examples of a given word you can use relations of other words or another strategy. A limited number of negative training samples will only be available in the test set. </p>
+
 <h2>2. The Association Task</h2>
 
-<p>In this task, two words are considered similar if the second is an association of the first one. Association here is understood as the &quot;mental association&quot; of a person given  on an input word, &quot;stimulus&quot;. We use results of two large-scale Russian associative experiments in order to build training and test collections: <a href="http://it-claim.ru/Projects/ASIS/">Russian Associative Thesaurus</a> (an offline experiment) and <a href="http://sociation.org/">Sociation.org</a> (an online experiment).</p>
+<p>In this task, two words are considered similar if the second is an association of the first one. Association here is understood as the &quot;free association&quot; of a person on an input word called &quot;stimulus&quot;. We use results of two large-scale Russian associative experiments in order to build training and test collections: <a href="http://it-claim.ru/Projects/ASIS/">Russian Associative Thesaurus</a> (an offline experiment) and <a href="http://sociation.org/">Sociation.org</a> (an online experiment).</p>
 
 <p>The goal of this task is to find cognitive associations of an input word. In an associative experiment respondents are asked to provide an association to an input word. This is normally the first thing that comes to mind of a person, e.g.:</p>
 
@@ -186,7 +188,7 @@
 
 <p>The association task is based on the Russian associative experiment data. Therefore, type of a semantic relation here is not constrained. A relation can be of any type: synonyms, hyponyms, homonyms, etc. </p>
 
-<p>Quality of a similarity measure in this task will be assessed in the same way as in the relatedness task (see the Section 1.2). </p>
+<p>Quality of a similarity measure in this task will be assessed via "Evaluation based on Semantic Relation Classification" similarly to the relatedness task (see the Section 1.2 for more details). Therefore, you will be given pairs of words. In other words, you are not asked to generate a set of associations for an input word in this task. You are rather asked to calculate similarities between word pairs as in all other tasks of RUSSE. </p>
 
 <h3>2.2 Training Data</h3>
 
@@ -207,6 +209,10 @@ These relations were sampled from the <a href="http://sociation.org/">Sociation.
 </code></pre>
 
 <p>Here <em>dir</em> and <em>rev</em> is the number of direct (<em>word1 -> word2</em>) and reverse (<em>word2 -> word1</em>) responses. The <em>sim</em> column contains similarity of words calculated as following: <em>sim = (dir + rev)/2 * (min(dir+2, rev+2)/max(dir+2, rev+2)) </em>. </p>
+
+
+<p><strong>Negative training samples</strong>:
+Please note that the training data contain no negative training samples.  In order to obtain negative examples of a given word you can use relations of other words or another strategy. A limited number of negative training samples will only be available in the test set. </p>
 
 <b>Please, note that there will be two separate evaluations in the associatin task: one for the Russian Associative Thesaurus and another for the Sociation.org data. </b>
 
@@ -238,19 +244,23 @@ These relations were sampled from the <a href="http://sociation.org/">Sociation.
 <li><a href="https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/wiki-ru-pos.csv.bz2">POS tagged version</a> of the Wikipedia (UTF-8) in the following format: &quot;surface lemma part-of-speech&quot;</li>
 </ul></li>
 <li><p><strong><a href="https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/wiki-cooccur-ge2.csv.bz2">Wikipedia co-occurrence scores</a>.</strong> The file is in the format “word1,word2,num”. Here “num” is the number of times “word1” and “word2” co-occurred within Wikipedia articles.</p></li>
-<li><p><strong><a href="http://smlc09.leeds.ac.uk/serge/mocky/parse/ruwac-filtered.out.lzma">RuWaC</a></strong>. A web-based corpus. An advantage of this corpus is that it is already syntactically parsed with MaltParser.</p></li>
+<li><p><strong><a href="http://corpus.leeds.ac.uk/tools/ru/ruwac-parsed.out.xz">RuWaC</a></strong>. A web-based corpus. An advantage of this corpus is that it is already syntactically parsed with MaltParser.</p></li>
 </ul>
 
 <ul>
 <li><p><strong>Baseline systems</strong>:</p>
 
 <ul>
-<li>Word2Vec: <a href="https://code.google.com/p/word2vec/">https://code.google.com/p/word2vec/</a></li>
-<li>SemanticVectors: <a href="https://code.google.com/p/semanticvectors/">https://code.google.com/p/semanticvectors/</a></li>
-<li>AirHead Reseach: <a href="https://code.google.com/p/airhead-research/">https://code.google.com/p/airhead-research/</a></li>
-<li>GenSim: <a href="http://radimrehurek.com/gensim/index.html">http://radimrehurek.com/gensim/index.html</a></li>
-<li>Serelex (see the “API” section): <a href="http://serelex.cental.be/page/about">http://serelex.cental.be/page/about</a></li>
-<li>DISSECT: <a href="http://clic.cimec.unitn.it/composes/toolkit/">http://clic.cimec.unitn.it/composes/toolkit/</a></li>
+<li> <a href="https://code.google.com/p/jwktl/">JWTKL</a></li>
+<li> <a href="https://code.google.com/p/word2vec/">Word2Vec</a></li>
+<li> <a href="https://code.google.com/p/semanticvectors/">SemanticVectors</a></li>
+<li> <a href="https://code.google.com/p/airhead-research/">AirHead Reseach</a> and  <h href="https://github.com/fozziethebeat/S-Space">S-Space</a> </li>
+<li> <a href="http://radimrehurek.com/gensim/index.html">GenSim</a></li>
+<li> <a href="http://serelex.cental.be/page/about">Serelex</a>. See the “API” section.</li>
+<li> <a href="http://clic.cimec.unitn.it/composes/toolkit/">DISSECT</a></li>
+<li><a href="https://www.ukp.tu-darmstadt.de/data/lexical-resources/uby/">UBY</a>. UBY is available in English and German only, but it contains many translations into Russian from different sources. </li>
+<li><a href="http://nlp.stanford.edu/projects/glove">GloVe</a></li>
+<li><a href="http://www.nlpado.de/~sebastian/software/dv.shtml">DependencyVectors (DV)</a></li>
 </ul></li>
 <li><p><strong>Some other userful NLP tools</strong>:</p>
 
