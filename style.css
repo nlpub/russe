@@ -30,3 +30,19 @@ li {
   background-color: transparent;
   padding-bottom: 32px;
 }
+
+#sponsors {
+  display: table-cell;
+}
+
+#sponsors a {
+  padding: 0;
+}
+
+#sponsors .pure-u-1-3 {
+  vertical-align: middle;
+}
+
+#sponsors img {
+  max-width: 100%;
+}
