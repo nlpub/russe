@@ -148,7 +148,7 @@
 <pre><code>word1,word2,sim\n
 </code></pre>
 
-<p><strong>Evaluation metric:</strong>  <a href="http://en.wikipedia.org/wiki/Accuracy_and_precision">accuracy</a> of the classification and AUC (area under <a href="http://en.wikipedia.org/wiki/Receiver_operating_characteristic">ROC curve</a>).</p>
+<p><strong>Evaluation metric:</strong> <a href="http://en.wikipedia.org/wiki/Information_retrieval#Average_precision">Average Precision</a> (area under the <a href="http://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html">Precision-Recall curve</a>). Additionally we will calculate <a href="http://en.wikipedia.org/wiki/Accuracy_and_precision">Accuracy</a> and AUC under the ROC curve, but the official metric will be the Average Precision. </p>
 
 <p>In this benchmark, similarity scores are used to distinguish semantically related pairs of words from semantically unrelated pairs. Each word in the test collection has 50% of related and 50% of unrelated terms. For instance:</p>
 
