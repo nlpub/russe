@@ -4,3 +4,4 @@ _site/
 /*.csv
 *.ini
 *.rb
+*.sql

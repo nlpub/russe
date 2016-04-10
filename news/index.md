@@ -8,6 +8,12 @@ keywords: news, semantic similarity, relatedness, association, RUSSE
 # News
 
 <article markdown="1">
+## 10/04/2016 — Russian Semantic Relatedness
+
+We have [published](/rsr/) several open language resources for semantic relatednes in Russian language.
+</article>
+
+<article markdown="1">
 ## 01/02/2015 — Final results now available
 
 The final results of the RUSSE evaluation campaign are [now available](https://docs.google.com/spreadsheets/d/190qw6O_r8xAxPM2SK8q-R-0ODp2wDx8qzh9Lr31jmSY/edit?usp=sharing). Raw results are [available here](https://drive.google.com/folderview?id=0B-Ar9zidyuewflo4YW5NbE0yM0M1N05aUm9zTmVDN3FJY191OHdLMGliSEM4eFJSQm5wMlU&usp=sharing). We are looking forward meeting you at the special session of the Dialogue 2015 conference dedicated to the RUSSE shared task.
