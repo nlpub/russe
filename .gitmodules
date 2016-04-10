@@ -1,0 +1,3 @@
+[submodule "likely"]
+	path = likely
+	url = https://github.com/ilyabirman/Likely
