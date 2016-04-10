@@ -7,13 +7,9 @@
     <a class="pure-menu-heading" href="#">RUSSE</a>
 
     <ul>
-      <li class="pure-menu-selected">
-        <a href="/">Home</a>
-      </li>
-      <li><a href="/news/">News</a></li>
-      <li><a href="/call/">Call for Participation</a></li>
-      <li><a href="/task/">Task Description</a></li>
-      <li><a href="/results/">Results</a></li>
+      {% for link in page.navigation %}
+      <li {% if page.url == link.url %}class="pure-menu-selected"{% endif %}><a href="{{link.href}}">{{link.text}}</a></li>
+      {% endfor %}
     </ul>
   </div>
 
