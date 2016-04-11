@@ -10,7 +10,7 @@ keywords: news, semantic similarity, relatedness, association, RUSSE
 <article markdown="1">
 ## 10/04/2016 — Russian Semantic Relatedness
 
-We have [published](/rsr/) several open language resources for semantic relatednes in Russian language.
+We have [published](/rsr/) several open language resources for semantic relatedness in Russian language.
 </article>
 
 <article markdown="1">
