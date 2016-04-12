@@ -10,6 +10,8 @@ exclude:
   - Gemfile*
   - README.md
   - likely/source
+gems:
+  - jekyll-redirect-from
 safe: true
 timezone: Europe/Moscow
 encoding: UTF-8
