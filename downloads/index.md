@@ -3,7 +3,9 @@ layout: default
 title: Russian Semantic Relatedness
 description: "Human and Machine Judgements about Russian Semantic Relatedness."
 keywords: semantic similarity, results, evaluation, RUSSE
-redirect_from: '/rsr'
+redirect_from:
+  - /rsr
+  - /rsr/
 ---
 
 # Human and Machine Judgements about Russian Semantic Relatedness

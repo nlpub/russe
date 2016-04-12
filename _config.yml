@@ -12,6 +12,8 @@ exclude:
   - likely/source
 gems:
   - jekyll-redirect-from
+whitelist:
+  - jekyll-redirect-from
 safe: true
 timezone: Europe/Moscow
 encoding: UTF-8
