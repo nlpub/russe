@@ -14,9 +14,15 @@ This page contains several open language resources for semantic relatednes in Ru
 
 ## HJ: Human Judgements of Word Pairs
 
-HJ dataset contains human judgements on 398 word pairs that were translated to Russian from the widely used benchmarks for English: MC (Miller and Charles, 1991), RG (Rubenstein and Goodenough, 1965) and WordSim353 (Filkenstein et al., 2001). In order to collect human judgements, an in-house crowdsourcing system was used. Volunteers on Facebook and Twitter were invited to participate in the experiment. Each annotator has been provided with a random assignment consisting of 15 word pairs selected from the 398 preliminarily prepared pairs, and has been asked to assess the similarity of each pair. The possible options were “not similar at all”, “weak similarity”, “moderate similarity”, and “high similarity”. Ordinal Krippendorff’s alpha of 0.49 indicates a moderate agreement of annotators in this experiment. To evaluate a similarity measure using this dataset one should calculate Spearman’s rank correlation coefficient ρ between a vector of human judgments and the scores of a given system.
+HJ dataset contains human judgements on 398 word pairs that were translated to Russian from the widely used benchmarks for English: MC (Miller and Charles, 1991), RG (Rubenstein and Goodenough, 1965) and WordSim353 (Filkenstein et al., 2001). In order to collect human judgements, an in-house crowdsourcing system was used. Volunteers on Facebook and Twitter were invited to participate in the experiment. Each annotator has been provided with a random assignment consisting of 15 word pairs selected from the 398 preliminarily prepared pairs, and has been asked to assess the similarity of each pair. The possible options were “not similar at all”, “weak similarity”, “moderate similarity”, and “high similarity”. Ordinal Krippendorff’s alpha of 0.49 indicates a moderate agreement of annotators in this experiment. To evaluate a similarity measure using this dataset one should calculate Spearman’s rank correlation coefficient ρ between a vector of human judgments and the scores of a given system. 
 
-* [Download HJ dataset](https://github.com/nlpub/russe-evaluation/blob/master/russe/evaluation/hj.csv) in the CSV format “word-i word-j similarity-ij”
+Below you can download either the complete HJ dataset featuring 398 pairs (recommened for most of the caseses), or separate parts of the dataset, namely MC (65 pairs), RG (30 pairs) or WordSim353 (353 apirs). Note, that the WordSim353 is further sub-divided into similarity and relatedness datasets. 
+
+* [Download HJ dataset](https://github.com/nlpub/russe-evaluation/blob/master/russe/evaluation/hj.csv) in the CSV format “word-i word-j similarity-ij”. 
+* [Download MC dataset](https://github.com/nlpub/russe-evaluation/blob/master/russe/evaluation/hj-mc.csv) in the CSV format “word-i word-j similarity-ij”
+* [Download RG dataset](https://github.com/nlpub/russe-evaluation/blob/master/russe/evaluation/hj-rg.csv) in the CSV format “word-i word-j similarity-ij”
+* [Download WordSim353 dataset (similarity)](https://github.com/nlpub/russe-evaluation/blob/master/russe/evaluation/hj-wordsim353-similarity.csv) in the CSV format “word-i word-j similarity-ij”
+* [Download WordSim353 dataset (relatedness)](https://github.com/nlpub/russe-evaluation/blob/master/russe/evaluation/hj-wordsim353-relatedness.csv) in the CSV format “word-i word-j similarity-ij”
 
 ## RT: Synonyms and Hypernyms from the Thesaurus RuThes
 
@@ -38,28 +44,36 @@ This dataset contains 12,886 word pairs coming from HJ, RT, and AE datasets. In 
 
 * [Download MJ dataset](https://github.com/nlpub/russe-evaluation/blob/master/russe/evaluation/mj.csv) in the CSV format “word-i word-j similarity-ij”
 
-## DT: Open Russian Distributional Thesaurus
+## RDT: Russian Distributional Thesaurus
 
 While resources presented above are accurate and represent different kind of semantics their low coverage let us use them only for evaluation and training. In this section we present a large scale resource in the same (wi, wj, sij) format – the first open Russian distributional thesaurus.
 
 In order to build the distributional thesaurus, we used the skip-gram model (Mikolov et al., 2013) trained on a 12.9 billion word collection of books in Russian. According to the results of our participation in the shared task on Russian semantic similarity (Panchenko et al., 2015), this approach scored in the top 5 among 105 submissions (Arefyev et al., 2015). At the same time, the approach is completely unsupervised and language independent as we do not use any preprocessing except tokenization. More specifically, to build a thesaurus we trained the model on Russian books extracted from the digital library [lib.rus.ec](http://lib.rus.ec). Following our prior experiments (Arefyev et al., 2015) we have selected the following parameters for the model: minimal word frequency – 5, number of dimensions in a word vector – 500, three or five iterations of the learning algorithm over the input corpus, context window size of 1, 2, 3, 5, 7 and 10 words. For the most frequent 932,000 words, we calculated 250 nearest neighbours with the cosine similarity between word vectors. These related words were lemmatized using PyMorphy2\. An important added value of our work is engineering. Training of a model takes up to five days on a r3.8xlarge Amazon EC2 instance featuring 32 cores and 244 GB of RAM. Furthermore, calculation of the neighbours takes up to ten days for only one. Not to mention the time needed to test different configurations of the model.
 
-Parameters of the model used to generate this distributional thesaurus:
+#####Parameters of the model used to generate this distributional thesaurus:
+
 
 * Model: skip-gram
-* Corpus: 150Gb sample of [lib.rus.ec](http://lib.rus.ec)
-* Number of thesaurus entries (words): 932,000
+* Corpus: [150Gb sample](https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/librusec_fb2.plain.gz) of the [lib.rus.ec](http://lib.rus.ec) collections of Russian books extracted from the FB2 format and cleaned from metadata ([a mirror](http://panchenko.me/russe/librusec_fb2.plain.gz)).
 * Context window size: 10 words
 * Number of dimensions: 500
 * Number of iterations: 3
 * Minimal word frequency: 5
 
-The resulting DT is a CSV file that can be simply used from any environment.
+#####Statistics of the distributional thesaurus:
 
-* [Download DT dataset](https://s3-eu-west-1.amazonaws.com/dsl-research/distrib_thes/3attempt/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz) in the CSV format “word-i word-j similarity-ij” (1.8 Gb)
-* [Download word vectors](https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/w2v_export/all.norm-sz500-w10-cb0-it3-min5.w2v) in the format of [word2vec](https://code.google.com/p/word2vec/) (14 Gb)
-* [How to load word vectors](https://github.com/nlpub/russe-evaluation/tree/master/russe/measures/word2vec), Python examples on GitHub.
+* Number of thesaurus entries (source words): 931,896
+* Number of destination words: 4,456,444
+* Number of relations in the thesaurus: 193,909,130
+
+
+
+The resulting DT is a CSV file that can be simply used from any environment. 
+
+* [Download RDT dataset](https://s3-eu-west-1.amazonaws.com/dsl-research/distrib_thes/3attempt/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz) in the CSV format “word-i word-j similarity-ij” ([a mirror](http://panchenko.me/russe/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz)) (1.8 Gb)
+* [Download word vectors](https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/w2v_export/all.norm-sz500-w10-cb0-it3-min5.w2v) used to generate the RDT dataset in the format of [word2vec](https://code.google.com/p/word2vec/). To [load word vectors](https://github.com/nlpub/russe-evaluation/tree/master/russe/measures/word2vec) with GenSim  you will need at least 64Gb of RAM to load the vectors. ([a mirror](http://panchenko.me/russe/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz)) (14 Gb)
+* [Download the lib.rus.ec corpus](https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/librusec_fb2.plain.gz) used to train the word vectors used to construct the RDT thesaurus consisting of 12.9 billions of tokens. ([a mirror](http://panchenko.me/russe/librusec_fb2.plain.gz)) (40Gb)
 
 ## Evaluation Scripts
 
-All evaluation scripts that can be used to measure performance of similarity measures with the listed above datasets are available at [GitHub](https://github.com/nlpub/russe-evaluation/tree/master/russe/evaluation).
+Evaluation scripts that can be used to measure performance of semantic relatedness measures based on HJ, RT, AE, MJ datasets are available on [GitHub](https://github.com/nlpub/russe-evaluation/tree/master/russe/evaluation).
