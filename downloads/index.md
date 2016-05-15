@@ -50,17 +50,17 @@ While resources presented above are accurate and represent different kind of sem
 
 In order to build the distributional thesaurus, we used the skip-gram model (Mikolov et al., 2013) trained on a 12.9 billion word collection of books in Russian. According to the results of our participation in the shared task on Russian semantic similarity (Panchenko et al., 2015), this approach scored in the top 5 among 105 submissions (Arefyev et al., 2015). At the same time, the approach is completely unsupervised and language independent as we do not use any preprocessing except tokenization. More specifically, to build a thesaurus we trained the model on Russian books extracted from the digital library [lib.rus.ec](http://lib.rus.ec). Following our prior experiments (Arefyev et al., 2015) we have selected the following parameters for the model: minimal word frequency – 5, number of dimensions in a word vector – 500, three or five iterations of the learning algorithm over the input corpus, context window size of 1, 2, 3, 5, 7 and 10 words. For the most frequent 932,000 words, we calculated 250 nearest neighbours with the cosine similarity between word vectors. These related words were lemmatized using PyMorphy2\. An important added value of our work is engineering. Training of a model takes up to five days on a r3.8xlarge Amazon EC2 instance featuring 32 cores and 244 GB of RAM. Furthermore, calculation of the neighbours takes up to ten days for only one. Not to mention the time needed to test different configurations of the model.
 
-#####Parameters of the model used to generate this distributional thesaurus:
+####Parameters of the model used to generate this distributional thesaurus:
 
 
 * Model: skip-gram
-* Corpus: [150Gb sample](https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/librusec_fb2.plain.gz) of the [lib.rus.ec](http://lib.rus.ec) collections of Russian books extracted from the FB2 format and cleaned from metadata ([a mirror](http://panchenko.me/russe/librusec_fb2.plain.gz)).
+* Corpus: [150Gb sample](https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/librusec_fb2.plain.gz) of the [lib.rus.ec](http://lib.rus.ec) collections of Russian books extracted from the FB2 format and cleaned from metadata ([a mirror](http://panchenko.me/data/russe/librusec_fb2.plain.gz)).
 * Context window size: 10 words
 * Number of dimensions: 500
 * Number of iterations: 3
 * Minimal word frequency: 5
 
-#####Statistics of the distributional thesaurus:
+####Statistics of the distributional thesaurus:
 
 * Number of thesaurus entries (source words): 931,896
 * Number of destination words: 4,456,444
@@ -70,10 +70,11 @@ In order to build the distributional thesaurus, we used the skip-gram model (Mik
 
 The resulting DT is a CSV file that can be simply used from any environment. 
 
-* [Download RDT dataset](https://s3-eu-west-1.amazonaws.com/dsl-research/distrib_thes/3attempt/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz) in the CSV format “word-i word-j similarity-ij” ([a mirror](http://panchenko.me/russe/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz)) (1.8 Gb)
-* [Download word vectors](https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/w2v_export/all.norm-sz500-w10-cb0-it3-min5.w2v) used to generate the RDT dataset in the format of [word2vec](https://code.google.com/p/word2vec/). To [load word vectors](https://github.com/nlpub/russe-evaluation/tree/master/russe/measures/word2vec) with GenSim  you will need at least 64Gb of RAM to load the vectors. ([a mirror](http://panchenko.me/russe/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz)) (14 Gb)
-* [Download the lib.rus.ec corpus](https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/librusec_fb2.plain.gz) used to train the word vectors used to construct the RDT thesaurus consisting of 12.9 billions of tokens. ([a mirror](http://panchenko.me/russe/librusec_fb2.plain.gz)) (40Gb)
+* [Download RDT dataset](https://s3-eu-west-1.amazonaws.com/dsl-research/distrib_thes/3attempt/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz) in the CSV format “word-i word-j similarity-ij” ([a mirror](http://panchenko.me/data/russe/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz)) (1.8 Gb)
+* [Download word vectors](https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/w2v_export/all.norm-sz500-w10-cb0-it3-min5.w2v) used to generate the RDT dataset in the format of [word2vec](https://code.google.com/p/word2vec/). To [load word vectors](https://github.com/nlpub/russe-evaluation/tree/master/russe/measures/word2vec) with GenSim  you will need at least 64Gb of RAM to load the vectors. ([a mirror](http://panchenko.me/data/russe/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz)) (14 Gb)
+* [Download the lib.rus.ec corpus](https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/librusec_fb2.plain.gz) used to train the word vectors used to construct the RDT thesaurus consisting of 12.9 billions of tokens. ([a mirror](http://panchenko.me/data/russe/librusec_fb2.plain.gz)) (40Gb)
 
 ## Evaluation Scripts
 
 Evaluation scripts that can be used to measure performance of semantic relatedness measures based on HJ, RT, AE, MJ datasets are available on [GitHub](https://github.com/nlpub/russe-evaluation/tree/master/russe/evaluation).
+I
