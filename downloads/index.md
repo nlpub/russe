@@ -50,7 +50,7 @@ While resources presented above are accurate and represent different kind of sem
 
 In order to build the distributional thesaurus, we used the skip-gram model (Mikolov et al., 2013) trained on a 12.9 billion word collection of books in Russian. According to the results of our participation in the shared task on Russian semantic similarity (Panchenko et al., 2015), this approach scored in the top 5 among 105 submissions (Arefyev et al., 2015). At the same time, the approach is completely unsupervised and language independent as we do not use any preprocessing except tokenization. More specifically, to build a thesaurus we trained the model on Russian books extracted from the digital library [lib.rus.ec](http://lib.rus.ec). Following our prior experiments (Arefyev et al., 2015) we have selected the following parameters for the model: minimal word frequency – 5, number of dimensions in a word vector – 500, three or five iterations of the learning algorithm over the input corpus, context window size of 1, 2, 3, 5, 7 and 10 words. For the most frequent 932,000 words, we calculated 250 nearest neighbours with the cosine similarity between word vectors. These related words were lemmatized using PyMorphy2\. An important added value of our work is engineering. Training of a model takes up to five days on a r3.8xlarge Amazon EC2 instance featuring 32 cores and 244 GB of RAM. Furthermore, calculation of the neighbours takes up to ten days for only one. Not to mention the time needed to test different configurations of the model.
 
-###Parameters of the model used to generate the distributional thesaurus:
+### Parameters of the model used to generate the distributional thesaurus:
 * Model: skip-gram
 * Corpus: a 150Gb sample of the [lib.rus.ec](http://lib.rus.ec) book collection.
 * Context window size: 10 words
@@ -58,7 +58,7 @@ In order to build the distributional thesaurus, we used the skip-gram model (Mik
 * Number of iterations: 3
 * Minimal word frequency: 5
 
-###Statistics of the distributional thesaurus:
+<h3>Statistics of the distributional thesaurus:</h3>
 
 * Number of thesaurus entries (source words): 931,896
 * Number of destination words: 4,456,444
