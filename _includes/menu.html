@@ -7,7 +7,7 @@
     <a class="pure-menu-heading" href="#">RUSSE</a>
 
     <ul>
-      {% for link in page.navigation %}
+      {% for link in layout.navigation %}
       <li {% if page.url == link.url %}class="pure-menu-selected"{% endif %}><a href="{{link.url}}">{{link.text}}</a></li>
       {% endfor %}
     </ul>
