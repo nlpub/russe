@@ -12,8 +12,10 @@ exclude:
   - likely/source
 gems:
   - jekyll-redirect-from
+  - jekyll-sitemap
 whitelist:
   - jekyll-redirect-from
+  - jekyll-sitemap
 safe: true
 timezone: Europe/Moscow
 encoding: UTF-8
