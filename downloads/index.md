@@ -69,12 +69,11 @@ These datasets are also available on Zenodo: <https://zenodo.org/record/163857>.
 * Number of relations in the thesaurus: 193,909,130
 
 
-
 The resulting DT is a CSV file that can be simply used from any environment. 
 
-* [**Download RDT dataset**](https://s3-eu-west-1.amazonaws.com/dsl-research/distrib_thes/3attempt/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz) in the CSV format “word-i word-j similarity-ij” ([a mirror](http://panchenko.me/data/russe/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz)) (1.8 Gb)
-* [**Download word vectors**](https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/w2v_export/all.norm-sz500-w10-cb0-it3-min5.w2v) used to generate the RDT in the format of [word2vec](https://code.google.com/p/word2vec/). To [load word vectors](https://github.com/nlpub/russe-evaluation/tree/master/russe/measures/word2vec) with GenSim  you will need at least 64Gb of RAM to load the vectors. ([a mirror](http://panchenko.me/data/russe/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz)) (14 Gb)
-* [**Download the corpus**](https://s3-eu-west-1.amazonaws.com/dsl-research/wiki/librusec_fb2.plain.gz) used to train RDT. The corpus is a 12.9 billion  tokens sample of the lib.rus.ec book collection (150GB of raw text) extracted from the FB2 format and cleaned from metadata. This corpus was used to train the word vectors used to construct the RDT thesaurus. ([a mirror](http://panchenko.me/data/russe/librusec_fb2.plain.gz)) (40Gb)
+* [**Download RDT dataset**](http://panchenko.me/data/russe/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz) in the CSV format “word-i word-j similarity-ij” [mirror at Zenodo](https://zenodo.org/record/163857/files/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz) (1.8 Gb)
+* [**Download word vectors**](http://panchenko.me/data/dsl-backup/w2v-ru/all.norm-sz500-w10-cb0-it3-min5.w2v) used to generate the RDT in the format of [word2vec](https://code.google.com/p/word2vec/). To [load word vectors](https://github.com/nlpub/russe-evaluation/tree/master/russe/measures/word2vec) with GenSim  you will need at least 17-19Gb of RAM to load the vectors. [mirror at Zenodo](https://zenodo.org/record/400631#.WOJdXRKGPdQ) (14 Gb)
+* [**Download the corpus**](http://panchenko.me/data/russe/librusec_fb2.plain.gz) used to train RDT. The corpus is a 12.9 billion  tokens sample of the lib.rus.ec book collection (150GB of raw text) extracted from the FB2 format and cleaned from metadata. This corpus was used to train the word vectors used to construct the RDT thesaurus. (40Gb)
 
 ## Evaluation Scripts
 
