@@ -8,7 +8,7 @@ description: "The RUSSE competition will perform a systematic comparison and eva
 
 **Keywords:** computational linguistics, natural language processing, lexical semantics, semantic similarity measures, semantic relations, semantic relation extraction, synonyms, hypernyms, co-hyponyms.
 
-**URI:** [http://russe.nlpub.ru/](http://russe.nlpub.ru/)
+**URL:** <http://russe.nlpub.org/>
 
 ## Motivation
 
