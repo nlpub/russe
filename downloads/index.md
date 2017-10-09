@@ -83,6 +83,7 @@ Evaluation scripts that can be used to measure performance of semantic relatedne
 
 If you use one of the datasets mentioned on this page please cite the following paper:
 
+{% raw %}
 ```
 @inbook{Panchenko:17:aist,
   author    = {Panchenko, Alexander and Ustalov, Dmitry and Arefyev, Nikolay and Paperno, Denis and Konstantinova, Natalia and Loukachevitch, Natalia and Biemann, Chris},
@@ -96,6 +97,6 @@ If you use one of the datasets mentioned on this page please cite the following 
   isbn      = {978-3-319-52920-2},
   doi       = {10.1007/978-3-319-52920-2_21},
   language  = {english},
-}}
+}
 ```
-
+{% endraw %}
