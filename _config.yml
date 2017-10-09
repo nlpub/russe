@@ -1,21 +1,22 @@
-title: Russian Semantic Similarity Evaluation
-description: The RUSSE competition will perform a systematic comparison and evaluation of the baseline and the most recent approaches to semantic similarity.
+title: Russian Semantic Evaluation
+description: The RUSSE competition will perform a systematic comparison and evaluation of the baseline and the most recent approaches to computational semantics.
 keywords: computational linguistics, natural language processing, lexical semantics, semantic similarity measures, semantic relations, semantic relation extraction, synonyms, hypernyms, co-hyponyms
-baseurl: ""
-url: "http://russe.nlpub.ru"
+baseurl: ''
+url: 'http://russe.nlpub.org'
 twitter_username: nlpub
 github_username: nlpub
 markdown: kramdown
+sass:
+  style: compressed
+plugins:
+- jekyll-redirect-from
+- jekyll-sitemap
+- jekyll-seo-tag
+- jekyll-feed
 exclude:
-  - Gemfile*
-  - README.md
-  - likely/source
-gems:
-  - jekyll-redirect-from
-  - jekyll-sitemap
-whitelist:
-  - jekyll-redirect-from
-  - jekyll-sitemap
+- Gemfile*
+- README.md
+- CNAME
 safe: true
 timezone: Europe/Moscow
 encoding: UTF-8

@@ -2,6 +2,7 @@ _site/
 .sass-cache/
 /Makefile
 /*.csv
+/*.tsv
 *.ini
 *.rb
 *.sql

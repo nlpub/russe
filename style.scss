@@ -1,0 +1,25 @@
+---
+---
+
+@charset "utf-8";
+
+$text: #333;
+$link: #00f;
+
+nav {
+    font-size: 115%;
+}
+
+@import "bulma/bulma.sass";
+
+body {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: underline;
+}
+
+p {
+    margin: 1em 0;
+}

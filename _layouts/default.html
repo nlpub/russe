@@ -1,31 +1,22 @@
----
-navigation:
-- text: Home
-  url: /
-- text: News
-  url: /news/
-- text: Call for Participation
-  url: /call/
-- text: Task Description
-  url: /task/
-- text: Results
-  url: /results/
-- text: <strong>Downloads</strong>
-  url: /downloads/
----
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 {% include head.html %}
+
 <body>
-<div id="layout">
+
 {% include menu.html %}
-<div id="content">
-{% include header.html %}
+
+<section class="section">
+<div class="container">
+<div class="content">
 {{ content }}
+</div>
+</div>
+</section>
+
 {% include footer.html %}
-</div>
-</div>
-{% include foot.html %}
+{% include metrika.html %}
+
 </body>
 </html>
