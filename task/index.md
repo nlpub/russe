@@ -197,5 +197,5 @@ We collected here pointers to some additional resources that you may find useful
 ### Useful tools
 
 * [PyMystem3](https://pypi.python.org/pypi/pymystem3/0.1.1) — a Python wrapper around Yandex Mystem.
-* [TreeTagger](http://nlpub.ru/TreeTagger) and [MaltParser](http://nlpub.ru/MaltParser) for Russian.  
+* [TreeTagger](https://nlpub.ru/TreeTagger) and [MaltParser](https://nlpub.ru/MaltParser) for Russian.
 * [Lucene](http://lucene.apache.org/) text search library.

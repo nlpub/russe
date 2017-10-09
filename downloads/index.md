@@ -14,11 +14,11 @@ This page contains several open language resources for semantic relatednes in Ru
 
 ## HJ: Human Judgements of Word Pairs
 
-HJ dataset contains human judgements on 398 word pairs that were translated to Russian from the widely used benchmarks for English: MC (Miller and Charles, 1991), RG (Rubenstein and Goodenough, 1965) and WordSim353 (Filkenstein et al., 2001). In order to collect human judgements, an in-house crowdsourcing system was used. Volunteers on Facebook and Twitter were invited to participate in the experiment. Each annotator has been provided with a random assignment consisting of 15 word pairs selected from the 398 preliminarily prepared pairs, and has been asked to assess the similarity of each pair. The possible options were “not similar at all”, “weak similarity”, “moderate similarity”, and “high similarity”. Ordinal Krippendorff’s alpha of 0.49 indicates a moderate agreement of annotators in this experiment. To evaluate a similarity measure using this dataset one should calculate Spearman’s rank correlation coefficient ρ between a vector of human judgments and the scores of a given system. 
+HJ dataset contains human judgements on 398 word pairs that were translated to Russian from the widely used benchmarks for English: MC (Miller and Charles, 1991), RG (Rubenstein and Goodenough, 1965) and WordSim353 (Filkenstein et al., 2001). In order to collect human judgements, an in-house crowdsourcing system was used. Volunteers on Facebook and Twitter were invited to participate in the experiment. Each annotator has been provided with a random assignment consisting of 15 word pairs selected from the 398 preliminarily prepared pairs, and has been asked to assess the similarity of each pair. The possible options were “not similar at all”, “weak similarity”, “moderate similarity”, and “high similarity”. Ordinal Krippendorff’s alpha of 0.49 indicates a moderate agreement of annotators in this experiment. To evaluate a similarity measure using this dataset one should calculate Spearman’s rank correlation coefficient ρ between a vector of human judgments and the scores of a given system.
 
-Below you can download either the complete HJ dataset featuring 398 pairs (recommened for most of the caseses), or separate parts of the dataset, namely MC (65 pairs), RG (30 pairs) or WordSim353 (353 apirs). Note, that the WordSim353 is further sub-divided into similarity and relatedness datasets. 
+Below you can download either the complete HJ dataset featuring 398 pairs (recommened for most of the caseses), or separate parts of the dataset, namely MC (65 pairs), RG (30 pairs) or WordSim353 (353 apirs). Note, that the WordSim353 is further sub-divided into similarity and relatedness datasets.
 
-* [**Download HJ dataset**](https://github.com/nlpub/russe-evaluation/blob/master/russe/evaluation/hj.csv) in the CSV format “word-i word-j similarity-ij”. 
+* [**Download HJ dataset**](https://github.com/nlpub/russe-evaluation/blob/master/russe/evaluation/hj.csv) in the CSV format “word-i word-j similarity-ij”.
 * [**Download MC dataset**](https://github.com/nlpub/russe-evaluation/blob/master/russe/evaluation/hj-mc.csv) in the CSV format “word-i word-j similarity-ij”
 * [**Download RG dataset**](https://github.com/nlpub/russe-evaluation/blob/master/russe/evaluation/hj-rg.csv) in the CSV format “word-i word-j similarity-ij”
 * [**Download WordSim353 dataset (similarity)**](https://github.com/nlpub/russe-evaluation/blob/master/russe/evaluation/hj-wordsim353-similarity.csv) in the CSV format “word-i word-j similarity-ij”
@@ -69,7 +69,7 @@ These datasets are also available on Zenodo: <https://zenodo.org/record/163857>.
 * Number of relations in the thesaurus: 193,909,130
 
 
-The resulting DT is a CSV file that can be simply used from any environment. 
+The resulting DT is a CSV file that can be simply used from any environment.
 
 * [**Download RDT dataset**](http://panchenko.me/data/russe/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz) in the CSV format “word-i word-j similarity-ij” [mirror at Zenodo](https://zenodo.org/record/163857/files/all.norm-sz500-w10-cb0-it3-min5.w2v.vocab_1100000_similar250.gz) (1.8 Gb)
 * [**Download word vectors**](http://panchenko.me/data/dsl-backup/w2v-ru/all.norm-sz500-w10-cb0-it3-min5.w2v) used to generate the RDT in the format of [word2vec](https://code.google.com/p/word2vec/). To [load word vectors](https://github.com/nlpub/russe-evaluation/tree/master/russe/measures/word2vec) with GenSim  you will need at least 17-19Gb of RAM to load the vectors. [mirror at Zenodo](https://zenodo.org/record/400631#.WOJdXRKGPdQ) (14 Gb)
@@ -81,15 +81,21 @@ Evaluation scripts that can be used to measure performance of semantic relatedne
 
 ## Citation in Scientific Papers
 
-If you use one of the datasets mentioned on this page please cite the following paper: 
+If you use one of the datasets mentioned on this page please cite the following paper:
 
 ```
-@incollection{panchenko2016human,
-  title={Human and Machine Judgements for Russian Semantic Relatedness},
-  author={Panchenko, Alexander and Ustalov, Dmitry and Arefyev, Nikolay and Paperno, Denis and Konstantinova, Natalia and Loukachevitch, Natalia  and Biemann, Chris},
-  booktitle={Analysis of Images, Social Networks and Texts (AIST'2016)},
-  year={2016},
-  publisher={Springer}
-}
+@inbook{Panchenko:17:aist,
+  author    = {Panchenko, Alexander and Ustalov, Dmitry and Arefyev, Nikolay and Paperno, Denis and Konstantinova, Natalia and Loukachevitch, Natalia and Biemann, Chris},
+  title     = {{Human and Machine Judgements for Russian Semantic Relatedness}},
+  booktitle = {Analysis of Images, Social Networks and Texts: 5th International Conference, AIST 2016, Yekaterinburg, Russia, April 7-9, 2016, Revised Selected Papers},
+  editor    = {Ignatov, Dmitry I. and others},
+  year      = {2017},
+  publisher = {Springer International Publishing},
+  address   = {Cham},
+  pages     = {221--235},
+  isbn      = {978-3-319-52920-2},
+  doi       = {10.1007/978-3-319-52920-2_21},
+  language  = {english},
+}}
 ```
 
