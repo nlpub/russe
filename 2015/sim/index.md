@@ -12,6 +12,8 @@ Semantic similarity measures proved to be useful for text processing application
 
 Measures of semantic similarity is an actively developing field of computational linguistics. Many methods were proposed and tested during last 20 years. Recently with the advent of neural network language models yielding state-of-the-art results on the semantic similarity task the interest to this field increased even more. Many authors tried to performed exhaustive comparisons of semantic similarity measures and developed a whole range of benchmarks and evaluations datasets. See [Lee (1999)](#Lee99), [Agirre et al. (2009)](#Agirre09), [Ferret (2010)](#Ferret10), [Panchenko (2013)](#Panchenko13) and [Baroni (2014)](#Baroni14) for an overview of the current approaches for English.
 
+A brief description of the present study is available at <https://nlpub.ru/RUSSE> in Russian.
+
 ## Contribution
 
 Unfortunately, most of the approaches to semantic similarity were implemented and evaluated only on a handful of European languages, mostly in English. While some Russian researchers sporadically tried to adopt several methods developed for English, these efforts were mostly done in a context of some specific applications without any proper evaluation. To the best of our knowledge, no systematic investigation of semantic similarity measures of Russian language was ever performed.

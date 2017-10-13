@@ -8,6 +8,8 @@ description: "The RUSSE competition will perform a systematic comparison and eva
 
 TBP
 
+A brief description of the present study is available at <https://nlpub.ru/RUSSE> in Russian.
+
 <h2 class="title">References</h2>
 
 * Watset
