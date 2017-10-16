@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Russian Word Sense Induction Evaluation
-description: "The RUSSE competition will perform a systematic comparison and evaluation of the baseline and the most recent approaches to word sense induction."
+description: "The RUSSE competition will perform a systematic comparison and evaluation of the baseline and the most recent approaches to word sense induction and disambuguation."
 ---
 
-# A Shared Task on Word Sense Induction and Disambiguation for the Russian Language</h1>
+# A Shared Task on Word Sense Induction and Disambiguation for the Russian Language
 
 We invite you to participate in the shared task on Word Sense Induction and Disambiguation for the Russian Language co-located with the [Dialogue 2018 conference](http://www.dialog-21.ru/en/). 
 
@@ -86,7 +86,7 @@ Please consider the example of the data format we offer: input.tsv, output.tsv. 
 
 * Miller, T., Erbs, N., Zorn, H.-P., Zesch, T., and Gurevych, I. (2013). [DKPro WSD: A Generalized UIMA-based Framework for Word Sense Disambiguation](https://aclweb.org/anthology/P13-4007). In Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics: System Demonstrations, pages 37–42, Sofia, Bulgaria. Association for Computational Linguistics.
 
-* Navigli, R. (2012). [A Quick Tour of Word Sense Disambiguation, Induction and Related Approaches](https://doi.org/10.1007/978-3-642-27660-6_10). In SOFSEM 2012: Theory and Practice of Computer Science: 38th Conference on Current Trends in Theory and Practice of Computer Science, pages 115–129, Špindlerův Mlýn, Czech Republic. Springer
+* Navigli, R. (2012). [A Quick Tour of Word Sense Disambiguation, Induction and Related Approaches](https://doi.org/10.1007/978-3-642-27660-6_10). In SOFSEM 2012: Theory and Practice of Computer Science: 38th Conference on Current Trends in Theory and Practice of Computer Science, pages 115–129, Špindlerův Mlýn, Czech Republic. Springer.
 
 * Panchenko, A., Fide, M., Ruppert, E., Faralli, S., Ustalov, D., Ponzetto, S. P., and Biemann, C. (2017). [Unsupervised, Knowledge-Free, and Interpretable Word Sense Disambiguation](https://aclweb.org/anthology/D/D17/D17-2016.pdf). In Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing: System Demonstrations, pages 91–96, Copenhagen, Denmark. Association for Computational Linguistics.
 
