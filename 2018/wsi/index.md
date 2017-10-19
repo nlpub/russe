@@ -63,7 +63,7 @@ The results of the shared task will be disseminated and discussed at the [24th I
 
 ## Data Formats
 
-We use the textual data format for both input and output data. Particularly, it is the TSV file format with the following columns:
+We use the textual data format for both input and output data. Particularly, it is the [TSV](https://en.wikipedia.org/wiki/Tab-separated_values) file format with the following columns:
 
 * ```context_id```: the number of the context;
 * ```word```: the subject for disambiguation;
@@ -72,7 +72,7 @@ We use the textual data format for both input and output data. Particularly, it 
 * ```positions```: the word positions in the context;
 * ```context```: the text fragment containing the target word.
 
-Please consider the example of the data format we offer: input.tsv, output.tsv. Note that the participating system should fill the empty predict_sense_id field with the sense predicted by the system.
+Please consider the example of the data format we offer: input.tsv, output.tsv. Note that the participating system should fill the empty `predict_sense_id` field with the sense predicted by the system.
 
 ## Contacts
 
