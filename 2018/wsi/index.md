@@ -10,9 +10,9 @@ We invite you to participate in the shared task on Word Sense Induction and Disa
 
 ## Motivation
 
-Word Sense Induction (WSI) is the process of automatic identification of the word senses. While evaluation of various sense induction and disambiguation approaches was performed in the past for the Western European languages, e.g., English, French, and German, no systematic evaluation of WSI for [Slavic languages](http://sigslav.cs.helsinki.fi) is available at the moment. This shared task makes a first step towards bridging this gap by setting up a shared task on one Slavic language. The goal of this task is to compare sense induction and disambiguation systems for the Russian language. Many Slavic languages still do not have broad coverage lexical resources available in English, such as WordNet, which provide a comprehensive inventory of senses. Therefore, word sense induction methods investigated in this shared task can be of great value to enable semantic processing of Slavic languages.  
+Word Sense Induction (WSI) is the process of automatic identification of the word senses. While evaluation of various sense induction and disambiguation approaches was performed in the past for the Western European languages, e.g., English, French, and German, no systematic evaluation of WSI for [Slavic languages](http://sigslav.cs.helsinki.fi) is available at the moment. This shared task makes a first step towards bridging this gap by setting up a shared task on one Slavic language. The goal of this task is to compare sense induction and disambiguation systems for the Russian language. Many Slavic languages still do not have broad coverage lexical resources available in English, such as WordNet, which provide a comprehensive inventory of senses. Therefore, word sense induction methods investigated in this shared task can be of great value to enable semantic processing of Slavic languages.
 
-If you are interested in participation, please [register using this form](https://goo.gl/forms/fnTNOwk4PrsZySX82) by the 15th of November.  A brief description of the present study in Russian is available at [NLPub](https://nlpub.ru/RUSSE).
+If you are interested in participation, please [register using this form](https://goo.gl/forms/fnTNOwk4PrsZySX82) by the 15th of November. A brief description of the present study in Russian is available on [NLPub](https://nlpub.ru/RUSSE).
 
 ## Task Description
 
@@ -38,7 +38,7 @@ Similarly to SemEval 2010 Task 14 WSI&D, we use a gold standard, where each ambi
 
 ### Baseline Systems
 
-We will offer a simple open source baseline system that will demonstrate the task, the input and output data formats as well as the used quality measure. For the knowledge-free track, we particularly encourage participation of various systems based on unsupervised word sense embeddings, e.g., AdaGram. For the knowledge-rich track, word sense embeddings based on inventories based of lexical resources, e.g., AutoExtend, can be obtained on the basis of lexical resources such as [RuThes](http://www.labinform.ru/pub/ruthes/index.htm) and [RuWordNet](http://ruwordnet.ru/ru/).   
+We will offer a simple open source baseline system that will demonstrate the task, the input and output data formats as well as the used quality measure. For the knowledge-free track, we particularly encourage participation of various systems based on unsupervised word sense embeddings, e.g., AdaGram. For the knowledge-rich track, word sense embeddings based on inventories based of lexical resources, e.g., AutoExtend, can be obtained on the basis of lexical resources such as [RuThes](http://www.labinform.ru/pub/ruthes/index.htm) and [RuWordNet](http://ruwordnet.ru/ru/).
 
 ## Dissemination of the Results
 
@@ -74,9 +74,9 @@ We use the textual data format for both input and output data. Particularly, it 
 
 Please consider the example of the data format we offer: input.tsv, output.tsv. Note that the participating system should fill the empty predict_sense_id field with the sense predicted by the system.
 
-## Contact the organizers
+## Contacts
 
-To answer a question post a message to rusemantics@googlegroups.com or post it via the GoogleGroup: https://groups.google.com/forum/?fromgroups#!forum/rusemantics. To follow the updates also join the Facebook group at https://www.facebook.com/rusemantics. 
+To answer a question post a message to [mailto:rusemantics@googlegroups.com](rusemantics@googlegroups.com) or post it via the Google Groups: <https://groups.google.com/forum/?fromgroups#!forum/rusemantics>. To follow the updates also join the Facebook group at <https://www.facebook.com/rusemantics>.
 
 ## References to Prior Work
 
