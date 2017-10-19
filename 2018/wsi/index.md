@@ -32,6 +32,19 @@ The advantage of our setting is that virtually any existing word sense disambigu
 
 We will provide training datasets, which can be used for development of the models. Later, test datasets will be released: The participants will need to use the developed models to disambiguate the test sentences and submit their final results to the organisers. Training and testing datasets will use the same corpora and annotations approaches, but the target words will be different for training and testing datasets.
 
+### Data format
+
+Data will be available as tab-separated (tsv) files, one file for seach dataset. One file contains multiple contexts for multiple words. Training and testing data use the same format. Each file will contain the following fields:
+
+* ``context_id`` - context identifier, unique across the current file. Example: "1".
+* ``word`` - target word for disambiguation. Example: "граф".
+* ``gold_sense_id`` - label of correct sense. Example: "2".
+* ``predict_sense_id`` - label of predicted sense. Example: "5". It is empty initially and needs to be filled by participants.
+* ``positions`` - positions of target word in context (both ends are included). Example: "0-3,132-137"
+* ``context`` - context in which target word must be disambiguated. Example: "Граф - это структура данных. Кроме этого, в дискретной математике теория графов является".
+
+An example of 10 contexts for two words in this format is available [here](https://github.com/nlpub/russe/blob/gh-pages/2018/wsi/example.tsv). This is a tab separated file with header, without quote chars between fields, each entry fits in one line (there are no line breaks inside fields). Encoding is UTF-8.
+
 ### Quality Measure
 
 Similarly to SemEval 2010 Task 14 WSI&D, we use a gold standard, where each ambiguous target word is provided with a set of instances, i.e., the contextscontaining the word. Each instance is manually annotated with the single sense identifier according to a predefined sense inventory. Each participating system assigns the sense labels for these ambiguous words, which can be viewed as a clustering of instances, according to sense labels. To evaluate a system, the system's labelling of contexts is compared to the gold standard labelling. We use the Adjusted Rand Index (ARI) as the quantitative measure of the clustering.
