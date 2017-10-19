@@ -74,6 +74,10 @@ We use the textual data format for both input and output data. Particularly, it 
 
 Please consider the example of the data format we offer: input.tsv, output.tsv. Note that the participating system should fill the empty predict_sense_id field with the sense predicted by the system.
 
+## Contact the organizers
+
+To answer a question post a message to rusemantics@googlegroups.com or post it via the GoogleGroup: https://groups.google.com/forum/?fromgroups#!forum/rusemantics. To follow the updates also join the Facebook group at https://www.facebook.com/rusemantics. 
+
 ## References to Prior Work
 
 * Bartunov, S., Kondrashkin, D., Osokin, A., and Vetrov, D. P. (2016). [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://proceedings.mlr.press/v51/bartunov16.html). Journal of Machine Learning Research, 51:130–138.
