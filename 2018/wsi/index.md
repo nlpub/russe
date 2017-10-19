@@ -78,6 +78,23 @@ Please consider the example of the data format we offer: input.tsv, output.tsv. 
 
 To answer a question post a message to [rusemantics@googlegroups.com](mailto:rusemantics@googlegroups.com) or post it via [Google Groups](https://groups.google.com/forum/?fromgroups#!forum/rusemantics). To follow the updates also join the Facebook group at <https://www.facebook.com/rusemantics>.
 
+## Partners
+
+<div class="tile is-ancestor is-vcentered">
+  <div class="tile is-2 has-text-centered">
+    <a href="http://dialog-21.ru/en/"><img src="https://nlpub.ru/images/5/55/Dialogue.png" alt="Dialogue"></a>
+  </div>
+  <div class="tile is-2 has-text-centered">
+    <a href="https://nlpub.ru/NLPub:About"><img src="https://nlpub.ru/images/thumb/a/aa/NLPub.svg/240px-NLPub.svg.png" alt="NLPub"></a>
+  </div>
+  <div class="tile is-2 has-text-centered">
+    <a href="http://mospolytech.ru/?eng"><img src="http://mospolytech.ru/storage/b53b3a3d6ab90ce0268229151c9bde11/images/Logo2.jpg" alt="Moscow Polytech"></a>
+  </div>
+  <div class="tile is-2 has-text-centered">
+    <a href="https://www.uni-hamburg.de/"><img src="http://www.echord.info/file/Attachments/Tmp/1xf2mp74gd66a/UHH_Logo.jpg" alt="Universität Hamburg"></a>
+  </div>
+</div>
+
 ## References to Prior Work
 
 * Bartunov, S., Kondrashkin, D., Osokin, A., and Vetrov, D. P. (2016). [Breaking Sticks and Ambiguities with Adaptive Skip-gram](http://proceedings.mlr.press/v51/bartunov16.html). Journal of Machine Learning Research, 51:130–138.
