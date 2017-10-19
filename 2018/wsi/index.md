@@ -12,7 +12,7 @@ We invite you to participate in the shared task on Word Sense Induction and Disa
 
 Word Sense Induction (WSI) is the process of automatic identification of the word senses. While evaluation of various sense induction and disambiguation approaches was performed in the past for the Western European languages, e.g., English, French, and German, no systematic evaluation of WSI for [Slavic languages](http://sigslav.cs.helsinki.fi) is available at the moment. This shared task makes a first step towards bridging this gap by setting up a shared task on one Slavic language. The goal of this task is to compare sense induction and disambiguation systems for the Russian language. Many Slavic languages still do not have broad coverage lexical resources available in English, such as WordNet, which provide a comprehensive inventory of senses. Therefore, word sense induction methods investigated in this shared task can be of great value to enable semantic processing of Slavic languages.
 
-If you are interested in participation, please [register using this form](https://goo.gl/forms/fnTNOwk4PrsZySX82) by the 15th of November. A brief description of the present study in Russian is available on [NLPub](https://nlpub.ru/RUSSE).
+If you are interested in participation, please [register using this form](https://goo.gl/forms/fnTNOwk4PrsZySX82) by the 15th of November. A brief description of the present study in Russian is available at <https://nlpub.ru/RUSSE>.
 
 ## Task Description
 
@@ -76,7 +76,7 @@ Please consider the example of the data format we offer: input.tsv, output.tsv. 
 
 ## Contacts
 
-To answer a question post a message to [mailto:rusemantics@googlegroups.com](rusemantics@googlegroups.com) or post it via the Google Groups: <https://groups.google.com/forum/?fromgroups#!forum/rusemantics>. To follow the updates also join the Facebook group at <https://www.facebook.com/rusemantics>.
+To answer a question post a message to [rusemantics@googlegroups.com](mailto:rusemantics@googlegroups.com) or post it via [Google Groups](https://groups.google.com/forum/?fromgroups#!forum/rusemantics). To follow the updates also join the Facebook group at <https://www.facebook.com/rusemantics>.
 
 ## References to Prior Work
 
