@@ -81,18 +81,27 @@ To answer a question post a message to [rusemantics@googlegroups.com](mailto:rus
 
 ## Partners
 
-<div class="tile is-ancestor is-vcentered">
-  <div class="tile is-2 has-text-centered">
-    <a href="http://dialog-21.ru/en/"><img src="https://nlpub.ru/images/5/55/Dialogue.png" alt="Dialogue"></a>
+<div class="columns is-mobile is-vcentered">
+  <div class="column is-2 has-text-centered">
+    <a href="http://dialog-21.ru/en/"><img src="http://www.dialog-21.ru/media/3860/logo_2017.png" alt="Dialogue"></a>
   </div>
-  <div class="tile is-2 has-text-centered">
+  <div class="column is-1 has-text-centered">
     <a href="https://nlpub.ru/NLPub:About"><img src="https://nlpub.ru/images/thumb/a/aa/NLPub.svg/240px-NLPub.svg.png" alt="NLPub"></a>
   </div>
-  <div class="tile is-2 has-text-centered">
-    <a href="http://mospolytech.ru/?eng"><img src="http://mospolytech.ru/storage/b53b3a3d6ab90ce0268229151c9bde11/images/Logo2.jpg" alt="Moscow Polytech"></a>
+  <div class="column is-2 has-text-centered">
+    <a href="http://mospolytech.ru/?eng"><img src="http://mospolytech.ru/img_new/mpu_logo_main_en.png" alt="Moscow Polytech"></a>
   </div>
-  <div class="tile is-2 has-text-centered">
+  <div class="column is-1 has-text-centered">
     <a href="https://www.uni-hamburg.de/"><img src="http://www.echord.info/file/Attachments/Tmp/1xf2mp74gd66a/UHH_Logo.jpg" alt="Universität Hamburg"></a>
+  </div>
+  <div class="column is-1 has-text-centered">
+    <a href="https://www.msu.ru/en/"><img src="http://www.math.msu.ru/conference/wp-content/uploads/2016/03/logo-msu-300x296.png" alt="Moscow State University"></a>
+  </div>
+  <div class="column is-1 has-text-centered">
+    <a href="https://www.hse.ru/en/"><img src="https://www.hse.ru/data/2012/01/19/1263884289/logo_с_hse_cmyk_e.png" alt="Higher School of Economics"></a>
+  </div>
+  <div class="column is-2 has-text-centered">
+    <a href="http://www.imm.uran.ru/eng"><img src="http://www.imm.uran.ru/eng/SiteAssets/logo_IMM_v4-2_draft.PNG" alt="Krasovskii Institute of Mathematics and Mechanics"></a>
   </div>
 </div>
 
