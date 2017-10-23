@@ -60,6 +60,7 @@ The results of the shared task will be disseminated and discussed at the [24th I
 * Anastasiya Lopukhina, Neurolinguistics Laboratory, National Research University Higher School of Economics & Russian Language Institute of the Russian Academy of Sciences
 * Nikolay Arefyev, Moscow State University & Samsung Research
 * Natalia Loukachevitch, Moscow State University
+* Aleksey Leontyev, ABBYY
 
 ## Data Formats
 
