@@ -84,7 +84,7 @@ To answer a question post a message to [rusemantics@googlegroups.com](mailto:rus
 
 <div class="columns is-mobile is-vcentered">
   <div class="column is-2">
-    <a href="http://dialog-21.ru/en/"><img src="http://www.dialog-21.ru/media/3860/logo_2017.png" alt="Dialogue"></a>
+    <a href="http://dialog-21.ru/en/"><img src="https://nlpub.ru/images/thumb/2/22/Dialogue.svg/627px-Dialogue.svg.png" alt="Dialogue"></a>
   </div>
   <div class="column is-1">
     <a href="https://nlpub.ru/NLPub:About"><img src="https://nlpub.ru/images/thumb/a/aa/NLPub.svg/240px-NLPub.svg.png" alt="NLPub"></a>
