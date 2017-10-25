@@ -7,6 +7,20 @@ keywords: news, semantic similarity, relatedness, association, RUSSE
 
 # News
 
+
+<article markdown="1">
+## 15/10/2017 — ABBYY to support the RUSSE
+
+We are pleased to announce a new collaboration with the ABBYY company those experts will help in preparation of the datasets for the shared task [word sense induction and disambiguation](/2018/wsi/). 
+</article>
+
+<article markdown="1">
+## 15/10/2017 — A Shared Task on Word Sense Induction and Disambibutation for the Russian Language
+
+Second edition of the RUSSE is [announced](/2018/wsi/). The task is dedicated to Word Sense Induction (WSI) is the process of automatic identification of the word senses.
+</article>
+
+
 <article markdown="1">
 ## 10/04/2016 — Russian Semantic Relatedness
 
