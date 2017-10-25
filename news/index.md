@@ -9,7 +9,7 @@ keywords: news, semantic similarity, relatedness, association, RUSSE
 
 
 <article markdown="1">
-## 15/10/2017 — ABBYY to support the RUSSE
+## 25/10/2017 — ABBYY supports a shared task 
 
 We are pleased to announce a new collaboration with the ABBYY company those experts will help in preparation of the datasets for the shared task [word sense induction and disambiguation](/2018/wsi/). 
 </article>
@@ -22,7 +22,7 @@ Second edition of the RUSSE is [announced](/2018/wsi/). The task is dedicated to
 
 
 <article markdown="1">
-## 10/04/2016 — Russian Semantic Relatedness
+## 10/04/2016 — Datasets on Russian Semantic Relatedness 
 
 We have [published](/downloads/) several open language resources for semantic relatedness in Russian language.
 </article>
