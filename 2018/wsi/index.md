@@ -125,4 +125,6 @@ To answer a question post a message to [rusemantics@googlegroups.com](mailto:rus
 
 * Panchenko, A., Fide, M., Ruppert, E., Faralli, S., Ustalov, D., Ponzetto, S. P., and Biemann, C. (2017). [Unsupervised, Knowledge-Free, and Interpretable Word Sense Disambiguation](https://aclweb.org/anthology/D/D17/D17-2016.pdf). In Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing: System Demonstrations, pages 91–96, Copenhagen, Denmark. Association for Computational Linguistics.
 
+* Pelevina M., Arefyev N., Biemann C., Panchenko A. (2016): [Making Sense of Word Embeddings](http://anthology.aclweb.org/W16-1620). In Proceedings of the 1st Workshop on Representation Learning for NLP co-located with the ACL conference. Berlin, Germany. Association for Computational Linguistics
+
 * Ustalov, D., Panchenko, A., and Biemann, C. (2017). [Watset: Automatic Induction of Synsets from a Graph of Synonyms](https://doi.org/10.18653/v1/P17-1145). In: Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pages 1579–1590, Vancouver, Canada. Association for Computational Lingustics.
