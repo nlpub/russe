@@ -38,7 +38,8 @@ Similarly to SemEval 2010 Task 14 WSI&D, we use a gold standard, where each ambi
 
 ### Baseline Systems
 
-We will offer a simple open source baseline system that will demonstrate the task, the input and output data formats as well as the used quality measure. For the knowledge-free track, we particularly encourage participation of various systems based on unsupervised word sense embeddings, e.g., AdaGram. For the knowledge-rich track, word sense embeddings based on inventories based of lexical resources, e.g., AutoExtend, can be obtained on the basis of lexical resources such as [RuThes](http://www.labinform.ru/pub/ruthes/index.htm) and [RuWordNet](http://ruwordnet.ru/ru/).
+We will offer simple baselines that demonstrate the task and the data formats. For the knowledge-free track, we particularly encourage participation of various systems based on unsupervised word sense embeddings, e.g. AdaGram. For the knowledge-rich track, word sense embeddings based on inventories based of lexical resources, e.g., AutoExtend, can be obtained on the basis of lexical resources such as [RuThes](http://www.labinform.ru/pub/ruthes/index.htm) and [RuWordNet](http://ruwordnet.ru/ru/).
+
 
 ## Dissemination of the Results
 
@@ -52,18 +53,23 @@ The results of the shared task will be disseminated and discussed at the [24th I
 * **Submission of the Results**: January 15, 2018.
 * **Results of the Shared Task**: February 1, 2018.
 
-## Organizers
+## Participation in the Task: Instructions
 
-* Alexander Panchenko, University of Hamburg
-* Dmitry Ustalov, Krasovskii Institute of Mathematics and Mechanics
-* Konstantin Lopukhin, Scrapinghub Inc.
-* Anastasiya Lopukhina, Neurolinguistics Laboratory, National Research University Higher School of Economics & Russian Language Institute of the Russian Academy of Sciences
-* Nikolay Arefyev, Moscow State University & Samsung Research
-* Natalia Loukachevitch, Moscow State University
-* Aleksey Leontyev, ABBYY
+Please follow instruction in this section to participate in the task. 
 
-## Data Formats
+### Flow of the Task and the Deadlines
 
+The important dates are listed above. We publically share the training datasets on the **1st of November 2017**. 
+The participants will have six weeks until the December 15 to develop their models using these training data. 
+On the **15 of December 2015** we will release test data and participants will be able to make real submissions
+during four weeks until the **January 15 2018**. Note that the training dataset and test dataset contain various words:
+you cannot simply learn a disambiguation model from a train dataset and apply it to the test data as the target 
+words will be different. Instead participants will need to induce word senses of the words in the test dataset.
+
+### Data Formats
+
+In this shared task we use only one dataformat for both train and test datasets, but also for submissions of the 
+results of the participants. 
 We use the textual data format for both input and output data. Particularly, it is the UTF-8 encoded [TSV](https://en.wikipedia.org/wiki/Tab-separated_values) file format with the following columns:
 
 * ```context_id```: context identifier, unique across the current file. Example: "1".
@@ -75,6 +81,38 @@ We use the textual data format for both input and output data. Particularly, it 
 There will be one file for each dataset, containing contexts for multiple words.
 Please consider the example of the data format we offer: [input.tsv](https://github.com/nlpub/russe/blob/gh-pages/2018/wsi/input.tsv), [output.tsv](https://github.com/nlpub/russe/blob/gh-pages/2018/wsi/output.tsv). Note that the participating system should fill the empty `predict_sense_id` field with the sense predicted by the system.
 
+<!--
+
+### Datasets
+
+This section lists the datasts
+
+1. Wikipedia. 
+
+2. RNC. 
+
+3. Dictionary.
+
+### Running the Evaluation
+
+### Baselines and Pointers to Useful Resources
+
+- KB systems
+- corpora
+- sense inventories
+
+-->
+
+
+## Organizers
+
+* Alexander Panchenko, University of Hamburg
+* Dmitry Ustalov, Krasovskii Institute of Mathematics and Mechanics
+* Konstantin Lopukhin, Scrapinghub Inc.
+* Anastasiya Lopukhina, Neurolinguistics Laboratory, National Research University Higher School of Economics & Russian Language Institute of the Russian Academy of Sciences
+* Nikolay Arefyev, Moscow State University & Samsung Research
+* Natalia Loukachevitch, Moscow State University
+* Aleksey Leontyev, ABBYY
 
 ## Contacts
 
