@@ -7,7 +7,7 @@ layout: default
 {{ content }}
 </div>
 <div class="column">
-<h2>Recent News</h2>
+<h2>Recent <a href="{{ "/news/" | prepend: site.baseurl }}">News</a></h2>
 <ul>
 {% for post in site.posts limit:5 %}
 <li>
@@ -16,6 +16,6 @@ layout: default
 </li>
 {% endfor %}
 </ul>
-<p>We also offer an Atom <a href="{{ "feed.xml"  | prepend: site.baseurl }}">feed</a>.</p>
+<p>We also offer an Atom <a href="{{ "feed.xml" | prepend: site.baseurl }}">feed</a>.</p>
 </div>
 </div>
