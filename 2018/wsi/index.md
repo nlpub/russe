@@ -116,7 +116,7 @@ This section lists the datasts
 
 ## Contacts
 
-To answer a question post a message to [rusemantics@googlegroups.com](mailto:rusemantics@googlegroups.com) or post it via [Google Groups](https://groups.google.com/forum/?fromgroups#!forum/rusemantics). To follow the updates also join the Facebook group at <https://www.facebook.com/rusemantics>.
+To answer a question post a message to [rusemantics@googlegroups.com](mailto:rusemantics@googlegroups.com) or post it via [Google Groups](https://groups.google.com/forum/?fromgroups#!forum/rusemantics). To follow the updates also join the Facebook group at <https://www.facebook.com/rusemantics>. Discussions in Russian are also available at <https://qa.nlpub.ru/c/russe>.
 
 ## Partners
 
