@@ -85,12 +85,12 @@ Please consider the example of the data format we offer: [input.tsv](https://git
 ## Organizers
 
 * Alexander Panchenko, University of Hamburg
-* Dmitry Ustalov, Krasovskii Institute of Mathematics and Mechanics
 * Konstantin Lopukhin, Scrapinghub Inc.
 * Anastasiya Lopukhina, Neurolinguistics Laboratory, National Research University Higher School of Economics & Russian Language Institute of the Russian Academy of Sciences
+* Dmitry Ustalov, Krasovskii Institute of Mathematics and Mechanics
 * Nikolay Arefyev, Moscow State University & Samsung Research
-* Natalia Loukachevitch, Moscow State University
 * Aleksey Leontyev, ABBYY
+* Natalia Loukachevitch, Moscow State University
 
 ## Contacts
 
