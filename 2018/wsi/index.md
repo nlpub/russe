@@ -6,7 +6,7 @@ description: "The RUSSE competition will perform a systematic comparison and eva
 
 # A Shared Task on Word Sense Induction and Disambiguation for the Russian Language
 
-We invite you to participate in the shared task on Word Sense Induction and Disambiguation for the Russian Language co-located with the [Dialogue 2018 conference](http://www.dialog-21.ru/en/). **The train dataset and detailed instructions for participants are available at our [Github repository](https://nlpub.github.io/russe-wsi-kit/)**. **TLDR**: You are given a word, e.g. ```"замок"``` and a bunch of text fragments (aka "contexts") where this word occurrs, e.g. ```"замок владимира мономаха в любече"``` and  ```"передвижению засова ключом в замке"```. You need to cluster these contexts in the (unknown in advance) number of clusters which correspond to various senses of the word. In this example you want to have two groups with the contexts of the "lock" and the "castle" senses of the word ```"замок"```. 
+We invite you to participate in the shared task on Word Sense Induction and Disambiguation for the Russian Language co-located with the [Dialogue 2018 conference](http://www.dialog-21.ru/en/). **The train dataset and detailed instructions for participants are available at our [GitHub repository](https://nlpub.github.io/russe-wsi-kit/)**. **TLDR**: You are given a word, e.g. ```"замок"``` and a bunch of text fragments (aka "contexts") where this word occurrs, e.g. ```"замок владимира мономаха в любече"``` and  ```"передвижению засова ключом в замке"```. You need to cluster these contexts in the (unknown in advance) number of clusters which correspond to various senses of the word. In this example you want to have two groups with the contexts of the "lock" and the "castle" senses of the word ```"замок"```.
 
 ## Motivation
 
@@ -16,7 +16,7 @@ If you are interested in participation, please [register using this form](https:
 
 ## Task Description
 
-The shared task is structurally similar to prior WSI tasks for the English language, such as [SemEval 2007 WSI](http://semeval2.fbk.eu/semeval2.php?location=tasks&taskid=2) and [SemEval 2010 WSI&D](https://www.cs.york.ac.uk/semeval2010_WSI/) tasks. 
+The shared task is structurally similar to prior WSI tasks for the English language, such as [SemEval 2007 WSI](http://semeval2.fbk.eu/semeval2.php?location=tasks&taskid=2) and [SemEval 2010 WSI&D](https://www.cs.york.ac.uk/semeval2010_WSI/) tasks.
 We use the “lexical sample” settings. Namely, we provide the participants with the set of contexts representing examples of ambiguous words, like the word “bank” in “In geography, the word **bank** generally refers to the land alongside a body of water.” For each context, a participant needs to disambiguate one target word. Note that, we do not provide any sense inventory: the participant can assign sense identifiers of their choice to a context, e.g., “bank#1” or “bank (area)”.
 
 ### Tracks
@@ -40,7 +40,6 @@ Similarly to SemEval 2010 Task 14 WSI&D, we use a gold standard, where each ambi
 
 We provide a state-of-the-art baseline that demonstrate the task and the data formats. For the knowledge-free track, we particularly encourage participation of various systems based on unsupervised word sense embeddings, e.g. AdaGram. For the knowledge-rich track, word sense embeddings based on inventories based of lexical resources, e.g., AutoExtend, can be obtained on the basis of lexical resources such as [RuThes](http://www.labinform.ru/pub/ruthes/index.htm) and [RuWordNet](http://ruwordnet.ru/ru/).
 
-
 ## Dissemination of the Results
 
 The results of the shared task will be disseminated and discussed at the [24th International Conference on Computational Linguistics and Intellectual Technologies Dialogue 2018](http://www.dialog-21.ru/en/): the proceedings are indexed by Scopus. Training and the test datasets will be published online to foster future research and developments.
@@ -55,16 +54,13 @@ The results of the shared task will be disseminated and discussed at the [24th I
 
 ## Participation in the Task: Instructions
 
-**Train datasets are already online**. You can start working on the development of our models. The detailed instructions are available at our [Github repository](https://nlpub.github.io/russe-wsi-kit/). Please follow instruction in this repository to participate in the task and write us a question if something is not clear. 
+**Train datasets are already online**. You can start working on the development of our models. The detailed instructions are available at our [Github repository](https://nlpub.github.io/russe-wsi-kit/). Please follow instruction in this repository to participate in the task and write us a question if something is not clear.
 
 ### Flow of the Task and the Deadlines
 
-The important dates are listed above. We publically share the training datasets on the **1st of November 2017**. 
-The participants will have six weeks until the December 15 to develop their models using these training data. 
-On the **15 of December 2015** we will release test data and participants will be able to make real submissions
-during four weeks until the **January 15 2018**. Note that the training dataset and test dataset contain various words:
-you cannot simply learn a disambiguation model from a train dataset and apply it to the test data as the target 
-words will be different. Instead participants will need to induce word senses of the words in the test dataset.
+The important dates are listed above. We publically share the training datasets on the **1st of November 2017**. The participants will have six weeks until the December 15 to develop their models using these training data.
+
+On the **15 of December 2017** we will release test data and participants will be able to make real submissions during four weeks until the **January 15 2018**. Note that the training dataset and test dataset contain various words: you cannot simply learn a disambiguation model from a train dataset and apply it to the test data as the target words will be different. Instead, the participants will need to induce word senses of the words in the test dataset.
 
 ## References to Prior Work
 
