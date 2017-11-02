@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: 2018-wsi
 title: Russian Word Sense Induction Evaluation
 description: "The RUSSE competition will perform a systematic comparison and evaluation of the baseline and the most recent approaches to word sense induction and disambuguation."
 ---
@@ -65,65 +65,6 @@ On the **15 of December 2015** we will release test data and participants will b
 during four weeks until the **January 15 2018**. Note that the training dataset and test dataset contain various words:
 you cannot simply learn a disambiguation model from a train dataset and apply it to the test data as the target 
 words will be different. Instead participants will need to induce word senses of the words in the test dataset.
-
-<!--### Data Formats
-
-In this shared task we use only one dataformat for both train and test datasets, but also for submissions of the 
-results of the participants. 
-We use the textual data format for both input and output data. Particularly, it is the UTF-8 encoded [TSV](https://en.wikipedia.org/wiki/Tab-separated_values) file format with the following columns:
-
-* ```context_id```: context identifier, unique across the current file. Example: "1".
-* ```gold_sense_id```: the word sense identifier in the gold standard. Example: "2".
-* ```predict_sense_id```: the word sense identifier predicted by the participating system. Example: "5". It is empty initially and needs to be filled by participants.
-* ```positions```: positions of target word in the context (both ends are included). Example: "0-3,132-137".
-* ```context```: the text fragment containing the target word. Example: "Граф - это структура данных. Кроме этого, в дискретной математике теория графов является".
-
-There will be one file for each dataset, containing contexts for multiple words.
-Please consider the example of the data format we offer: [input.tsv](https://github.com/nlpub/russe/blob/gh-pages/2018/wsi/input.tsv), [output.tsv](https://github.com/nlpub/russe/blob/gh-pages/2018/wsi/output.tsv). Note that the participating system should fill the empty `predict_sense_id` field with the sense predicted by the system.
--->
-
-## Organizers
-
-* Alexander Panchenko, University of Hamburg
-* Konstantin Lopukhin, Scrapinghub Inc.
-* Anastasiya Lopukhina, Neurolinguistics Laboratory, National Research University Higher School of Economics & Russian Language Institute of the Russian Academy of Sciences
-* Dmitry Ustalov, Krasovskii Institute of Mathematics and Mechanics
-* Nikolay Arefyev, Moscow State University & Samsung Research
-* Aleksey Leontyev, ABBYY
-* Natalia Loukachevitch, Moscow State University
-
-## Contacts
-
-To answer a question post a message to [rusemantics@googlegroups.com](mailto:rusemantics@googlegroups.com) or post it via [Google Groups](https://groups.google.com/forum/?fromgroups#!forum/rusemantics). To follow the updates also join the Facebook group at <https://www.facebook.com/rusemantics>. Discussions in Russian are also available at <https://qa.nlpub.ru/c/russe>.
-
-## Partners
-
-<div class="columns is-mobile is-vcentered">
-  <div class="column is-2">
-    <a href="http://dialog-21.ru/en/"><img src="https://nlpub.ru/images/thumb/2/22/Dialogue.svg/627px-Dialogue.svg.png" alt="Dialogue"></a>
-  </div>
-  <div class="column is-1">
-    <a href="https://nlpub.ru/NLPub:About"><img src="https://nlpub.ru/images/thumb/a/aa/NLPub.svg/240px-NLPub.svg.png" alt="NLPub"></a>
-  </div>
-  <div class="column is-2">
-    <a href="http://mospolytech.ru/?eng"><img src="http://mospolytech.ru/img_new/mpu_logo_main_en.png" alt="Moscow Polytech"></a>
-  </div>
-  <div class="column is-1">
-    <a href="https://www.uni-hamburg.de/"><img src="http://www.echord.info/file/Attachments/Tmp/1xf2mp74gd66a/UHH_Logo.jpg" alt="Universität Hamburg"></a>
-  </div>
-  <div class="column is-1">
-    <a href="https://www.msu.ru/en/"><img src="http://www.math.msu.ru/conference/wp-content/uploads/2016/03/logo-msu-300x296.png" alt="Moscow State University"></a>
-  </div>
-  <div class="column is-1">
-    <a href="https://www.hse.ru/en/"><img src="https://www.hse.ru/data/2012/01/19/1263884289/logo_с_hse_cmyk_e.png" alt="Higher School of Economics"></a>
-  </div>
-  <div class="column is-2">
-    <a href="http://www.imm.uran.ru/eng"><img src="http://www.imm.uran.ru/eng/SiteAssets/logo_IMM_v4-2_draft.PNG" alt="Krasovskii Institute of Mathematics and Mechanics"></a>
-  </div>
-  <div class="column is-2">
-    <a href="https://abbyy.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/ABBYY_logo.svg/2000px-ABBYY_logo.svg.png" alt="ABBYY"></a>
-  </div>
-</div>
 
 ## References to Prior Work
 
