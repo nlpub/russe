@@ -38,7 +38,7 @@ Similarly to SemEval 2010 Task 14 WSI&D, we use a gold standard, where each ambi
 
 ### Baseline Systems
 
-We will offer simple baselines that demonstrate the task and the data formats. For the knowledge-free track, we particularly encourage participation of various systems based on unsupervised word sense embeddings, e.g. AdaGram. For the knowledge-rich track, word sense embeddings based on inventories based of lexical resources, e.g., AutoExtend, can be obtained on the basis of lexical resources such as [RuThes](http://www.labinform.ru/pub/ruthes/index.htm) and [RuWordNet](http://ruwordnet.ru/ru/).
+We provide a state-of-the-art baseline that demonstrate the task and the data formats. For the knowledge-free track, we particularly encourage participation of various systems based on unsupervised word sense embeddings, e.g. AdaGram. For the knowledge-rich track, word sense embeddings based on inventories based of lexical resources, e.g., AutoExtend, can be obtained on the basis of lexical resources such as [RuThes](http://www.labinform.ru/pub/ruthes/index.htm) and [RuWordNet](http://ruwordnet.ru/ru/).
 
 
 ## Dissemination of the Results
@@ -55,7 +55,7 @@ The results of the shared task will be disseminated and discussed at the [24th I
 
 ## Participation in the Task: Instructions
 
-Please follow instruction in this section to participate in the task. 
+**Train datasets are already online**. You can start working on the development of our models. The detailed instructions are available at our [Github repository](https://nlpub.github.io/russe-wsi-kit/). Please follow instruction in this repository to participate in the task and write us a question if something is not clear. 
 
 ### Flow of the Task and the Deadlines
 
@@ -66,7 +66,7 @@ during four weeks until the **January 15 2018**. Note that the training dataset 
 you cannot simply learn a disambiguation model from a train dataset and apply it to the test data as the target 
 words will be different. Instead participants will need to induce word senses of the words in the test dataset.
 
-### Data Formats
+<!--### Data Formats
 
 In this shared task we use only one dataformat for both train and test datasets, but also for submissions of the 
 results of the participants. 
@@ -80,29 +80,7 @@ We use the textual data format for both input and output data. Particularly, it 
 
 There will be one file for each dataset, containing contexts for multiple words.
 Please consider the example of the data format we offer: [input.tsv](https://github.com/nlpub/russe/blob/gh-pages/2018/wsi/input.tsv), [output.tsv](https://github.com/nlpub/russe/blob/gh-pages/2018/wsi/output.tsv). Note that the participating system should fill the empty `predict_sense_id` field with the sense predicted by the system.
-
-<!--
-
-### Datasets
-
-This section lists the datasts
-
-1. Wikipedia. 
-
-2. RNC. 
-
-3. Dictionary.
-
-### Running the Evaluation
-
-### Baselines and Pointers to Useful Resources
-
-- KB systems
-- corpora
-- sense inventories
-
 -->
-
 
 ## Organizers
 
