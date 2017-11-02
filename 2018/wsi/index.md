@@ -6,7 +6,7 @@ description: "The RUSSE competition will perform a systematic comparison and eva
 
 # A Shared Task on Word Sense Induction and Disambiguation for the Russian Language
 
-We invite you to participate in the shared task on Word Sense Induction and Disambiguation for the Russian Language co-located with the [Dialogue 2018 conference](http://www.dialog-21.ru/en/). 
+We invite you to participate in the shared task on Word Sense Induction and Disambiguation for the Russian Language co-located with the [Dialogue 2018 conference](http://www.dialog-21.ru/en/). **The train dataset and detailed instructions for participants are available at our [Github repository](https://nlpub.github.io/russe-wsi-kit/)**.
 
 ## Motivation
 
