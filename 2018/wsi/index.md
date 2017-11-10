@@ -1,18 +1,18 @@
 ---
 layout: 2018-wsi
 title: Russian Word Sense Induction Evaluation
-description: "The RUSSE competition will perform a systematic comparison and evaluation of the baseline and the most recent approaches to word sense induction and disambuguation."
+description: "The RUSSE competition will perform a systematic comparison and evaluation of the baseline and the most recent approaches to word sense induction and disambiguation."
 ---
 
 # A Shared Task on Word Sense Induction and Disambiguation for the Russian Language
 
-We invite you to participate in the shared task on Word Sense Induction and Disambiguation for the Russian Language co-located with the [Dialogue 2018 conference](http://www.dialog-21.ru/en/). **The train dataset and detailed instructions for participants are available at our [GitHub repository](https://nlpub.github.io/russe-wsi-kit/)**. **TLDR**: You are given a word, e.g. ```"замок"``` and a bunch of text fragments (aka "contexts") where this word occurrs, e.g. ```"замок владимира мономаха в любече"``` and  ```"передвижению засова ключом в замке"```. You need to cluster these contexts in the (unknown in advance) number of clusters which correspond to various senses of the word. In this example you want to have two groups with the contexts of the "lock" and the "castle" senses of the word ```"замок"```.
+We invite you to participate in the [ACL SIGSLAV](http://sigslav.cs.helsinki.fi) sponsored shared task on Word Sense Induction and Disambiguation for the Russian Language. **TLDR of the task**: You are given a word, e.g. ```bank``` and a bunch of text fragments (aka "contexts") where this word occurs, e.g. ```bank is a financial institution that accepts deposits``` and ```river bank is a slope beside a body of water```. You need to cluster these contexts in the (unknown in advance) number of clusters which correspond to various senses of the word. In this example, you want to have two groups with the contexts of the ```company``` and the ```area``` senses of the word ```bank```. 
+
+The training dataset and detailed instructions for participants are available at our [GitHub repository](https://nlpub.github.io/russe-wsi-kit/). If you are interested in participation, please [register using this form](https://goo.gl/forms/fnTNOwk4PrsZySX82).
 
 ## Motivation
 
-Word Sense Induction (WSI) is the process of automatic identification of the word senses. While evaluation of various sense induction and disambiguation approaches was performed in the past for the Western European languages, e.g., English, French, and German, no systematic evaluation of WSI for [Slavic languages](http://sigslav.cs.helsinki.fi) is available at the moment. This shared task makes a first step towards bridging this gap by setting up a shared task on one Slavic language. The goal of this task is to compare sense induction and disambiguation systems for the Russian language. Many Slavic languages still do not have broad coverage lexical resources available in English, such as WordNet, which provide a comprehensive inventory of senses. Therefore, word sense induction methods investigated in this shared task can be of great value to enable semantic processing of Slavic languages.
-
-If you are interested in participation, please [register using this form](https://goo.gl/forms/fnTNOwk4PrsZySX82) by the 15th of November. A brief description of the present study in Russian is available at <https://nlpub.ru/RUSSE>.
+Word Sense Induction (WSI) is the process of automatic identification of the word senses. While evaluation of various sense induction and disambiguation approaches was performed in the past for the Western European languages, e.g., English, French, and German, no systematic evaluation of WSI for [Slavic languages](http://sigslav.cs.helsinki.fi) are available at the moment. This shared task makes a first step towards bridging this gap by setting up a shared task on one Slavic language. The goal of this task is to compare sense induction and disambiguation systems for the Russian language. Many Slavic languages still do not have broad coverage lexical resources available in English, such as WordNet, which provide a comprehensive inventory of senses. Therefore, word sense induction methods investigated in this shared task can be of great value to enable semantic processing of Slavic languages.
 
 ## Task Description
 
@@ -30,19 +30,16 @@ The advantage of our setting is that virtually any existing word sense disambigu
 
 ### Datasets
 
-We will provide training datasets, which can be used for development of the models. Later, test datasets will be released: The participants will need to use the developed models to disambiguate the test sentences and submit their final results to the organisers. Training and testing datasets will use the same corpora and annotations approaches, but the target words will be different for training and testing datasets.
+We provide three training datasets, which can be used for development of the models of various sense inventories and corpora.  Once the test datasets will be released, the participants will need to use the developed models to disambiguate the test sentences submitting their final results. Training and testing datasets use the same corpora and annotations approaches, but the target words will be different for training and testing datasets.
 
 ### Quality Measure
 
-Similarly to SemEval 2010 Task 14 WSI&D, we use a gold standard, where each ambiguous target word is provided with a set of instances, i.e., the contextscontaining the word. Each instance is manually annotated with the single sense identifier according to a predefined sense inventory. Each participating system assigns the sense labels for these ambiguous words, which can be viewed as a clustering of instances, according to sense labels. To evaluate a system, the system's labelling of contexts is compared to the gold standard labelling. We use the Adjusted Rand Index (ARI) as the quantitative measure of the clustering.
+Similarly to SemEval 2010 Task 14 WSI&D, we use a gold standard, where each ambiguous target word is provided with a set of instances, i.e., the context containing the target word. Each instance is manually annotated with the single sense identifier according to a predefined sense inventory. Each participating system assigns the sense labels for these ambiguous word occurrences, which can be viewed as a clustering of instances, according to sense labels. To evaluate a system, the system’s labeling of contexts is compared to the gold standard labeling. We use the Adjusted Rand Index (ARI) as the quantitative measure of the clustering.
+
 
 ### Baseline Systems
 
-We provide a state-of-the-art baseline that demonstrate the task and the data formats. For the knowledge-free track, we particularly encourage participation of various systems based on unsupervised word sense embeddings, e.g. AdaGram. For the knowledge-rich track, word sense embeddings based on inventories based of lexical resources, e.g., AutoExtend, can be obtained on the basis of lexical resources such as [RuThes](http://www.labinform.ru/pub/ruthes/index.htm) and [RuWordNet](http://ruwordnet.ru/ru/).
-
-## Dissemination of the Results
-
-The results of the shared task will be disseminated and discussed at the [24th International Conference on Computational Linguistics and Intellectual Technologies Dialogue 2018](http://www.dialog-21.ru/en/): the proceedings are indexed by Scopus. Training and the test datasets will be published online to foster future research and developments.
+We provide a state-of-the-art baseline that demonstrates the task and the data formats. For the knowledge-free track, we particularly encourage participation of various systems based on unsupervised word sense embeddings, e.g. AdaGram. For the knowledge-rich track, word sense embeddings based on inventories based of lexical resources, e.g., AutoExtend, can be obtained on the basis of lexical resources such as [RuThes](http://www.labinform.ru/pub/ruthes/index.htm) and [RuWordNet](http://ruwordnet.ru/ru/).
 
 ## Important Dates
 
@@ -54,13 +51,17 @@ The results of the shared task will be disseminated and discussed at the [24th I
 
 ## Participation in the Task: Instructions
 
-**Train datasets are already online**. You can start working on the development of our models. The detailed instructions are available at our [Github repository](https://nlpub.github.io/russe-wsi-kit/). Please follow instruction in this repository to participate in the task and write us a question if something is not clear.
+**Train datasets are already online**. You can start working on the development of our models. The detailed instructions are available at our [Github repository](https://nlpub.github.io/russe-wsi-kit/). Please follow the instruction in this repository to participate in the task and write us a question if something is not clear.
 
 ### Flow of the Task and the Deadlines
 
 The important dates are listed above. We publically share the training datasets on the **1st of November 2017**. The participants will have six weeks until the December 15 to develop their models using these training data.
 
-On the **15 of December 2017** we will release test data and participants will be able to make real submissions during four weeks until the **January 15 2018**. Note that the training dataset and test dataset contain various words: you cannot simply learn a disambiguation model from a train dataset and apply it to the test data as the target words will be different. Instead, the participants will need to induce word senses of the words in the test dataset.
+On the **15 of December 2017** we will release test data and participants will be able to make real submissions during four weeks until the **January 15 2018**. Note that the training dataset and test dataset contain various words: you cannot simply learn a disambiguation model from the training dataset and apply it to the test data as the target words will be different. Instead, the participants will need to induce word senses of the words in the test dataset.
+
+## Dissemination of the Results
+
+We invite participants can submit a paper about their system to the [24th International Conference on Computational Linguistics and Intellectual Technologies (Dialogue'2018)](http://www.dialog-21.ru/en/): the proceedings are indexed by Scopus. The results of the shared task will be discussed at this conference. Training and the test datasets will be published online to foster future research and developments. 
 
 ## References to Prior Work
 
@@ -80,4 +81,4 @@ On the **15 of December 2017** we will release test data and participants will b
 
 * Pelevina M., Arefyev N., Biemann C., Panchenko A. (2016): [Making Sense of Word Embeddings](http://anthology.aclweb.org/W16-1620). In Proceedings of the 1st Workshop on Representation Learning for NLP co-located with the ACL conference. Berlin, Germany. Association for Computational Linguistics
 
-* Ustalov, D., Panchenko, A., and Biemann, C. (2017). [Watset: Automatic Induction of Synsets from a Graph of Synonyms](https://doi.org/10.18653/v1/P17-1145). In: Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pages 1579–1590, Vancouver, Canada. Association for Computational Lingustics.
+* Ustalov, D., Panchenko, A., and Biemann, C. (2017). [Watset: Automatic Induction of Synsets from a Graph of Synonyms](https://doi.org/10.18653/v1/P17-1145). In: Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pages 1579–1590, Vancouver, Canada. Association for Computational Linguistics.
