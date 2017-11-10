@@ -17,3 +17,7 @@ To answer a question post a message to [rusemantics@googlegroups.com](mailto:rus
 * Nikolay Arefyev, Moscow State University & Samsung Research
 * Natalia Loukachevitch, Moscow State University
 * Aleksey Leontyev, ABBYY
+
+## Sponsors
+
+* ACL, the Special Interest Group on Slavic Natural Language Processing
