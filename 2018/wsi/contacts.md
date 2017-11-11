@@ -14,7 +14,7 @@ To answer a question post a message to [rusemantics@googlegroups.com](mailto:rus
 * Konstantin Lopukhin, Scrapinghub Inc.
 * Anastasiya Lopukhina, Neurolinguistics Laboratory, National Research University Higher School of Economics & Russian Language Institute of the Russian Academy of Sciences
 * Dmitry Ustalov, Krasovskii Institute of Mathematics and Mechanics
-* Nikolay Arefyev, Moscow State University & Samsung Research
+* Nikolay Arefyev, Moscow State University & Samsung Research Center (SRC)
 * Natalia Loukachevitch, Moscow State University
 * Aleksey Leontyev, ABBYY
 
