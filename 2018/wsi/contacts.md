@@ -20,4 +20,5 @@ To answer a question post a message to [rusemantics@googlegroups.com](mailto:rus
 
 ## Sponsors
 
-* ACL, the Special Interest Group on Slavic Natural Language Processing
+* The Special Interest Group on Slavic Natural Language Processing (SIGSLAV) of the Association for Computational Linguistics (ACL)
+* ABBYY
