@@ -57,7 +57,7 @@ We provide a state-of-the-art baseline that demonstrates the task and the data f
 
 The important dates are listed above. We publically share the training datasets on the **1st of November 2017**. The participants will have six weeks until the December 15 to develop their models using these training data.
 
-On the **15 of December 2017** we will release test data and participants will be able to make real submissions during four weeks until the **January 15 2018**. Note that the training dataset and test dataset contain various words: you cannot simply learn a disambiguation model from the training dataset and apply it to the test data as the target words will be different. Instead, the participants will need to induce word senses of the words in the test dataset.
+On the **15th of December 2017** we will release test data and participants will be able to make real submissions during six weeks until the **February 1, 2018**. Note that the training dataset and test dataset contain various words: you cannot simply learn a disambiguation model from the training dataset and apply it to the test data as the target words will be different. Instead, the participants will need to induce word senses of the words in the test dataset.
 
 ## Dissemination of the Results
 
