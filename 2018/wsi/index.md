@@ -46,8 +46,8 @@ We provide a state-of-the-art baseline that demonstrates the task and the data f
 * **First Call for Participation**: October 15, 2017.
 * **Release of the Training Data**: November 1, 2017.
 * **Release of the Test Data**: December 15, 2018.
-* **Submission of the Results**: January 15, 2018.
-* **Results of the Shared Task**: February 1, 2018.
+* **Submission of the Results**: <s>January 15</s> February 1, 2018.
+* **Results of the Shared Task**: <s>February 1</s> February 15, 2018.
 
 ## Participation in the Task: Instructions
 
