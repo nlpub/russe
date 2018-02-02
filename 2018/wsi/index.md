@@ -46,8 +46,8 @@ We provide a state-of-the-art baseline that demonstrates the task and the data f
 * **First Call for Participation**: October 15, 2017.
 * **Release of the Training Data**: November 1, 2017.
 * **Release of the Test Data**: December 15, 2018.
-* **Submission of the Results**: <s>January 15</s> February 1, 2018.
-* **Results of the Shared Task**: <s>February 1</s> February 15, 2018.
+* **Submission of the Results**: ~~January 15~~ ~~February 1~~ February 4, 2018.
+* **Results of the Shared Task**: ~~February 1~~ February 15, 2018.
 
 ## Participation in the Task: Instructions
 
@@ -57,7 +57,7 @@ We provide a state-of-the-art baseline that demonstrates the task and the data f
 
 The important dates are listed above. We publically share the training datasets on the **1st of November 2017**. The participants will have six weeks until the December 15 to develop their models using these training data.
 
-On the **15th of December 2017** we will release test data and participants will be able to make real submissions during six weeks until the **February 1, 2018**. Note that the training dataset and test dataset contain various words: you cannot simply learn a disambiguation model from the training dataset and apply it to the test data as the target words will be different. Instead, the participants will need to induce word senses of the words in the test dataset.
+On the **15th of December 2017** we will release test data and participants will be able to make real submissions during seven weeks until the **February 4, 2018**. Note that the training dataset and test dataset contain various words: you cannot simply learn a disambiguation model from the training dataset and apply it to the test data as the target words will be different. Instead, the participants will need to induce word senses of the words in the test dataset.
 
 ## Dissemination of the Results
 
