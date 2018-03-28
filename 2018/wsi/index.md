@@ -61,7 +61,11 @@ On the **15th of December 2017** we will release test data and participants will
 
 ## Dissemination of the Results
 
-We invite participants can submit a paper about their system to the [24th International Conference on Computational Linguistics and Intellectual Technologies (Dialogue'2018)](http://www.dialog-21.ru/en/): the proceedings are indexed by Scopus. The results of the shared task will be discussed at this conference. Training and the test datasets will be published online to foster future research and developments. 
+We invite participants can submit a paper about their system to the [24th International Conference on Computational Linguistics and Intellectual Technologies (Dialogue'2018)](http://www.dialog-21.ru/en/): the proceedings are indexed by Scopus. The results of the shared task will be discussed at this conference. Training and the test datasets will be published online to foster future research and developments.
+
+## Acknowledgements
+
+This research was supported by Deutsche Forschungsgemeinschaft (DFG) under the project “Joining Ontologies and Semantics Induced from Text” (JOIN-T) and by the RFBR under the project no.&nbsp;16-37-00354 мол&#95;а. The work of Konstantin Lopukhin and Anastasiya Lopukhina was supported by a grant of the Russian Science Foundation, Project 16-18-02054. We are grateful to the authors of the Active Dictionary of Russian who kindly allowed us to use the dictionary in this shared task. We are grateful to Ted Pedersen for a helpful discussion about the evaluation settings in this shared task.
 
 ## References to Prior Work
 
