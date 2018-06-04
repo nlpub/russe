@@ -61,7 +61,26 @@ On the **15th of December 2017** we will release test data and participants will
 
 ## Dissemination of the Results
 
-We invite participants can submit a paper about their system to the [24th International Conference on Computational Linguistics and Intellectual Technologies (Dialogue'2018)](http://www.dialog-21.ru/en/): the proceedings are indexed by Scopus. The results of the shared task will be discussed at this conference. Training and the test datasets will be published online to foster future research and developments.
+We invite participants can submit a paper about their system to the [24th International Conference on Computational Linguistics and Intellectual Technologies (Dialogue'2018)](http://www.dialog-21.ru/en/): the proceedings are indexed by Scopus. The results of the shared task have been [discussed]({{ site.baseurl }}{% link _posts/2018-06-02-dialogue.md %}) at this conference. Training and the test datasets will be published online to foster future research and developments.
+
+## Citation
+
+* Panchenko,&nbsp;A., Lopukhina,&nbsp;A., Ustalov,&nbsp;D., Lopukhin,&nbsp;K., Arefyev,&nbsp;N., Leontyev,&nbsp;A., Loukachevitch,&nbsp;N.: RUSSE&rsquo;2018: [A Shared Task on Word Sense Induction for the Russian Language](http://www.dialog-21.ru/media/4280/dialog2018scopus.pdf#page=559). In: Computational Linguistics and Intellectual Technologies: Papers from the Annual International Conference &ldquo;Dialogue&rdquo;. pp.&nbsp;547&ndash;564. RSUH, Moscow, Russia (2018)
+
+```latex
+{% raw %}@inproceedings{Panchenko:18:dialogue,
+  author    = {Panchenko, Alexander and Lopukhina, Anastasia and Ustalov, Dmitry and Lopukhin, Konstantin and Arefyev, Nikolay and Leontyev, Alexey and Loukachevitch, Natalia},
+  title     = {{RUSSE'2018: A Shared Task on Word Sense Induction for the Russian Language}},
+  booktitle = {Computational Linguistics and Intellectual Technologies: Papers from the Annual International Conference ``Dialogue''},
+  year      = {2018},
+  pages     = {547--564},
+  url       = {http://www.dialog-21.ru/media/4280/dialog2018scopus.pdf},
+  address   = {Moscow, Russia},
+  publisher = {RSUH},
+  issn      = {2221-7932},
+  language  = {english},
+}{% endraw %}
+```
 
 ## Acknowledgements
 
