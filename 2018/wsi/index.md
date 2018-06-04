@@ -65,7 +65,7 @@ We invite participants can submit a paper about their system to the [24th Intern
 
 ## Citation
 
-* Panchenko,&nbsp;A., Lopukhina,&nbsp;A., Ustalov,&nbsp;D., Lopukhin,&nbsp;K., Arefyev,&nbsp;N., Leontyev,&nbsp;A., Loukachevitch,&nbsp;N.: [RUSSE&rsquo;2018: A Shared Task on Word Sense Induction for the Russian Language](http://www.dialog-21.ru/media/4280/dialog2018scopus.pdf#page=559). In: Computational Linguistics and Intellectual Technologies: Papers from the Annual International Conference &ldquo;Dialogue&rdquo;. pp.&nbsp;547&ndash;564. RSUH, Moscow, Russia (2018)
+* Panchenko,&nbsp;A., Lopukhina,&nbsp;A., Ustalov,&nbsp;D., Lopukhin,&nbsp;K., Arefyev,&nbsp;N., Leontyev,&nbsp;A., Loukachevitch,&nbsp;N.: [RUSSE&rsquo;2018: A Shared Task on Word Sense Induction for the Russian Language](http://www.dialog-21.ru/media/4324/panchenkoa.pdf). In: Computational Linguistics and Intellectual Technologies: Papers from the Annual International Conference &ldquo;Dialogue&rdquo;. pp.&nbsp;547&ndash;564. RSUH, Moscow, Russia (2018)
 
 ```latex
 {% raw %}@inproceedings{Panchenko:18:dialogue,
@@ -74,7 +74,7 @@ We invite participants can submit a paper about their system to the [24th Intern
   booktitle = {Computational Linguistics and Intellectual Technologies: Papers from the Annual International Conference ``Dialogue''},
   year      = {2018},
   pages     = {547--564},
-  url       = {http://www.dialog-21.ru/media/4280/dialog2018scopus.pdf},
+  url       = {http://www.dialog-21.ru/media/4324/panchenkoa.pdf},
   address   = {Moscow, Russia},
   publisher = {RSUH},
   issn      = {2221-7932},
