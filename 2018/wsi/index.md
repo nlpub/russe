@@ -74,7 +74,7 @@ We invite participants can submit a paper about their system to the [24th Intern
   booktitle = {Computational Linguistics and Intellectual Technologies: Papers from the Annual International Conference ``Dialogue''},
   year      = {2018},
   pages     = {547--564},
-  url       = {http://www.dialog-21.ru/media/4324/panchenkoa.pdf},
+  url       = {http://www.dialog-21.ru/media/4539/panchenkoaplusetal.pdf},
   address   = {Moscow, Russia},
   publisher = {RSUH},
   issn      = {2221-7932},
