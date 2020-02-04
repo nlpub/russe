@@ -4,6 +4,10 @@ layout: index
 
 # RUSSE
 
-**RUSSE** is series of workshops on Russian Semantic Evaluation. Each workshop is centered around a shared task on a specific topic related to the semantic processing of the Russian language.
+**RUSSE** is series of workshops on Russian Semantic Evaluation. Each workshop is centered around a shared task on a specific topic related to the semantic processing of the Russian language. There are three shared tasks:
 
-The first workshop on [semantic relatedness and similarity](/2015/sim/) was held in 2015 in conjunction with the [Dialogue](http://dialog-21.ru/en/) conference. The second workshop is dedicated to [word sense induction and disambiguation](/2018/wsi/) and will be held in 2018 also in conjunction with the Dialogue conference.
+* [Taxonomy Enrichment](/2020/isa/) (2020)
+* [Word Sense Induction and Disambiguation](/2018/wsi/) (2018)
+* [Semantic Relatedness and Similarity](/2015/sim/) (2015)
+
+Traditionally, results of RUSSE are disseminated at the [Dialogue](http://www.dialog-21.ru/en/) series of conferences.
