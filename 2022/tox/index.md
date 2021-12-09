@@ -25,11 +25,11 @@ Everyone interested in paraphrasing toxic sentences are welcome to participate. 
 
 The evaluation will be carried out both manually and automatically (in CodaLab). Participants upload a file with the predicted results to the CodaLab competition system, then it is automatically evaluated with our script. The evaluation consists of the following metrics:
 
-Style transfer accuracy
-Meaning preservation score
-Fluency score
-Joint score (Style transfer accuracy * Meaning preservation score * Fluency score)
-ChrF1 <https://github.com/m-popovic/chrF>
+* Style transfer accuracy
+* Meaning preservation score
+* Fluency score
+* Joint score (Style transfer accuracy * Meaning preservation score * Fluency score)
+* ChrF1 <https://github.com/m-popovic/chrF>
 
 ## Baselines
 
