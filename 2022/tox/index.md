@@ -27,12 +27,14 @@ The task of detoxification can be formulated as follows: given texts in the toxi
 
 For example:
 
-из за таких пидоров мы и страдаем -> Из-за таких людей мы и страдаем
-We suffer from such faggots -> We suffer from such people
-хуй знает кто кум, но девушка красивая👍 -> неизвестно кто кум, но девушка красивая
-fuck knows who the godfather is, but the girl is beautiful 👍 -> it is unknown who the godfather is, but the girl is beautiful
-порядок бы блять навёл ! -> Порядок бы навел
-Put these fucking things in order -> Put the things in order
+|| toxic sentence | detoxified sentence |
+| --- | --- | --- |
+||из за таких пидоров мы и страдаем | Из-за таких людей мы и страдаем |
+|*translation:*|*We suffer from such faggots*| *We suffer from such people* |
+||хуй знает кто кум, но девушка красивая👍 | неизвестно кто кум, но девушка красивая |
+|*translation:*|*fuck knows who the godfather is, but the girl is beautiful 👍*|*it is unknown who the godfather is, but the girl is beautiful*|
+||порядок бы блять навёл ! | Порядок бы навел |
+|*translation:*|*Put these fucking things in order*|*Put the things in order*|
 
 Everyone interested in TST and detoxification is welcome to participate. The participants are allowed to use any additional datasets or models if they are publicly available. However, we ask participants to mention all additional resources used for the training of models. The participants can test their models on the public test set by submitting the results to the leaderboard. Once the private test set is released, the participants will have a week to detoxify test sentences and submit their final results.
 
