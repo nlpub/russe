@@ -52,7 +52,7 @@ Of course, the annotators can write anything as a paraphrase. However, we have v
 
 If the generated paraphrase receives correct answers with high (>=90%) confidence, then it gets into our dataset.
 
-For the original data, we took the toxic part of the toxic classification datasets based on [Odnoklassniki](https://www.kaggle.com/blackmoon/russian-language-toxic-comments) and [Pikabu](https://www.kaggle.com/alexandersemiletov/toxic-russian-comments). As a result, We collected a dataset with paraphrases for 5026 toxic sentences, each having 1-3 paraphrase variants, resulting in 7058 paraphrases overall. 
+For the original data, we took the toxic part of the toxic classification datasets based on [Odnoklassniki](https://www.kaggle.com/blackmoon/russian-language-toxic-comments) and [Pikabu](https://www.kaggle.com/alexandersemiletov/toxic-russian-comments). As a result, We collected a dataset with paraphrases for **5026** toxic sentences, each having **1-3** paraphrase variants, resulting in **7058** paraphrases overall. 
 
 ## Evaluation
 
@@ -87,7 +87,7 @@ After receiving manual scores of these three parameters, they again will be conc
 
 We provide several baselines for this task: a rule-based Delete approach and an approach based on the [T5 model](https://huggingface.co/sberbank-ai/ruT5-base). 
 
-* **Delete:** This is a simple unsupervised method that eliminates toxic words based on a predefined toxic words vocabulary (link). The idea is often used on television and other media: rude words are bleeped out or hidden with special characters (usually an asterisk). 
+* **Delete:** This is a simple unsupervised method that eliminates toxic words based on a predefined toxic words vocabulary. The idea is often used on television and other media: rude words are bleeped out or hidden with special characters (usually an asterisk). 
 
 * **T5-base:** This is the supervised baseline based on the T5 model. We trained the [ruT5-base model](https://huggingface.co/sberbank-ai/ruT5-base) on the train part of our dataset.
 
