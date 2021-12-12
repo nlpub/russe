@@ -13,11 +13,11 @@ Detoxification can be solved with Text Style Transfer (TST) [1] methods. There a
 To boost the research in the area of detoxification for Russian, we collected a parallel corpus of toxic sentences and their manually written non-toxic paraphrases. We make this corpus available and invite the participants of the shared task to create models
 
 
-[1] Jin, Di, Zhijing Jin, Zhiting Hu, Olga Vechtomova and Rada Mihalcea. “Deep Learning for Text Style Transfer: A Survey.” ArXiv abs/2011.00416 (2020): n. Pag. PDF: https://arxiv.org/abs/2011.00416 
+*[1] Jin, Di, Zhijing Jin, Zhiting Hu, Olga Vechtomova and Rada Mihalcea. “Deep Learning for Text Style Transfer: A Survey.” ArXiv abs/2011.00416 (2020): n. Pag. PDF: https://arxiv.org/abs/2011.00416*
 
-[2] Dementieva, Daryna, Daniil Moskovskiy, Varvara Logacheva, David Dale, Olga Kozlova, Nikita Semenov, and Alexander Panchenko. 2021. "Methods for Detoxification of Texts for the Russian Language" Multimodal Technologies and Interaction 5, no. 9: 54. https://doi.org/10.3390/mti5090054. PDF: https://www.mdpi.com/2414-4088/5/9/54/pdf 
+*[2] Dementieva, Daryna, Daniil Moskovskiy, Varvara Logacheva, David Dale, Olga Kozlova, Nikita Semenov, and Alexander Panchenko. 2021. "Methods for Detoxification of Texts for the Russian Language" Multimodal Technologies and Interaction 5, no. 9: 54. https://doi.org/10.3390/mti5090054. PDF: https://www.mdpi.com/2414-4088/5/9/54/pdf*
 
-[3] Dale, David, Anton Voronov, Daryna Dementieva, Varvara Logacheva, Olga Kozlova, Nikita Semenov and Alexander Panchenko. “Text Detoxification using Large Pre-trained Neural Models.” EMNLP (2021). PDF: https://arxiv.org/pdf/2109.08914.pdf 
+*[3] Dale, David, Anton Voronov, Daryna Dementieva, Varvara Logacheva, Olga Kozlova, Nikita Semenov and Alexander Panchenko. “Text Detoxification using Large Pre-trained Neural Models.” EMNLP (2021). PDF: https://arxiv.org/pdf/2109.08914.pdf*
 
 ## Task Formulation
 
