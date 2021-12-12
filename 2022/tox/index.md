@@ -31,10 +31,8 @@ For example:
 | --- | --- | --- |
 ||из за таких пидоров мы и страдаем | Из-за таких людей мы и страдаем |
 |*translation:*|*We suffer from such faggots*| *We suffer from such people* |
-|||
 ||хуй знает кто кум, но девушка красивая👍 | неизвестно кто кум, но девушка красивая |
 |*translation:*|*fuck knows who the godfather is, but the girl is beautiful 👍*|*it is unknown who the godfather is, but the girl is beautiful*|
-|||
 ||порядок бы блять навёл ! | Порядок бы навел |
 |*translation:*|*Put these fucking things in order*|*Put the things in order*|
 
