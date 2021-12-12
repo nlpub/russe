@@ -42,13 +42,13 @@ For this shared task, we compiled a new dataset with parallel data for detoxific
 
 The whole pipeline consists of three tasks:
 
-Paraphrase generation. The annotators are asked to generate the neutral paraphrase of the input text. They can also select a choice not to rewrite the input if the text is already neutral or it is difficult to extract non-toxic content.
+* **Paraphrase generation.** The annotators are asked to generate the neutral paraphrase of the input text. They can also select a choice not to rewrite the input if the text is already neutral or it is difficult to extract non-toxic content.
 
 Of course, the annotators can write anything as a paraphrase. However, we have very strict criteria to style-transferred text – the text must be now in neutral style and the content must be preserved. To ensure this, we validate received paraphrases with the next tasks.
 
-Content preservation check. Given to texts – original toxic sentence and generated paraphrase – the annotators should validate, if these texts are with similar content. 
+* **Content preservation check.** Given to texts – original toxic sentence and generated paraphrase – the annotators should validate, if these texts are with similar content. 
 
-Toxicity classification. Given the generated paraphrase, the annotators should classify it into one of the classes – toxic or neutral.
+* **Toxicity classification.** Given the generated paraphrase, the annotators should classify it into one of the classes – toxic or neutral.
 
 If the generated paraphrase receives correct answers with high (>=90%) confidence, then it gets into our dataset.
 
@@ -64,11 +64,11 @@ The goals of a style transfer model are to (i) change the text style, (ii) prese
 content, and (iii) yield a grammatical sentence. Thus, the automatic evaluation phase consists of the following metrics:
 
 
-* Style transfer accuracy (STA). Bert-based classifier (fine-tuned from Conversational Rubert) trained on merge of Russian Language Toxic Comments dataset collected from 2ch.hk and Toxic Russian Comments dataset collected from ok.ru. Link: <https://huggingface.co/SkolkovoInstitute/russian_toxicity_classifier> 
-* Meaning preservation score (SIM) is evaluated as cosine similarity of [LaBSE sentence embeddings](<https://arxiv.org/abs/2007.01852>). For computational optimization, we use the model version <https://huggingface.co/cointegrated/LaBSE-en-ru>, which is original LaBSE from Google with embeddings for languages other than Russian and English stripped away.
-* Fluency score (FL) is evaluated with the weakly supervised classifier (<https://huggingface.co/SkolkovoInstitute/rubert-base-corruption-detector>). This BERT-based model has been trained to distinguish 780 thousand texts from Odnoklassniki and Pikabu toxicity datasets and a few [web corpora](<https://wortschatz.uni-leipzig.de/en/download>) from their corrupted versions. The corruptions included random replacement, deletion, addition, shuffling, and re-inflexion of words and characters, random changes of capitalization, round-trip translation, filling random gaps with T5 and RoBERTA models.
-* Joint score: This is the metric by which the ranking of automatic evaluation on phase will be conducted. This metric is calculated as a superposition of three metrics -STA, SIM, and FL: J = (STA * SIM * FL)
-* [ChrF1](https://github.com/m-popovic/chrF): While all previous metrics compare the output of the model with the original toxic sentences, this metric uses neutral references for the comparison.
+* **Style transfer accuracy (STA).** Bert-based classifier (fine-tuned from Conversational Rubert) trained on merge of Russian Language Toxic Comments dataset collected from 2ch.hk and Toxic Russian Comments dataset collected from ok.ru. Link: <https://huggingface.co/SkolkovoInstitute/russian_toxicity_classifier> 
+* **Meaning preservation score (SIM)** is evaluated as cosine similarity of [LaBSE sentence embeddings](<https://arxiv.org/abs/2007.01852>). For computational optimization, we use the model version <https://huggingface.co/cointegrated/LaBSE-en-ru>, which is original LaBSE from Google with embeddings for languages other than Russian and English stripped away.
+* **Fluency score (FL)** is evaluated with the weakly supervised classifier (<https://huggingface.co/SkolkovoInstitute/rubert-base-corruption-detector>). This BERT-based model has been trained to distinguish 780 thousand texts from Odnoklassniki and Pikabu toxicity datasets and a few [web corpora](<https://wortschatz.uni-leipzig.de/en/download>) from their corrupted versions. The corruptions included random replacement, deletion, addition, shuffling, and re-inflexion of words and characters, random changes of capitalization, round-trip translation, filling random gaps with T5 and RoBERTA models.
+* **Joint score:** This is the metric by which the ranking of automatic evaluation on phase will be conducted. This metric is calculated as a superposition of three metrics -STA, SIM, and FL: J = (STA * SIM * FL)
+* **[ChrF1](https://github.com/m-popovic/chrF):** While all previous metrics compare the output of the model with the original toxic sentences, this metric uses neutral references for the comparison.
 
 
 ### Human Evaluation
@@ -77,9 +77,9 @@ After private set submissions, we are going to select the best model for each pa
 
 We are going to use Yandex.Toloka platform to evaluate participants’ results on a private test set. The texts will be as well evaluated based on three parameters – style transfer accuracy, content preservation, and fluency:
 
-* Toxicity classification. Given the generated paraphrase, the annotators should classify it into one of the classes – toxic or neutral.
-* Content preservation check. Given to texts – original toxic sentence and generated paraphrase – the annotators should validate if these texts are with similar content.
-* Fluency task. The annotators validate if the text is written correctly and meaningful.
+* **Toxicity classification.** Given the generated paraphrase, the annotators should classify it into one of the classes – toxic or neutral.
+* **Content preservation check.** Given to texts – original toxic sentence and generated paraphrase – the annotators should validate if these texts are with similar content.
+* **Fluency task.** The annotators validate if the text is written correctly and meaningful.
 
 After receiving manual scores of these three parameters, they again will be concatenated into one joint metric J as a superposition of three scores. This metric will be used for the final ranking of the participants. The final table with results will be published on the [competition web-page](https://russe.nlpub.org/2022/tox/).
 
@@ -87,9 +87,9 @@ After receiving manual scores of these three parameters, they again will be conc
 
 We provide several baselines for this task: a rule-based Delete approach and an approach based on the [T5 model](https://huggingface.co/sberbank-ai/ruT5-base). 
 
-* Delete: This is a simple unsupervised method that eliminates toxic words based on a predefined toxic words vocabulary (link). The idea is often used on television and other media: rude words are bleeped out or hidden with special characters (usually an asterisk). 
+* **Delete:** This is a simple unsupervised method that eliminates toxic words based on a predefined toxic words vocabulary (link). The idea is often used on television and other media: rude words are bleeped out or hidden with special characters (usually an asterisk). 
 
-* T5-base: This is the supervised baseline based on the T5 model. We trained the [ruT5-base model](https://huggingface.co/sberbank-ai/ruT5-base) on the train part of our dataset.
+* **T5-base:** This is the supervised baseline based on the T5 model. We trained the [ruT5-base model](https://huggingface.co/sberbank-ai/ruT5-base) on the train part of our dataset.
 
 
 You are welcome to test other  brand new Russian Encoder-Decoder models (like GPT-2, GPT-3, T5, etc.) or other monolingual or multilingual Transformers.  Also, we are expecting to see interesting modifications of classical Seq2Seq models or even brand-new approaches.
