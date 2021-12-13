@@ -111,7 +111,7 @@ You are welcome to test other brand new Russian Encoder-Decoder models (like GPT
 
 ## Participate
 
-Please submit your solutions to CodaLab at <https://codalab.lisn.upsaclay.fr/competitions/584>.
+Please submit your solutions to CodaLab: [will be available soon]<https://codalab.lisn.upsaclay.fr/competitions/584>.
 
 Join our discussion group in Telegram: <https://t.me/joinchat/Ckja7Vh00qPOU887pLonqQ>.
 
