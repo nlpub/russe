@@ -13,11 +13,11 @@ Detoxification can be solved with Text Style Transfer (TST) [1] methods. There a
 To boost the research in the area of detoxification for Russian, we collected a parallel corpus of toxic sentences and their manually written non-toxic paraphrases. We make this corpus available and invite the participants of the shared task to create models
 
 
-*[1] Jin, Di, Zhijing Jin, Zhiting Hu, Olga Vechtomova and Rada Mihalcea. “Deep Learning for Text Style Transfer: A Survey.” ArXiv abs/2011.00416 (2020): n. Pag. PDF: https://arxiv.org/abs/2011.00416*
+*[1] Jin, Di, Zhijing Jin, Zhiting Hu, Olga Vechtomova and Rada Mihalcea. “Deep Learning for Text Style Transfer: A Survey.” ArXiv abs/2011.00416 (2020): n. Pag. PDF: <https://arxiv.org/abs/2011.00416>*
 
-*[2] Dementieva, Daryna, Daniil Moskovskiy, Varvara Logacheva, David Dale, Olga Kozlova, Nikita Semenov, and Alexander Panchenko. 2021. "Methods for Detoxification of Texts for the Russian Language" Multimodal Technologies and Interaction 5, no. 9: 54. https://doi.org/10.3390/mti5090054. PDF: https://www.mdpi.com/2414-4088/5/9/54/pdf*
+*[2] Dementieva, Daryna, Daniil Moskovskiy, Varvara Logacheva, David Dale, Olga Kozlova, Nikita Semenov, and Alexander Panchenko. 2021. "Methods for Detoxification of Texts for the Russian Language" Multimodal Technologies and Interaction 5, no. 9: 54. <https://doi.org/10.3390/mti5090054>. PDF: <https://www.mdpi.com/2414-4088/5/9/54/pdf>*
 
-*[3] Dale, David, Anton Voronov, Daryna Dementieva, Varvara Logacheva, Olga Kozlova, Nikita Semenov and Alexander Panchenko. “Text Detoxification using Large Pre-trained Neural Models.” EMNLP (2021). PDF: https://arxiv.org/pdf/2109.08914.pdf*
+*[3] Dale, David, Anton Voronov, Daryna Dementieva, Varvara Logacheva, Olga Kozlova, Nikita Semenov and Alexander Panchenko. “Text Detoxification using Large Pre-trained Neural Models.” EMNLP (2021). PDF: <https://arxiv.org/pdf/2109.08914.pdf>*
 
 ## Task Formulation
 
@@ -69,7 +69,7 @@ content, and (iii) yield a grammatical sentence. Thus, the automatic evaluation 
 * **Style transfer accuracy (STA).** Bert-based classifier (fine-tuned from Conversational Rubert) trained on merge of Russian Language Toxic Comments dataset collected from 2ch.hk and Toxic Russian Comments dataset collected from ok.ru. Link: <https://huggingface.co/SkolkovoInstitute/russian_toxicity_classifier> 
 * **Meaning preservation score (SIM)** is evaluated as cosine similarity of [LaBSE sentence embeddings](<https://arxiv.org/abs/2007.01852>). For computational optimization, we use the model version <https://huggingface.co/cointegrated/LaBSE-en-ru>, which is original LaBSE from Google with embeddings for languages other than Russian and English stripped away.
 * **Fluency score (FL)** is evaluated with the weakly supervised classifier (<https://huggingface.co/SkolkovoInstitute/rubert-base-corruption-detector>). This BERT-based model has been trained to distinguish 780 thousand texts from Odnoklassniki and Pikabu toxicity datasets and a few [web corpora](<https://wortschatz.uni-leipzig.de/en/download>) from their corrupted versions. The corruptions included random replacement, deletion, addition, shuffling, and re-inflexion of words and characters, random changes of capitalization, round-trip translation, filling random gaps with T5 and RoBERTA models.
-* **Joint score:** This is the metric by which the ranking of automatic evaluation on phase will be conducted. This metric is calculated as a superposition of three metrics -STA, SIM, and FL: J = (STA * SIM * FL)
+* **Joint score (J):** This is the metric by which the ranking of automatic evaluation on phase will be conducted. This metric is calculated as a superposition of three metrics -STA, SIM, and FL: J = (STA * SIM * FL)
 * **[ChrF1](https://github.com/m-popovic/chrF):** While all previous metrics compare the output of the model with the original toxic sentences, this metric uses neutral references for the comparison.
 
 
