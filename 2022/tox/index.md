@@ -43,19 +43,20 @@ The whole pipeline consists of three tasks:
 
 * **Paraphrase generation.** The annotators are asked to generate a neutral paraphrase of the input text. They can also select not to rewrite the input if the text is already neutral or it is difficult to extract non-toxic content.
 
-Of course, the annotators can write anything as a paraphrase. However, we have very strict criteria to style-transferred text – the text must be now in a neutral style and the content must be preserved. To ensure this, we validate received paraphrases with the next tasks.
+Of course, the annotators can write anything as a paraphrase. In order to filter out paraphrases of low quality,  we validate them with the next tasks.
 
-* **Content preservation check.** Given to texts – original toxic sentence and generated paraphrase – the annotators should validate if these texts are with similar content. 
+* **Content preservation check.** Given two texts – an original toxic sentence and a generated paraphrase – the annotators should indicate if the content of these texts matches.  
 
-* **Toxicity classification.**  Given the generated paraphrase, the annotators should classify it into one of the classes – toxic or neutral.
+* **Toxicity classification.**   Given the generated paraphrase, the annotators should label it as toxic or neutral.
 
 If the generated paraphrase receives correct answers with high (>=90%) confidence, then it gets into our dataset.
 
-For the original data, we took the toxic part of the toxic classification datasets based on [Odnoklassniki](https://www.kaggle.com/blackmoon/russian-language-toxic-comments) and [Pikabu](https://www.kaggle.com/alexandersemiletov/toxic-russian-comments). As a result, we collected a dataset with paraphrases for **5026** toxic sentences, each having **1-3** paraphrase variants, resulting in **7058** paraphrases overall. 
+For the original data, we took the toxic part of the toxic comment classification datasets based on [Odnoklassniki](https://www.kaggle.com/blackmoon/russian-language-toxic-comments) and [Pikabu](https://www.kaggle.com/alexandersemiletov/toxic-russian-comments) websites. As a result, we collected a dataset with paraphrases for **5026** toxic sentences, each having **1-3** paraphrase variants, resulting in **7058** paraphrases overall. 
 
 ## Evaluation
 
-As TST is quite a new and difficult task to evaluate, there are several works dedicated to the choice of metrics for this task [5,6]. As in our competition we propose a new parallel corpus for detoxification tasks and now can refer to TST tasks like machine translation tasks, we want to use the best practices of machine translation competitions and hold two parts of submissions evaluation – automatic and human.
+Style transfer is difficult to evaluate automatically because there are multiple ways of rewriting a sentence in a different style. Thus, there is no established evaluation strategy. There exist several concurrent evaluations strategies each having its weak points [5,6]. We use the best practices of machine translation and other text generation competitions and perform automatic as well as manual evaluation. 
+
 
 ### Automatic Evaluation
 
@@ -63,42 +64,48 @@ The goals of a style transfer model are to (i) change the text style, (ii) prese
 content, and (iii) yield a grammatical sentence. Thus, the automatic evaluation phase consists of the following metrics:
 
 
-* **Style transfer accuracy (STA).** [Bert-based classifier](https://huggingface.co/SkolkovoInstitute/russian_toxicity_classifier)  (fine-tuned from Conversational Rubert) trained on merge of Russian Language Toxic Comments dataset collected from 2ch.hk and Toxic Russian Comments dataset collected from ok.ru.
-* **Meaning preservation score (SIM)** is evaluated as cosine similarity of [LaBSE sentence embeddings](<https://arxiv.org/abs/2007.01852>). For computational optimization, we use the [model](https://huggingface.co/cointegrated/LaBSE-en-ru), which is original LaBSE from Google with embeddings for languages other than Russian and English stripped away.
-* **Fluency score (FL)** is evaluated with the [weakly supervised classifier](https://huggingface.co/SkolkovoInstitute/rubert-base-corruption-detector). This BERT-based model has been trained to distinguish 780 thousand texts from Odnoklassniki and Pikabu toxicity datasets and a few [web corpora](<https://wortschatz.uni-leipzig.de/en/download>) from their corrupted versions. The corruptions included random replacement, deletion, addition, shuffling, and re-inflexion of words and characters, random changes of capitalization, round-trip translation, filling random gaps with T5 and RoBERTA models. For each sentence pair, fluency score is the difference of probabilities of being non-corrupted assigned by this classifier to the rewritten sentence and to the original sentence.  
+* **Style transfer accuracy (STA).** is evaluated with a [BERT-based classifier](https://huggingface.co/SkolkovoInstitute/russian_toxicity_classifier) (fine-tuned from Conversational Rubert) trained on merge of Russian Language Toxic Comments dataset collected from 2ch.hk and Toxic Russian Comments dataset collected from ok.ru.
+* **Meaning preservation score (SIM)** is evaluated as cosine similarity of [LaBSE sentence embeddings](https://arxiv.org/abs/2007.01852). For computational optimization, we use the [model version](https://huggingface.co/cointegrated/LaBSE-en-ru), which is original LaBSE from Google with embeddings for languages other than Russian and English stripped away.
+* **Fluency score (FL)** is evaluated with a [fluency classifier](https://huggingface.co/SkolkovoInstitute/rubert-base-corruption-detector). This is a BERT-based model trained to distinguish real user-generated texts from corrupted texts. We train the model on 780 thousand texts from Odnoklassniki and Pikabu toxicity datasets and a few [web corpora](<https://wortschatz.uni-leipzig.de/en/download>) and on their automatically corrupted versions. The corruptions included random replacement, deletion, insertion, shuffling, and re-inflexion of words and characters, random changes of capitalization, round-trip translation, filling random gaps with T5 and RoBERTA models. For each sentence pair, we compute the probability of being corrupted for its source and target sentences. The overall fluency score is the difference between these two probabilities. The rationale behind this is the following. Since we detoxify user-generated sentences, they can already contain errors and disfluencies, and it is unfair to expect a detoxification model to fix these errors. We make sure that the detoxification model produces a text which is not worse in terms of fluency than the original message.  
 
-* STA, SIM and FL scores are all linearly calibrated to match human judgements of the corresponding properties, and clipped between 0 and 1.
+* **Joint score:**  We combine the three metrics to get a single number along which models can be compared. It is computed as an averaged sentence-level multiplication of STA, SIM, and FL: J = (STA * SIM * FL). This metric will be used for **ranking models during the automatic evaluation**.
 
-* **Joint score:**  This is the metric by which **the ranking of automatic evaluation** will be conducted. This metric is calculated as a superposition of three metrics -STA, SIM, and FL: J = (STA * SIM * FL)
+STA, SIM and FL scores are all linearly calibrated to match human judgements of the corresponding properties, and clipped between 0 and 1.
 
-* **[ChrF1](https://github.com/m-popovic/chrF):** While all previous metrics compare the output of the model with the original toxic sentences, this metric uses neutral references for the comparison.
+Since we have reference answers for the public and private test sets, we compute the reference-based **[ChrF1](https://github.com/m-popovic/chrF)** metric, which is the character-level F1 score. This metric will be given only for participants’ information and will not influence the ranking of models.
 
 
 ### Human Evaluation
 
-After private set submissions, we are going to select the best model for each participant based on an automatically calculated J score. These submissions will be used for the final ranking phase – human evaluation.
+Since the automatic metrics (both referenceless classifiers and reference-based metrics) cannot reliably identify the best-performing model, we also conduct the manual evaluation of the private test set.
 
-We are going to use Yandex.Toloka platform to evaluate participants’ results on a private test set. The texts will be as well evaluated based on three parameters – style transfer accuracy, content preservation, and fluency:
+After having submitted the detoxified versions of the private test set, participants can choose one of their models for manual evaluation. If a participant does not choose the model themselves, we are going to select their model which yielded the highest automatic J score.
 
-
-* **Toxicity classification (STA).** Given the generated paraphrase, the annotators should classify it into one of the classes – *toxic* or *neutral*.
-* **Content preservation check (SIM).** Given to texts – original toxic sentence and generated paraphrase – the annotators should validate if these texts are with similar content and mark them as *similar* or *dissimilar*.
-
-* **Fluency task (FL).** The annotators validate if the text is written correctly and is meaningful. For fair evaluation, this metric is calculated relative as well to the original sentence. Both original and generated sentences will be evaluated three-point scale: *Absolutely correct* – the words and the whole sentence are correct, meaningful, but we allow punctuation and register mistakes, so some commas can be missed or the sentence can start from the lower-cased letter; *With some mistakes, but meaningful* – the text can contain some incorrectly written or corrupted words, but the reader still can understand the meaning of the whole text; *Incorrect and meaningless* – the sentence contains mistakes that make it difficult to understand the meaning of the text. If the generated sentence receives a score the same or higher than the original sentence, then it will be marked as *correct*, otherwise – *incorrect*.
+The outputs of the best models (one per participant/team) will be manually evaluated along with three parameters: style transfer accuracy, content preservation, and fluency:
 
 
-After receiving manual scores of these three parameters, they again will be concatenated into one joint metric J as a superposition of three scores: J = STA * SIM * FL. **This metric will be used for the final ranking of the participants. The final table with results will be published on the [competition web-page](https://russe.nlpub.org/2022/tox/).**
+* **Toxicity (STA).**  Given the generated paraphrase, the annotators should classify it into one of the classes – *toxic* or *neutral*.
+
+* **Content preservation (SIM).**  Given two texts (original toxic sentence and generated paraphrase) the annotators should evaluate the similarity of their content and mark them as *similar* or *dissimilar*.
+
+* **Fluency task (FL).** The annotators validate if the text is grammatically correct and meaningful. For a fair evaluation, this metric is calculated relative to the original sentence. Both original and generated sentences will be evaluated along a three-point scale:     
+  - *Absolutely correct* – the words and the whole sentence are correct, meaningful, but we allow punctuation and register mistakes because they are common in user-generated content;
+  - *With some mistakes, but meaningful* – the text can contain some words with errors or typos, but the reader still can understand the meaning of the whole text;
+  - *Incorrect and meaningless* – the sentence contains mistakes that make it difficult to understand the meaning of the text. 
+
+If the generated sentence receives a score the same or higher than the original sentence, then it will be marked as *correct*, otherwise – *incorrect*.
+
+After receiving manual scores of these three parameters, they will be combined into one joint metric J as a sentence-level multiplication of three scores: J = STA * SIM * FL. **This metric will be used for the final ranking of the participants and for identifying the winner. The final table with results will be published on the [competition web-page](https://russe.nlpub.org/2022/tox/).**
 
 ## Baselines
 
-We provide several baselines for this task: a rule-based **Delete** approach and an approach based on the **[T5 model](https://huggingface.co/sberbank-ai/ruT5-base)**. 
+We provide two baselines for this task: a rule-based **Delete** approach and an approach based on the **[T5 model](https://huggingface.co/sberbank-ai/ruT5-base)**. 
 
-* **Delete:** This is a simple unsupervised method that eliminates toxic words based on a predefined [toxic words vocabulary](https://github.com/skoltech-nlp/rudetoxifier/blob/main/data/train/MAT_FINAL_with_unigram_inflections.txt). The idea is often used on television and other media: rude words are bleeped out or hidden with special characters (usually an asterisk). 
+* **Delete:** This is an unsupervised method that eliminates toxic words based on a predefined [toxic words vocabulary](https://github.com/skoltech-nlp/rudetoxifier/blob/main/data/train/MAT_FINAL_with_unigram_inflections.txt). The idea is often used on television and other media: rude words are bleeped out or hidden with special characters (usually an asterisk). We provide both the vocabulary and the script that applies it to input sentences.
 
 * **T5-base:** This is the supervised baseline based on the T5 model. We trained the [ruT5-base model](https://huggingface.co/sberbank-ai/ruT5-base) on the train part of our dataset.
 
-
-You are welcome to test other brand new Russian Encoder-Decoder models (like GPT-2, GPT-3, T5, etc.) or other monolingual or multilingual Transformers.  Also, we are expecting to see interesting modifications of classical Seq2Seq models or even brand-new approaches.
+You are welcome to test other brand new Russian Encoder-Decoder models (GPT-2, GPT-3, T5, etc.) or other monolingual or multilingual Transformers.  Also, we would be happy to see interesting modifications of classical Seq2Seq models or even novel approaches.
 
 ## Important Dates
 
@@ -138,6 +145,6 @@ Join our discussion group in Telegram: <https://t.me/joinchat/Ckja7Vh00qPOU887pL
 
 [4] Daryna Dementieva, Sergey Ustyantsev, David Dale, Olga Kozlova, Nikita Semenov, Alexander Panchenko, Varvara Logacheva. **“Crowdsourcing of Parallel Corpora: the Case of Style Transfer for Detoxification.”** *Proceedings of the 2nd Crowd Science Workshop: Trust, Ethics, and Excellence in Crowdsourced Data Management at Scale co-located with 47th International Conference on Very Large Data Bases (VLDB), 2021. [paper](http://ceur-ws.org/Vol-2932/paper2.pdf)*
 
-[5] Yamshchikov I. P. et al. **“Style-transfer and Paraphrase: Looking for a Sensible Semantic Similarity Metric.”** *Proceedings of the AAAI Conference on Artificial Intelligence. – 2021. – Т. 35. – №. 16. – С. 14213-14220 [paper](https://arxiv.org/abs/2004.05001)*
+[5] Yamshchikov I. P. et al. **“Style-transfer and Paraphrase: Looking for a Sensible Semantic Similarity Metric.”** *Proceedings of the AAAI Conference on Artificial Intelligence. – 2021. – Т. 35. – №. 16. – С. 14213-14220. [paper](https://arxiv.org/abs/2004.05001)*
 
 [6] Briakou E. et al. **“Evaluating the Evaluation Metrics for Style Transfer: A Case Study in Multilingual Formality Transfer.”** *Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing. – 2021. – С. 1321-1336. [paper](https://arxiv.org/abs/2110.10668)*
