@@ -37,7 +37,7 @@ Everyone interested in TST and detoxification is welcome to participate. The par
 
 ## Dataset
 
-For this shared task, we created a new dataset with parallel data for detoxification. We hired workers via Yandex.Toloka platform (https://toloka.yandex.ru/). The pipeline for the parallel detoxification collection was presented in the work [4] and tested for an English dataset collection. We have improved this pipeline and adapted it for the Russian language.
+For this shared task, we created a new dataset with parallel data for detoxification. We hired workers via [Yandex.Toloka platform](https://toloka.yandex.ru/). The pipeline for the parallel detoxification collection was presented in the work [4] and tested for an English dataset collection. We have improved this pipeline and adapted it for the Russian language.
 
 The whole pipeline consists of three tasks:
 
