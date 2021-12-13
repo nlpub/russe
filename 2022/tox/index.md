@@ -130,14 +130,14 @@ Join our discussion group in Telegram: <https://t.me/joinchat/Ckja7Vh00qPOU887pL
 
 ## References
 
-*[1] Jin, Di, Zhijing Jin, Zhiting Hu, Olga Vechtomova and Rada Mihalcea. **“Deep Learning for Text Style Transfer: A Survey.”** *ArXiv abs/2011.00416 (2020). [paper](https://arxiv.org/abs/2011.00416)*
+[1] Jin, Di, Zhijing Jin, Zhiting Hu, Olga Vechtomova and Rada Mihalcea. **“Deep Learning for Text Style Transfer: A Survey.”** *ArXiv abs/2011.00416 (2020). [paper](https://arxiv.org/abs/2011.00416)*
 
-*[2] Dementieva, Daryna, Daniil Moskovskiy, Varvara Logacheva, David Dale, Olga Kozlova, Nikita Semenov, and Alexander Panchenko. **“Methods for Detoxification of Texts for the Russian Language”** *Multimodal Technologies and Interaction 5 (2021): no. 9: 54. https://doi.org/10.3390/mti5090054. [paper](https://www.mdpi.com/2414-4088/5/9/54/pdf)*
+[2] Dementieva, Daryna, Daniil Moskovskiy, Varvara Logacheva, David Dale, Olga Kozlova, Nikita Semenov, and Alexander Panchenko. **“Methods for Detoxification of Texts for the Russian Language”** *Multimodal Technologies and Interaction 5 (2021): no. 9: 54. https://doi.org/10.3390/mti5090054. [paper](https://www.mdpi.com/2414-4088/5/9/54/pdf)*
 
-*[3] Dale, David, Anton Voronov, Daryna Dementieva, Varvara Logacheva, Olga Kozlova, Nikita Semenov and Alexander Panchenko. **“Text Detoxification using Large Pre-trained Neural Models.”** *EMNLP (2021). [paper](https://arxiv.org/pdf/2109.08914.pdf)*
+[3] Dale, David, Anton Voronov, Daryna Dementieva, Varvara Logacheva, Olga Kozlova, Nikita Semenov and Alexander Panchenko. **“Text Detoxification using Large Pre-trained Neural Models.”** *EMNLP (2021). [paper](https://arxiv.org/pdf/2109.08914.pdf)*
 
-*[4] Daryna Dementieva, Sergey Ustyantsev, David Dale, Olga Kozlova, Nikita Semenov, Alexander Panchenko, Varvara Logacheva. **“Crowdsourcing of Parallel Corpora: the Case of Style Transfer for Detoxification.”** *Proceedings of the 2nd Crowd Science Workshop: Trust, Ethics, and Excellence in Crowdsourced Data Management at Scale co-located with 47th International Conference on Very Large Data Bases (VLDB), 2021. [paper](http://ceur-ws.org/Vol-2932/paper2.pdf)*
+[4] Daryna Dementieva, Sergey Ustyantsev, David Dale, Olga Kozlova, Nikita Semenov, Alexander Panchenko, Varvara Logacheva. **“Crowdsourcing of Parallel Corpora: the Case of Style Transfer for Detoxification.”** *Proceedings of the 2nd Crowd Science Workshop: Trust, Ethics, and Excellence in Crowdsourced Data Management at Scale co-located with 47th International Conference on Very Large Data Bases (VLDB), 2021. [paper](http://ceur-ws.org/Vol-2932/paper2.pdf)*
 
-*[5] Yamshchikov I. P. et al. **“Style-transfer and Paraphrase: Looking for a Sensible Semantic Similarity Metric.”** *Proceedings of the AAAI Conference on Artificial Intelligence. – 2021. – Т. 35. – №. 16. – С. 14213-14220 [paper](https://arxiv.org/abs/2004.05001)*
+[5] Yamshchikov I. P. et al. **“Style-transfer and Paraphrase: Looking for a Sensible Semantic Similarity Metric.”** *Proceedings of the AAAI Conference on Artificial Intelligence. – 2021. – Т. 35. – №. 16. – С. 14213-14220 [paper](https://arxiv.org/abs/2004.05001)*
 
-*[6] Briakou E. et al. **“Evaluating the Evaluation Metrics for Style Transfer: A Case Study in Multilingual Formality Transfer.”** *Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing. – 2021. – С. 1321-1336. [paper](https://arxiv.org/abs/2110.10668)*
+[6] Briakou E. et al. **“Evaluating the Evaluation Metrics for Style Transfer: A Case Study in Multilingual Formality Transfer.”** *Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing. – 2021. – С. 1321-1336. [paper](https://arxiv.org/abs/2110.10668)*
