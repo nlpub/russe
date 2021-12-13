@@ -58,7 +58,7 @@ For the original data, we took the toxic part of the toxic classification datase
 
 ## Evaluation
 
-As TST is quite a new and difficult task to evaluate, there are several works dedicated to the choice of metrics for this task. As in our competition we propose a new parallel corpora for detoxification tasks and now can refer to TST tasks like machine translation tasks, we want to use the best practices of machine translation competitions and hold two parts of submissions evaluation – automatic and human.
+As TST is quite a new and difficult task to evaluate, there are several works dedicated to the choice of metrics for this task. As in our competition we propose a new parallel corpus for detoxification tasks and now can refer to TST tasks like machine translation tasks, we want to use the best practices of machine translation competitions and hold two parts of submissions evaluation – automatic and human.
 
 ### Automatic Evaluation
 
@@ -95,7 +95,7 @@ We provide several baselines for this task: a rule-based Delete approach and an 
 * **T5-base:** This is the supervised baseline based on the T5 model. We trained the [ruT5-base model](https://huggingface.co/sberbank-ai/ruT5-base) on the train part of our dataset.
 
 
-You are welcome to test other  brand new Russian Encoder-Decoder models (like GPT-2, GPT-3, T5, etc.) or other monolingual or multilingual Transformers.  Also, we are expecting to see interesting modifications of classical Seq2Seq models or even brand-new approaches.
+You are welcome to test other brand new Russian Encoder-Decoder models (like GPT-2, GPT-3, T5, etc.) or other monolingual or multilingual Transformers.  Also, we are expecting to see interesting modifications of classical Seq2Seq models or even brand-new approaches.
 
 ## Important Dates
 
