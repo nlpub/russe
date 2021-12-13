@@ -79,9 +79,9 @@ After private set submissions, we are going to select the best model for each pa
 
 We are going to use Yandex.Toloka platform to evaluate participants’ results on a private test set. The texts will be as well evaluated based on three parameters – style transfer accuracy, content preservation, and fluency:
 
-* **Toxicity classification.** Given the generated paraphrase, the annotators should classify it into one of the classes – toxic or neutral.
-* **Content preservation check.** Given to texts – original toxic sentence and generated paraphrase – the annotators should validate if these texts are with similar content.
-* **Fluency task.** The annotators validate if the text is written correctly and meaningful.
+* **Style transfer accuracy (STA).** Given the generated paraphrase, the annotators should classify it into one of the classes – toxic or neutral.
+* **Content preservation check (CP).** Given to texts – original toxic sentence and generated paraphrase – the annotators should validate if these texts are with similar content.
+* **Fluency task (FL).** The annotators validate if the text is written correctly and meaningful.
 
 After receiving manual scores of these three parameters, they again will be concatenated into one joint metric J as a superposition of three scores. This metric will be used for the final ranking of the participants. The final table with results will be published on the [competition web-page](https://russe.nlpub.org/2022/tox/).
 
