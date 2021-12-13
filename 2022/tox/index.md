@@ -90,7 +90,7 @@ The outputs of the best models (one per participant/team) will be manually evalu
 
 * **Fluency task (FL).** The annotators validate if the text is grammatically correct and meaningful. For a fair evaluation, this metric is calculated relative to the original sentence. Both original and generated sentences will be evaluated along a three-point scale:     
   - *Absolutely correct* – the words and the whole sentence are correct, meaningful, but we allow punctuation and register mistakes because they are common in user-generated content;
-  - *With some mistakes, but meaningful* – the text can contain some words with errors or typos, but the reader still can understand the meaning of the whole text;
+  - *Contains mistakes, but is meaningful* – the text can contain some words with errors or typos, but the reader still can understand the meaning of the whole text;
   - *Incorrect and meaningless* – the sentence contains mistakes that make it difficult to understand the meaning of the text. 
 
 If the generated sentence receives a score the same or higher than the original sentence, then it will be marked as *correct*, otherwise – *incorrect*.
