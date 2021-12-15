@@ -10,7 +10,7 @@ You are very welcome to the first shared task on text detoxification based on a 
 
 <!--- ![skoltech](./logos/skoltech_logo.png) ![mts](./logos/MTS_Al_Crop_Red.png) ![sber](./logos/Sber_Devices_1Line.png) --->
 <img src="./logos/skoltech_logo.png" alt="skoltech" width="150"/> <img src="./logos/MTS_Al_Crop_Red.png" alt="mts" width="150"/>
-<img src="./logos/Sber_Devices_1Line.png" alt="sber" width="250"/>
+<img src="./logos/Sber_Devices_1Line.png" alt="sber" width="200"/>
 
 **Quick Start:** 
 - The task is to rewrite Russian toxic sentences into non-toxic sentences which mean the same thing
