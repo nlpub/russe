@@ -35,7 +35,7 @@ You are very welcome to the first shared task on text detoxification based on a 
 
 Identification of toxicity in user texts is an active area of research. Today, social networks such as [Facebook](https://edition.cnn.com/2021/06/16/tech/facebook-ai-conflict-moderation-groups/index.html), [Instagram](https://about.instagram.com/blog/announcements/introducing-new-tools-to-protect-our-community-from-abuse), [VK](https://vk.com/press/stickers-hate-speech) are trying to address the problem of toxicity. However, they usually simply block such kinds of texts. We suggest a proactive reaction to toxicity from the user. Namely, we aim at presenting a neutral version of a user message which preserves meaningful content. We denote this task as *detoxification*.
 
-Detoxification can be solved with Text Style Transfer (TST) [1] methods. There already exist unsupervised approaches to detoxification [2, 3] trained without parallel corpora for the Russian and English languages. However, the output of these models is often of bad quality.
+Detoxification can be solved with Text Style Transfer (TST) [[1](#cite1)] methods. There already exist unsupervised approaches to detoxification [2, 3] trained without parallel corpora for the Russian and English languages. However, the output of these models is often of bad quality.
 
 Russian IT company Yandex already tried to address the detoxification problem and launched the first [detoxification competition](https://yandex.ru/cup/ml/analysis/#NLP). However, we want to extend this setup. We collected **a new parallel corpus** of toxic sentences and their manually written non-toxic paraphrases and want to refer to the detoxification task as a machine translation task.
 
@@ -188,7 +188,7 @@ The human evaluation is supported by the [Yandex.Toloka](https://toloka.yandex.r
 
 ## <a name="references"></a>References
 
-[1] Jin, Di, Zhijing Jin, Zhiting Hu, Olga Vechtomova and Rada Mihalcea. **“Deep Learning for Text Style Transfer: A Survey.”** *ArXiv abs/2011.00416 (2020). [pdf](https://arxiv.org/abs/2011.00416)*
+<a name="cite1"></a>[1] Jin, Di, Zhijing Jin, Zhiting Hu, Olga Vechtomova and Rada Mihalcea. **“Deep Learning for Text Style Transfer: A Survey.”** *ArXiv abs/2011.00416 (2020). [pdf](https://arxiv.org/abs/2011.00416)*
 
 [2] Dementieva, Daryna, Daniil Moskovskiy, Varvara Logacheva, David Dale, Olga Kozlova, Nikita Semenov, and Alexander Panchenko. **“Methods for Detoxification of Texts for the Russian Language”** *Multimodal Technologies and Interaction 5 (2021): no. 9: 54. https://doi.org/10.3390/mti5090054. [pdf](https://www.mdpi.com/2414-4088/5/9/54/pdf)*
 
