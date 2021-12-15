@@ -62,12 +62,12 @@ Everyone interested in TST and detoxification is welcome to participate. The par
 
 ## <a name="dataset"></a>Dataset
 
-We provide a parallel detoxification dataset. The source sentences are Russian toxic messages from Odnoklassniki, Pikabu, and Twitter platforms. The target part of the dataset are the same messages which were manually rewritten by crowd workers to eliminate toxicity.
+We provide a parallel detoxification dataset. The source sentences are Russian toxic messages from [Odnoklassniki](https://www.kaggle.com/blackmoon/russian-language-toxic-comments), [Pikabu](https://www.kaggle.com/alexandersemiletov/toxic-russian-comments) and [Twitter](http://study.mokoron.com/) platforms. The target part of the dataset are the same messages which were manually rewritten by crowd workers to eliminate toxicity. Some toxic sentences contain multiple (up to 3) variants of detoxification.
 
 The dataset is divided into train, development, and test sets. The train and development parts are made available along with their references from the beginning of the competition. The source test sentences will be made available during the evaluation phase. The reference test sentences will be released after the end of the competition. Dataset statistics:
-- train: 3,539 sentence pairs;
-- development: 800 sentence pairs;
-- test: 1,474 sentence pairs.
+- train: 3,539 toxic sentences with 1-3 detoxified versions;
+- development: 800 toxic sentences with 1-3 detoxified versions;
+- test: 1,474 toxic sentences with 1-3 detoxified versions.
 
 The dataset was collected for this competition. We hired workers via [Yandex.Toloka platform](https://toloka.yandex.ru/). The pipeline for the parallel detoxification collection was presented in the work [4] and tested for an English dataset collection. We have improved this pipeline and adapted it for the Russian language.
 
@@ -82,8 +82,6 @@ Of course, the annotators can write anything as a paraphrase. In order to filter
 * **Toxicity classification.**   Given the generated paraphrase, the annotators should label it as toxic or neutral.
 
 If the generated paraphrase receives correct answers with high (>=90%) confidence, then it gets into our dataset.
-
-For the original data, we took the toxic part of the toxic comment classification datasets based on [Odnoklassniki](https://www.kaggle.com/blackmoon/russian-language-toxic-comments) and [Pikabu](https://www.kaggle.com/alexandersemiletov/toxic-russian-comments) websites. As a result, we collected a dataset with paraphrases for **5026** toxic sentences, each having **1-3** paraphrase variants, resulting in **7058** paraphrases overall. 
 
 ## <a name="evaluation"></a>Evaluation
 
