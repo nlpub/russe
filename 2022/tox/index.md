@@ -26,9 +26,10 @@ You are very welcome to the first shared task on text detoxification based on a 
 6. [Baselines](#baselines)
 7. [RESULTS](#results)
 8. [Important dates](#important_dates)
-9. [Organizers](#organizers)
-10. [Acknowledgements](#acknowledgements)
-11. [References](#references)
+9. [Participate](#participate)
+10. [Organizers](#organizers)
+11. [Acknowledgements](#acknowledgements)
+12. [References](#references)
 
 
 ## <a name="motivation"></a>Motivation
@@ -159,7 +160,7 @@ The final results will be available here after the human evaluation.
 * Human Evaluation Results: February 28, 2022
 * Article submission deadlines: March 15, 2022
 
-## <a name="motivation"></a>Participate
+## <a name="participate"></a>Participate
 
 Please submit your solutions to CodaLab: <https://codalab.lisn.upsaclay.fr/competitions/642>.
 
