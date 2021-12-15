@@ -8,10 +8,12 @@ description: Shared task on Text detoxification based on parallel corpora for th
 
 You are very welcome to the first shared task on text detoxification based on a parallel dataset!
 
+![skoltech](./logos/skoltech_logo.png =50x) ![mts](./logos/MTS_Al_Crop_Red.png =50x) ![sber](./logos/Sber_Devices_1Line.png =50x)
+
 **Quick Start:** 
 - The task is to rewrite Russian toxic sentences into non-toxic sentences which mean the same thing
 - The training data, baselines, and evaluation scripts are available on [github](https://github.com/skoltech-nlp/russe_detox_2022)
-- You should submit via [CodaLab](https://codalab.lisn.upsaclay.fr/competitions/584)
+- You should submit via [CodaLab](https://codalab.lisn.upsaclay.fr/competitions/642)
 - Competition news and discussion are in the [Telegram chat](https://t.me/joinchat/Ckja7Vh00qPOU887pLonqQ)
 - The intermediate evaluation is automatic, the final evaluation will be manual.
 
@@ -20,8 +22,8 @@ You are very welcome to the first shared task on text detoxification based on a 
 2. [Task Formulation](#task_formulation)
 3. [Dataset](#dataset)
 4. [Evaluation](#evaluation)
- - [Automatic evaluation](#automatic_evaluation)
- - [Human evaluation](#human_evaluation)
+  - [Automatic evaluation](#automatic_evaluation)
+  - [Human evaluation](#human_evaluation)
 5. [General rules](#general_rules)
 6. [Baselines](#baselines)
 7. [Important dates](#important_dates)
@@ -150,7 +152,7 @@ You are welcome to test other brand new Russian Encoder-Decoder models (GPT-2, G
 
 ## <a name="motivation"></a>Participate
 
-Please submit your solutions to CodaLab: [will be available soon]<https://codalab.lisn.upsaclay.fr/competitions/584>.
+Please submit your solutions to CodaLab: [will be available soon](https://codalab.lisn.upsaclay.fr/competitions/642).
 
 Join our discussion group in Telegram: <https://t.me/joinchat/Ckja7Vh00qPOU887pLonqQ>.
 
