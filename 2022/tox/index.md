@@ -8,10 +8,6 @@ description: Shared task on Text detoxification based on parallel corpora for th
 
 You are very welcome to the first shared task on text detoxification based on a parallel dataset!
 
-<!--- ![skoltech](./logos/skoltech_logo.png) ![mts](./logos/MTS_Al_Crop_Red.png) ![sber](./logos/Sber_Devices_1Line.png) --->
-<img src="./logos/skoltech_logo.png" alt="skoltech" width="100"/> <img src="./logos/MTS_Al_Crop_Red.png" alt="mts" width="100"/>
-<img src="./logos/Sber_Devices_1Line.png" alt="sber" width="180"/>
-
 **Quick Start:** 
 - The task is to rewrite Russian toxic sentences into non-toxic sentences which mean the same thing
 - The training data, baselines, and evaluation scripts are available on [github](https://github.com/skoltech-nlp/russe_detox_2022)
@@ -28,10 +24,11 @@ You are very welcome to the first shared task on text detoxification based on a 
   - [Human evaluation](#human_evaluation)
 5. [General rules](#general_rules)
 6. [Baselines](#baselines)
-7. [Important dates](#important_dates)
-8. [Organizers](#organizers)
-9. [Acknowledgements](#acknowledgements)
-10. [References](#references)
+7. [RESULTS](#results)
+8. [Important dates](#important_dates)
+9. [Organizers](#organizers)
+10. [Acknowledgements](#acknowledgements)
+11. [References](#references)
 
 
 ## <a name="motivation"></a>Motivation
@@ -151,6 +148,10 @@ We provide two baselines for this task: a rule-based **Delete** approach and an 
 
 You are welcome to test other brand new Russian Encoder-Decoder models (GPT-2, GPT-3, T5, etc.) or other monolingual or multilingual Transformers.  Also, we would be happy to see interesting modifications of classical Seq2Seq models or even novel approaches.
 
+## <a name="results"></a>RESULTS
+
+The final results will be available here after the human evaluation.
+
 ## <a name="important_dates"></a>Important Dates
 
 * First Call for Participation: December 15, 2021
@@ -177,6 +178,9 @@ Join our discussion group in Telegram: <https://t.me/joinchat/Ckja7Vh00qPOU887pL
 * Nikita Semenov, Mobile TeleSystems (MTS)
 * Tatiana Shavrina, Sberbank
 * Alena Fenogenova, Sberbank
+
+<img src="./logos/skoltech_logo.png" alt="skoltech" width="100"/> <img src="./logos/MTS_Al_Crop_Red.png" alt="mts" width="100"/>
+<img src="./logos/Sber_Devices_1Line.png" alt="sber" width="180"/>
 
 ## <a name="acknowledgements"></a> Acknowledgements
 
