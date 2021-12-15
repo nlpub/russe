@@ -65,7 +65,14 @@ Everyone interested in TST and detoxification is welcome to participate. The par
 
 ## <a name="dataset"></a>Dataset
 
-For this shared task, we created a new dataset with parallel data for detoxification. We hired workers via [Yandex.Toloka platform](https://toloka.yandex.ru/). The pipeline for the parallel detoxification collection was presented in the work [4] and tested for an English dataset collection. We have improved this pipeline and adapted it for the Russian language.
+We provide a parallel detoxification dataset. The source sentences are Russian toxic messages from Odnoklassniki, Pikabu, and Twitter platforms. The target part of the dataset are the same messages which were manually rewritten by crowd workers to eliminate toxicity.
+
+The dataset is divided into train, development, and test sets. The train and development parts are made available along with their references from the beginning of the competition. The source test sentences will be made available during the evaluation phase. The reference test sentences will be released after the end of the competition. Dataset statistics:
+- train: 3,539 sentence pairs;
+- development: 800 sentence pairs;
+- test: 1,474 sentence pairs.
+
+The dataset was collected for this competition. We hired workers via [Yandex.Toloka platform](https://toloka.yandex.ru/). The pipeline for the parallel detoxification collection was presented in the work [4] and tested for an English dataset collection. We have improved this pipeline and adapted it for the Russian language.
 
 The whole pipeline consists of three tasks:
 
