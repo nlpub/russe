@@ -161,7 +161,7 @@ The final results will be available here after the human evaluation.
 
 ## <a name="motivation"></a>Participate
 
-Please submit your solutions to CodaLab: [will be available soon](https://codalab.lisn.upsaclay.fr/competitions/642).
+Please submit your solutions to CodaLab: <https://codalab.lisn.upsaclay.fr/competitions/642>.
 
 Join our discussion group in Telegram: <https://t.me/joinchat/Ckja7Vh00qPOU887pLonqQ>.
 
