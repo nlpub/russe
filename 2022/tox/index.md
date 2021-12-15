@@ -9,8 +9,8 @@ description: Shared task on Text detoxification based on parallel corpora for th
 You are very welcome to the first shared task on text detoxification based on a parallel dataset!
 
 <!--- ![skoltech](./logos/skoltech_logo.png) ![mts](./logos/MTS_Al_Crop_Red.png) ![sber](./logos/Sber_Devices_1Line.png) --->
-<img src="./logos/skoltech_logo.png" alt="skoltech" width="150"/> <img src="./logos/MTS_Al_Crop_Red.png" alt="mts" width="150"/>
-<img src="./logos/Sber_Devices_1Line.png" alt="sber" width="200"/>
+<img src="./logos/skoltech_logo.png" alt="skoltech" width="100"/> <img src="./logos/MTS_Al_Crop_Red.png" alt="mts" width="100"/>
+<img src="./logos/Sber_Devices_1Line.png" alt="sber" width="180"/>
 
 **Quick Start:** 
 - The task is to rewrite Russian toxic sentences into non-toxic sentences which mean the same thing
