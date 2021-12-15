@@ -30,7 +30,8 @@ You are very welcome to the first shared task on text detoxification based on a 
 6. [Baselines](#baselines)
 7. [Important dates](#important_dates)
 8. [Organizers](#organizers)
-9. [References](#references)
+9. [Acknowledgements](#acknowledgements)
+10. [References](#references)
 
 
 ## <a name="motivation"></a>Motivation
@@ -169,6 +170,10 @@ Join our discussion group in Telegram: <https://t.me/joinchat/Ckja7Vh00qPOU887pL
 * Nikita Semenov, Mobile TeleSystems (MTS)
 * Tatiana Shavrina, Sberbank
 * Alena Fenogenova, Sberbank
+
+## <a name="acknowledgements"></a> Acknowledgements
+
+The human evaluation is supported by the [Yandex.Toloka](https://toloka.yandex.ru/) research grant.
 
 ## <a name="references"></a>References
 
