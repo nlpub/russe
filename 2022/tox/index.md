@@ -8,20 +8,20 @@ description: Shared task on Text detoxification based on parallel corpora for th
 
 You are very welcome to the first shared task on text detoxification based on a parallel dataset!
 
-**TL;DR:** 
+**Quick Start:** 
 - The task is to rewrite Russian toxic sentences into non-toxic sentences which mean the same thing
 - The training data, baselines, and evaluation scripts are available on [github](https://github.com/skoltech-nlp/russe_detox_2022)
 - You should submit via [CodaLab](https://codalab.lisn.upsaclay.fr/competitions/584)
 - Competition news and discussion are in the [Telegram chat](https://t.me/joinchat/Ckja7Vh00qPOU887pLonqQ)
 - The intermediate evaluation is automatic, the final evaluation will be manual.
 
-Contents:
+**Contents:**
 1. [Motivation](#motivation)
 2. [Task Formulation](#task_formulation)
 3. [Dataset](#dataset)
 4. [Evaluation](#evaluation)
-  4.1 [Automatic evaluation](#automatic_evaluation)
-  4.2 [Human evaluation](#human_evaluation)
+ - [Automatic evaluation](#automatic_evaluation)
+ - [Human evaluation](#human_evaluation)
 5. [General rules](#general_rules)
 6. [Baselines](#baselines)
 7. [Important dates](#important_dates)
