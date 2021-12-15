@@ -129,7 +129,6 @@ Join our discussion group in Telegram: <https://t.me/joinchat/Ckja7Vh00qPOU887pL
 * Varvara Logacheva, Skoltech (<v.logacheva@skoltech.ru>)
 * David Dale, Skoltech 
 * Alexander Panchenko, Skoltech
-* Olga Kozlova, Mobile TeleSystems (MTS)
 * Irina Krotova, Mobile TeleSystems (MTS)
 * Nikita Semenov, Mobile TeleSystems (MTS)
 * Tatiana Shavrina, Sberbank
