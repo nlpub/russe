@@ -15,27 +15,18 @@ You are very welcome to the first shared task on text detoxification based on a 
 - Competition news and discussion are in the [Telegram chat](https://t.me/joinchat/Ckja7Vh00qPOU887pLonqQ)
 - The intermediate evaluation is automatic, the final evaluation will be manual.
 
-[Motivation](#motivation)
-
-[Task Formulation](#task_formulation)
-
-[Dataset](#dataset)
-
-[Evaluation](#evaluation)
-
-[Automatic evaluation](#automatic_evaluation)
-
-[Human evaluation](#human_evaluation)
-
-[General rules](#general_rules)
-
-[Baselines](#baselines)
-
-[Important dates](#important_dates)
-
-[Organizers](#organizers)
-
-[References](#references)
+Contents:
+1. [Motivation](#motivation)
+2. [Task Formulation](#task_formulation)
+3. [Dataset](#dataset)
+4. [Evaluation](#evaluation)
+  4.1 [Automatic evaluation](#automatic_evaluation)
+  4.2 [Human evaluation](#human_evaluation)
+5. [General rules](#general_rules)
+6. [Baselines](#baselines)
+7. [Important dates](#important_dates)
+8. [Organizers](#organizers)
+9. [References](#references)
 
 
 ## <a name="motivation"></a>Motivation
