@@ -12,7 +12,8 @@ You are very welcome to the first shared task on text detoxification based on a 
 - The task is to rewrite Russian toxic sentences into non-toxic sentences which mean the same thing
 - The training data, baselines, and evaluation scripts are available on [github](https://github.com/skoltech-nlp/russe_detox_2022)
 - You should submit via [CodaLab](https://codalab.lisn.upsaclay.fr/competitions/642)
-- Competition news and discussion are in the [Telegram chat](https://t.me/joinchat/Ckja7Vh00qPOU887pLonqQ)
+- Competition news and announcements are in the [Telegram channel](https://t.me/russe_detox) 
+- Join the [Telegram chat](https://t.me/joinchat/Ckja7Vh00qPOU887pLonqQ) for the participants
 - The intermediate evaluation is automatic, the final evaluation will be manual.
 
 **Contents:**
