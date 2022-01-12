@@ -20,6 +20,8 @@ You are very welcome to the first shared task on text detoxification based on a 
 1. [Motivation](#motivation)
 2. [Task Formulation](#task_formulation)
 3. [Dataset](#dataset)
+  - [Data collection pipeline](#data_collection)
+  - [Definition of toxicity](#definition_toxicity)
 4. [Evaluation](#evaluation)
   - [Automatic evaluation](#automatic_evaluation)
   - [Human evaluation](#human_evaluation)
@@ -71,6 +73,8 @@ The dataset is divided into train, development, and test sets. The train and dev
 - development: 800 toxic sentences with 1-3 detoxified versions;
 - test: 1,474 toxic sentences with 1-3 detoxified versions.
 
+### <a name="data_collection"></a>Data collection pipeline
+
 The dataset was collected for this competition. We hired workers via [Yandex.Toloka platform](https://toloka.yandex.ru/). The pipeline for the parallel detoxification collection was presented in the work [4] and tested for an English dataset collection. We have improved this pipeline and adapted it for the Russian language.
 
 The whole pipeline consists of three tasks:
@@ -84,6 +88,69 @@ Of course, the annotators can write anything as a paraphrase. In order to filter
 * **Toxicity classification.**   Given the generated paraphrase, the annotators should label it as toxic or neutral.
 
 If the generated paraphrase receives correct answers with high (>=90%) confidence, then it gets into our dataset.
+
+### <a name="definition_toxicity"></a>Definition of toxicity
+
+We generated the paraphrases manually via crowdsourcing. We hired crowd workers using Yandex.Toloka platform. Then, in order to check if the paraphrase is really non-toxic, we launched checked it for toxicity, also via crowdsourcing. The notion of toxicity was explained to the crowd workers using the instructions and training examples.
+
+Please find the instructions below:
+
+>You are asked to read sentences and define if they contain offences, swear or rude words. 
+>
+>Attention! Non-offensive sentences can contain criticism and have a negative sentiment.
+>
+>**Examples**
+>
+>Offensive sentences:
+>- Интернетная шпана, не тебе меня поучать. (*You internet punks, it's not for you to lecture me*).
+>- Какая подписка, что ты несёшь, поехавший? (*What kind of subscription, what are you talking about, idiot?*)
+>- Как минимум два малолетних дегенерата в треде, мда. (*At least two juvenile degenerates in a thread, hmm.*)
+>- Вообще не вижу смысла спорить по поводу дюймов, хуёвый там ips или нет, машина не этим интересна. (*In general, I see no reason to argue about inches, no matter if ips is shit or not, it’s not the main thing about a car.*)
+>
+>Нейтральные (не оскорбительные) предложения:
+>- У нас в есть убунты и текникал превью. (*We have ubuntu and technical previews.*)
+>- он тоже был храбрым! (*he was brave too!*)
+>- Это бессмысленно, ты же знаешь (*It's pointless, you know*)
+>- Если он мечтает съесть своих соседей то это плохо. (*If he dreams of eating his neighbors, then this is bad.*)
+
+We provide training examples to fine-tune workers’ understanding of toxicity. The examples have a hint which is shown if a worker chooses a wrong answer. Some examples of training questions:
+
+- “а так реагировать на простое фото это пиздец, по моему фляга у тебя свистит пиздец как” (*And such reaction to a simple photo is fucked up, in my opinion you’re retarded*)
+  - *Label*: toxic 
+  - *Hint*: Use of obscenity (“fucked up”) and insult (“retarded”)
+- “тварина ебаная если это ее слова” (*Fucking beast if that's her words*)
+  - *Label*: toxic 
+  - *Hint*: Use of insult (“fucking beast”)
+- “ну ты глупый” (*You’re stupid*)
+  - *Label*: toxic 
+  - *Hint*: Insult of the interlocutor (“stupid”)
+- “Лжецы. Вот и что с такими делать?” (*Liars. So what should we do to them?*)
+  - *Label*: non-toxic 
+  - *Hint*: "Liars" is not an insult, but rather a statement of fact and not a swear word.
+- “очень плохой человек тот кто со своим ружьем такую птицу убивает” (*A very bad person is the one who kills such a bird with his gun*)
+  - *Label*: non-toxic 
+  - *Hint*: A "bad person" is not an insult.
+- “Странная, люди просто салатом делятся” (*You are strange, people are just sharing their salads*)
+  - *Label*: non-toxic 
+  - *Hint*: No offences or swear words.
+
+Non-toxic sentences can still contain criticism such as “bad person”, “liar”, etc. Since our task is to detoxify a text while saving its content, we also allow keeping negative content. We also do not focus on subtle forms of toxicity such as sarcasm or passive aggression, since they are difficult to identify not only for machines, but also for untrained human assessors. We leave work on these types of toxicity for future work.
+
+During the dataset collection we tried to exclude examples which are impossible to detoxify. These are (i) sentences whose meaning is offensive, (ii) sentences which aren’t toxic so can’t be detoxified, and (iii) sentences with unclear meaning. See the following examples:
+- “пристрелить этих уродов без суда и следствия” (*shoot these freaks without trial*)
+  - *Reason*: toxic content
+- “а что ты сука умеешь, только ноги раздвигать...” (*and what can you bitch, you can only spread your legs...*)
+  - *Reason*: toxic content
+- “пидоры они в квадрате суки.” (*fags are squared bitches.*)
+  - *Reason*: toxic content
+- “ч оз тема ч о класс ответить д лёка продаю пизду дочери комментарий” (*h oz topic h about class answer d loka sell pussy daughter comment*)
+  - *Reason*: unclear content
+- “СВИНОРУСЫ 19 реджев В треде 19 хохлов” (*PIGS 19 regges In the thread 19 Ukrainians*)
+  - *Reason*: unclear content
+
+Paraphrasing sentences with toxic content cannot remove toxicity, and if we manage to remove it, the sense of such sentence will be very different from the original one. 
+
+We would also like to remind that manual labelling can contain a small number of errors, especially if it is non-expert labelling. Thus, you can find occasional incorrect examples in the data.
 
 ## <a name="evaluation"></a>Evaluation
 
