@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: 2022-tox
 title: Russian Text Detoxification Based on Parallel Corpora 
 description: Shared task on Text detoxification based on parallel corpora for the Russian Language. Automatic detoxification of the Russian texts aims to combat offensive speech.
 ---
