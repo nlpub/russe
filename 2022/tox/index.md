@@ -16,25 +16,6 @@ You are very welcome to the first shared task on text detoxification based on a 
 - Join the [Telegram chat](https://t.me/joinchat/Ckja7Vh00qPOU887pLonqQ) for the participants
 - The intermediate evaluation is automatic, the final evaluation will be manual.
 
-**Contents:**
-1. [Motivation](#motivation)
-2. [Task Formulation](#task_formulation)
-3. [Dataset](#dataset)
-  - [Data collection pipeline](#data_collection)
-  - [Definition of toxicity](#definition_toxicity)
-4. [Evaluation](#evaluation)
-  - [Automatic evaluation](#automatic_evaluation)
-  - [Human evaluation](#human_evaluation)
-5. [General rules](#general_rules)
-6. [Baselines](#baselines)
-7. [RESULTS](#results)
-8. [Important dates](#important_dates)
-9. [Participate](#participate)
-10. [Organizers](#organizers)
-11. [Acknowledgements](#acknowledgements)
-12. [References](#references)
-
-
 ## <a name="motivation"></a>Motivation
 
 Identification of toxicity in user texts is an active area of research. Today, social networks such as [Facebook](https://edition.cnn.com/2021/06/16/tech/facebook-ai-conflict-moderation-groups/index.html), [Instagram](https://about.instagram.com/blog/announcements/introducing-new-tools-to-protect-our-community-from-abuse), [VK](https://vk.com/press/stickers-hate-speech) are trying to address the problem of toxicity. However, they usually simply block such kinds of texts. We suggest a proactive reaction to toxicity from the user. Namely, we aim at presenting a neutral version of a user message which preserves meaningful content. We denote this task as *detoxification*.
