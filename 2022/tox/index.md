@@ -202,9 +202,9 @@ The final results will be available here after the human evaluation.
 
 ## <a name="important_dates"></a>Important Dates
 
-* First Call for Participation: December 15, 2021
-* Release of the Training Data: December 15, 2021
-* Release of the Test Data: January 31, 2022
+* ~~First Call for Participation: December 15, 2021~~
+* ~~Release of the Training Data: December 15, 2021~~
+* ~~Release of the Test Data: January 31, 2022~~
 * Submission of the Results: February 14, 2022
 * Human Evaluation Results: February 28, 2022
 * Article submission deadlines: March 15, 2022
