@@ -198,14 +198,48 @@ You are welcome to test other brand new Russian Encoder-Decoder models (GPT-2, G
 
 ## <a name="results"></a>RESULTS
 
-The final results will be available here after the human evaluation.
+### Human Evaluation
+|Team Name|STA|SIM|FL|J|
+|---|---|---|---|---|
+|Human References|0.00|0.00|0.00|0.00|0.00|
+|Delete (baseline)|0.00|0.00|0.00|0.00|0.00|
+|T5 (baseline)|0.00|0.00|0.00|0.00|0.00|
+|Ruprompts (baseline)|0.00|0.00|0.00|0.00|0.00|
+|orzhan|0.00|0.00|0.00|0.00|0.00|
+|NSU team|0.00|0.00|0.00|0.00|0.00|
+|Mindful Squirrel|0.00|0.00|0.00|0.00|0.00|
+|king_menin|0.00|0.00|0.00|0.00|0.00|
+|anzak|0.00|0.00|0.00|0.00|0.00|
+|SomethingAwful|0.00|0.00|0.00|0.00|0.00|
+|FRC CSC RAS|0.00|0.00|0.00|0.00|0.00|
+|Barracudas|0.00|0.00|0.00|0.00|0.00|
+|gleb_shnshn|0.00|0.00|0.00|0.00|0.00|
+|team_ruprompts|0.00|0.00|0.00|0.00|0.00|
+
+### Automatic Evaluation
+|Team Name|STA|SIM|FL|J|
+|---|---|---|---|---|
+|Human References|0.00|0.00|0.00|0.00|0.00|
+|Delete (baseline)|0.00|0.00|0.00|0.00|0.00|
+|T5 (baseline)|0.00|0.00|0.00|0.00|0.00|
+|Ruprompts (baseline)|0.00|0.00|0.00|0.00|0.00|
+|orzhan|0.00|0.00|0.00|0.00|0.00|
+|NSU team|0.00|0.00|0.00|0.00|0.00|
+|Mindful Squirrel|0.00|0.00|0.00|0.00|0.00|
+|king_menin|0.00|0.00|0.00|0.00|0.00|
+|anzak|0.00|0.00|0.00|0.00|0.00|
+|SomethingAwful|0.00|0.00|0.00|0.00|0.00|
+|FRC CSC RAS|0.00|0.00|0.00|0.00|0.00|
+|Barracudas|0.00|0.00|0.00|0.00|0.00|
+|gleb_shnshn|0.00|0.00|0.00|0.00|0.00|
+|team_ruprompts|0.00|0.00|0.00|0.00|0.00|
 
 ## <a name="important_dates"></a>Important Dates
 
 * ~~First Call for Participation: December 15, 2021~~
 * ~~Release of the Training Data: December 15, 2021~~
 * ~~Release of the Test Data: January 31, 2022~~
-* Submission of the Results: February 14, 2022
+* ~~Submission of the Results: February 14, 2022~~
 * Human Evaluation Results: February 28, 2022
 * Article submission deadlines: March 15, 2022
 
