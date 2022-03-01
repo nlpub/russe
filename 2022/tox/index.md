@@ -6,6 +6,8 @@ description: Shared task on Text detoxification based on parallel corpora for th
 
 # Russian Text Detoxification Based on Parallel Corpora 
 
+!!!The [RESULTS](#results) are out!!!
+
 You are very welcome to the first shared task on text detoxification based on a parallel dataset!
 
 **Quick Start:** 
@@ -202,39 +204,39 @@ You are welcome to test other brand new Russian Encoder-Decoder models (GPT-2, G
 
 |Team Name|STA|SIM|FL|J|
 | --- | --- | --- | --- | --- |
-|Human References|0.00|0.00|0.00|0.00|0.00|
-|Delete (baseline)|0.00|0.00|0.00|0.00|0.00|
-|T5 (baseline)|0.00|0.00|0.00|0.00|0.00|
-|Ruprompts (baseline)|0.00|0.00|0.00|0.00|0.00|
-|orzhan|0.00|0.00|0.00|0.00|0.00|
-|NSU team|0.00|0.00|0.00|0.00|0.00|
-|Mindful Squirrel|0.00|0.00|0.00|0.00|0.00|
-|king_menin|0.00|0.00|0.00|0.00|0.00|
-|anzak|0.00|0.00|0.00|0.00|0.00|
-|SomethingAwful|0.00|0.00|0.00|0.00|0.00|
-|FRC CSC RAS|0.00|0.00|0.00|0.00|0.00|
-|Barracudas|0.00|0.00|0.00|0.00|0.00|
-|gleb_shnshn|0.00|0.00|0.00|0.00|0.00|
-|team_ruprompts|0.00|0.00|0.00|0.00|0.00|
+|Human References|**0.888**|**0.824**|0.894|**0.653**|
+|SomethingAwful|0.794|**0.872**|**0.903**|**0.633**|
+|T5 (baseline)|0.791|0.822|**0.925**|**0.606**|
+|FRC CSC RAS|0.734|**0.865**|**0.918**|0.598|
+|Mindful Squirrel|**0.824**|0.791|0.846|0.582|
+|team_ruprompts|0.778|0.809|0.903|0.568|
+|orzhan|0.805|0.782|0.869|0.565|
+|Barracudas|0.790|0.718|0.782|0.505| 
+|king_menin|**0.808**|0.697|0.897|0.501|
+|Ruprompts (baseline)|0.803|0.703|0.866|0.493|
+|NSU team|0.767|0.721|0.825|0.455|
+|anzak|0.433|0.624|0.791|0.171|
+|Delete (baseline)|0.387|0.705|0.726|0.162|
+|gleb_shnshn|0.249|0.128|0.238|0.016|
 
 ### Automatic Evaluation
 
-|Team Name|STA|SIM|FL|J|
-| --- | --- | --- | --- | --- |
-|Human References|0.00|0.00|0.00|0.00|0.00|
-|Delete (baseline)|0.00|0.00|0.00|0.00|0.00|
-|T5 (baseline)|0.00|0.00|0.00|0.00|0.00|
-|Ruprompts (baseline)|0.00|0.00|0.00|0.00|0.00|
-|orzhan|0.00|0.00|0.00|0.00|0.00|
-|NSU team|0.00|0.00|0.00|0.00|0.00|
-|Mindful Squirrel|0.00|0.00|0.00|0.00|0.00|
-|king_menin|0.00|0.00|0.00|0.00|0.00|
-|anzak|0.00|0.00|0.00|0.00|0.00|
-|SomethingAwful|0.00|0.00|0.00|0.00|0.00|
-|FRC CSC RAS|0.00|0.00|0.00|0.00|0.00|
-|Barracudas|0.00|0.00|0.00|0.00|0.00|
-|gleb_shnshn|0.00|0.00|0.00|0.00|0.00|
-|team_ruprompts|0.00|0.00|0.00|0.00|0.00|
+|Team Name|STA|SIM|FL|J|ChrF|
+| --- | --- | --- | --- | --- | --- |
+|gleb_shnshn|**0.975**|**0.935**|**0.959**|**0.873**|0.529|
+|orzhan|**0.982**|0.860|**0.969**|**0.822**|0.550|
+|FRC CSC RAS|0.945|0.855|**0.967**|**0.784**|0.571|
+|SomethingAwful|**0.948**|0.819|0.911|0.709|**0.573**|
+|Mindful Squirrel|0.933|0.798|0.885|0.659|0.564|
+|king_menin|0.942|0.728|0.889|0.614|0.497|
+|T5 (baseline)|0.796|0.827|0.837|0.560|**0.573**|
+|team_ruprompts|0.804|0.804|0.829|0.542|0.563|
+|Ruprompts (baseline)|0.811|0.793|0.804|0.528|0.547|
+|Barracudas|0.852|0.758|0.785|0.523|0.532|
+|Human References|0.846|0.716|0.783|0.494|**0.773**|
+|NSU team|0.830|0.756|0.757|0.483|0.505|
+|anzak|0.569|**0.892**|0.910|0.441|0.536|
+|Delete (baseline)|0.558|**0.887**|0.852|0.406|0.529|
 
 ## <a name="important_dates"></a>Important Dates
 
