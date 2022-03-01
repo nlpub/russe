@@ -199,8 +199,9 @@ You are welcome to test other brand new Russian Encoder-Decoder models (GPT-2, G
 ## <a name="results"></a>RESULTS
 
 ### Human Evaluation
+
 |Team Name|STA|SIM|FL|J|
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 |Human References|0.00|0.00|0.00|0.00|0.00|
 |Delete (baseline)|0.00|0.00|0.00|0.00|0.00|
 |T5 (baseline)|0.00|0.00|0.00|0.00|0.00|
@@ -217,8 +218,9 @@ You are welcome to test other brand new Russian Encoder-Decoder models (GPT-2, G
 |team_ruprompts|0.00|0.00|0.00|0.00|0.00|
 
 ### Automatic Evaluation
+
 |Team Name|STA|SIM|FL|J|
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 |Human References|0.00|0.00|0.00|0.00|0.00|
 |Delete (baseline)|0.00|0.00|0.00|0.00|0.00|
 |T5 (baseline)|0.00|0.00|0.00|0.00|0.00|
