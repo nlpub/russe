@@ -205,7 +205,7 @@ You are welcome to test other brand new Russian Encoder-Decoder models (GPT-2, G
 |Team Name|STA|SIM|FL|J|
 | --- | --- | --- | --- | --- |
 |Human References|**0.888**|**0.824**|0.894|**0.653**|
-|SomethingAwful|0.794|**0.872**|**0.903**|**0.633**|
+|**SomethingAwful**|0.794|**0.872**|**0.903**|**0.633**|
 |T5 (baseline)|0.791|0.822|**0.925**|**0.606**|
 |FRC CSC RAS|0.734|**0.865**|**0.918**|0.598|
 |Mindful Squirrel|**0.824**|0.791|0.846|0.582|
@@ -244,8 +244,8 @@ You are welcome to test other brand new Russian Encoder-Decoder models (GPT-2, G
 * ~~Release of the Training Data: December 15, 2021~~
 * ~~Release of the Test Data: January 31, 2022~~
 * ~~Submission of the Results: February 14, 2022~~
-* Human Evaluation Results: February 28, 2022
-* Article submission deadlines: March 15, 2022
+* ~~Human Evaluation Results: February 28, 2022~~
+* Article submission deadlines: March 25, 2022
 
 ## <a name="participate"></a>Participate
 
